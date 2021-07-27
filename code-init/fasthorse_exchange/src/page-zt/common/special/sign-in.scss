@@ -1,0 +1,163 @@
+@mixin css($name) {
+  .#{$name} {
+    @include flex(center);
+    min-height: calc(100vh - #{$header-height});
+    background: $body-white;
+
+    .wrap {
+      @include flex-column(space-between, stretch);
+      width: 5.55rem;
+      min-height: 350px;
+      margin: 3vh 0 13vh;
+      padding: .31rem 0.8rem;
+      background: $background-c1;
+      border-radius: 0.08rem;
+      color: $font-black;
+      z-index: 10;
+
+      .sign-title {
+        text-align: center;
+      }
+    }
+    .signup-head {
+      overflow: hidden;
+      margin-bottom: 0.1rem;
+      div {
+        float: left;
+      }
+      .h1 {
+        float: right;
+        margin: 15px 0 20px;
+        line-height: .2rem;
+        @extend .content-5;
+        text-align: left;
+        font-size: 0.12rem;
+        color: $background-c1;
+
+        .tab {
+          display: block;
+          float: left;
+          padding: 3px 13px;
+          white-space: nowrap;
+          border-top: 1px solid $color-gray-1;
+          border-right: 1px solid $color-gray-1;
+          border-bottom: 1px solid $color-gray-1;
+          border-top-right-radius: 0.3rem;
+          border-bottom-right-radius: 0.3rem;
+          a {
+            color: #333 !important;
+          }
+        }
+        .selecte {
+          background: $font-black;
+          border-top: 1px solid $color-black-1;
+          border-left: 1px solid $color-black-1;
+          border-bottom: 1px solid $color-black-1;
+          border-top-left-radius: 0.3rem;
+          border-bottom-left-radius: 0.3rem;
+          border-top-right-radius: 0rem;
+          border-bottom-right-radius: 0rem;
+        }
+      }
+    }
+
+    .my-input {
+      display: flex;
+      justify-content: space-between;
+      margin: .24rem 0;
+      padding: 0.07rem 0.1rem;
+      background: $sign-in-bg !important;
+      background: transparent !important;
+      border: 1px solid $color-gray-1;
+      border-radius: 0.3rem;
+      height: 0.42rem;
+    }
+
+    .forget-p {
+      display: block;
+      text-align: right;
+    }
+
+    .bottom {
+      @include flex(space-between, flex-end, wrap);
+      position: relative;
+
+      .submit {
+        display: block;
+        margin: 0;
+        height: .4rem;
+        width: 100%;
+        border-radius: 0.3rem;
+        background: $background-c2;
+        color: $font-white-c1;
+      }
+
+    }
+    .tips {
+      @include flex(space-between);
+    }
+    .other-control {
+      margin-top: 0.2rem;
+      &>div:first-child {
+        float: right;
+      }
+      &>div:last-child {
+        float: left;
+      }
+    }
+
+    a {
+      color: $font-blue-c1 !important;
+    }
+
+    .verify-items {
+      position: relative;
+      width: 5.55rem;
+      padding: 0.53rem .79rem;
+      border-radius: .08rem;
+      margin: 0 0 .1rem;
+      background: $background-c2;
+      box-shadow: 0 .02rem .2rem rgba(#000, .15);
+
+      h2 {
+        margin: 0 0 .5rem;
+        color: $font-gray-c1;
+        font-size: 0.36rem;
+        text-align: center;
+        @extend .content-4;
+
+        .iconfont {
+          position: absolute;
+          right: .2rem;
+          top: .2rem;
+          padding: .05rem;
+          cursor: pointer;
+          opacity: .8;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+
+      button {
+        width: 100%;
+        @include lineHeight(.46rem);
+      }
+      .yzm-btn {
+        margin: 0;
+        background: $background-c4;
+        border-radius: 0.22rem;
+        color: $font-gray-c1;
+      }
+
+      .btns {
+        @include flex(space-between);
+      }
+
+      .btn-cancel {
+        @include btn-fill(rgba(#5a698d, .4));
+      }
+    }
+  }
+}

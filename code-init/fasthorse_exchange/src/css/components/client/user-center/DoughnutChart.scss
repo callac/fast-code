@@ -1,0 +1,65 @@
+.doughnut-chart {
+  @include flex(space-between, stretch);
+  padding: 0 .1rem .2rem 0;
+
+  .bars {
+    flex: 1;
+    margin: 0 1rem 0 0;
+
+    .bar-item {
+      @include flex();
+      padding: .1rem .1rem .15rem;
+
+      &.hover {
+        background: rgba(#000, .2);
+
+        .asset {
+          color: $font-dark;
+        }
+      }
+
+      .asset {
+        width: .7rem;
+      }
+
+      .amount {
+        @extend .content-2;
+        flex: 1;
+
+        .text {
+          @include flex(space-between);
+          margin: 0 0 .05rem;
+
+          .ratio {
+            margin: 0 0 0 .1rem;
+            color: $font-dark;
+          }
+        }
+
+        .bar {
+          height: .06rem;
+          border-radius: .03rem;
+        }
+      }
+    }
+  }
+
+  .doughnut {
+    width: 3rem;
+    min-height: 4rem;
+
+    .chart-path {
+      cursor: pointer;
+    }
+
+    .chart-title {
+      fill: $font-dark;
+    }
+  }
+
+  .no-data {
+    width: 100%;
+    padding: .4rem 0;
+    text-align: center;
+  }
+}

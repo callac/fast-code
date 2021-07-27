@@ -1,0 +1,115 @@
+.table-base-wrap {
+
+  .check-box {
+    display: inline-block;
+  }
+
+  .icon-up-down {
+    margin: 0 0 -.02rem -.04rem;
+    @extend .content-1;
+    color: inherit;
+  }
+
+  .load {
+    @include flex(center);
+    position: absolute;
+    width: 100%;
+
+    .loading {
+      margin: .2rem 0 0;
+    }
+  }
+
+  .no-result {
+    background-color: transparent !important;
+  }
+
+  .table-extend {
+    width: 100%;
+    $baseSize: .1rem;
+
+    @function size($val) {
+      @return $val * $baseSize;
+    }
+
+    /* scrollbar css */
+    .scrollbar-wrap {
+      position: relative;
+      width: 100%;
+      padding: 0 !important;
+      overflow: hidden;
+
+      &:hover .scrollbar {
+        display: block
+      }
+
+      .scrollbar-content {
+        position: relative;
+        width: 100%;
+        height: auto
+      }
+
+      .scrollbar {
+        display: none;
+        position: absolute;
+        right: 4px;
+        width: 4px;
+        border-radius: 2px;
+        background: #eee;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+        cursor: default !important
+      }
+    }
+
+    .tr {
+      @include flex();
+      white-space: nowrap;
+      box-sizing: border-box;
+    }
+
+    .th {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .th, .td {
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      user-select: none;
+      box-sizing: border-box;
+      padding: 0 .1rem;
+      min-height: .1rem;
+
+      .column-resize {
+        position: absolute;
+        right: size(-.5);
+        top: 50%;
+        z-index: 1;
+        max-width: 100%;
+        width: size(1);
+        height: 100%;
+        cursor: col-resize;
+        transform: translate(0, -50%);
+      }
+    }
+
+    .td {
+      text-transform: none;
+
+      img, div {
+        max-width: 100%;
+      }
+
+      div {
+        display: inline-block !important;
+      }
+
+      .td-value {
+        display: inline-block;
+        max-width: 100%;
+        vertical-align: middle;
+      }
+    }
+  }
+}

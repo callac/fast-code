@@ -1,0 +1,66 @@
+.exchange-manage {
+  .pagination {
+    margin: .2rem 0 .6rem;
+  }
+
+  .symbol {
+    @import "../../common/special/bind";
+    margin: 0.2rem 0 0 0.37rem;
+    width: 1.19rem;
+    height: 0.3rem;
+    background: $background-c1;
+    //color: $font-white-c1;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0;
+    border: none;
+    line-height: .3rem;
+    background: transparent;
+    font-size: inherit;
+    white-space: nowrap;
+
+    &.cancel {
+      cursor: default;
+    }
+  }
+  .vue-popper {
+    background: $body-white-c2;
+    .scrollbar-wrap {
+      .scrollbar-content {
+        .option {
+          &:hover {
+            background: rgba($color-colours-4, 0.5);
+          }
+        }
+        .selected {
+          background: $color-colours-4;
+        }
+      }
+    }
+  }
+
+  .table-base-wrap {
+    padding-top: 0;
+    //.thead .tr {
+    //  color: $font;
+    //}
+
+    .tbody .tr {
+      //color: $font;
+      border-bottom: 1px solid $border;
+    }
+  }
+
+  .table {
+    margin: -.2rem;
+  }
+  .my-overlay .window {
+    width: 6.5rem;
+    height: 4.5rem;
+    .content-wrap {
+      padding: 0;
+    }
+  }
+}

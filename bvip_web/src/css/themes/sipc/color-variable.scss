@@ -1,0 +1,72 @@
+/* Base */
+$black-darker: #222;
+$black-dark: #333;
+$black: #666;
+$black-light: #999;
+$black-lighter: #ccc;
+
+$white: rgba(255, 255, 255, .9);
+$white-light: rgba(255, 255, 255, .7);
+$white-lighter: rgba(255, 255, 255, .5);
+$white-lightest: rgba(255, 255, 255, .3);
+
+$red: #FA4A61;
+
+$blue: #008add;
+$blue-light: #53b6d2;
+$blue-lighter: #7292a1;
+
+$green: #0db27c;
+
+$yellow: #ffac00;
+
+/* custom */
+$main-color: #3a416f;
+$main-color-darker: #2e3763;
+$disabled: #ddd;
+
+$font-darker: #2e3763;
+$font-dark: #3a416f;
+$font: #5d6494;
+$font-light: #6d74a8;
+$font-light-1: #7b82bc;
+
+$border: rgba(114, 145, 161, .2);
+$border-input: #E5E6F1;
+$border-hover: rgba(114, 145, 161, .4);
+
+$background: #fff;
+$background-1: #fff;
+$background-2: #fafafa;
+$background-2-1: #fbfbfb;
+$background-3: #fafafb;
+$background-4: #f4f4f5;
+
+$option-font: inherit;
+$option-selected-bg: $main-color-darker;
+$option-selected-font: #fff;
+$options-bg: #fff;
+$input-bg: #eee;
+$option-hover-bg: rgba($main-color-darker, .5);
+$input-bg-disabled: $input-bg;
+
+$kline-btn-font: $white;
+$kline-btn-font-hover: $yellow;
+$kline-btn-bg-hover: rgba(255, 172, 0, .1);
+
+$sign-in-bg: #fff;
+
+$rank-head-icon: #6a65df;
+
+$footer-font: #ddd;
+$footer-bg: #000;
+
+$kline-bg: #fff;
+
+$exchange-tr-hover: #F2F3F8;
+$exchange-table-bg: #fff;
+
+$exchange-font-1:#667680;
+$exchange-font-2:#CFDDE6;
+
+$exchange-table-color:#B8CDD9;

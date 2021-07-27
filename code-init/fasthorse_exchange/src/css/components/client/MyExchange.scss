@@ -1,0 +1,60 @@
+.my-exchange {
+  position: relative;
+
+  .btn-cancel {
+    height: inherit;
+    padding: 0;
+    border: none;
+    font-size: inherit;
+    color: rgba($red, .8);
+    background: transparent;
+    white-space: nowrap;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &.font-green {
+      color: $main-color;
+    }
+  }
+
+  .cancel {
+    height: inherit;
+    font-size: inherit;
+    color: $font;
+    white-space: nowrap;
+  }
+
+  .table {
+    margin: -.2rem;
+  }
+
+  .tr {
+    //color: $font !important;
+    color: #8A8A99 !important;
+  }
+
+  .pagination {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    height: .32rem;
+    padding: 0 .1rem;
+    margin: 0;
+
+    .input {
+      width: .6rem;
+      height: .24rem;
+      margin-right: 0;
+    }
+
+    .page-btn {
+      @include flex(center);
+      min-width: auto;
+      width: .24rem;
+      height: .24rem;
+    }
+  }
+}

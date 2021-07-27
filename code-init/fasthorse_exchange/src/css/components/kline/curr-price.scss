@@ -1,0 +1,14 @@
+.curr-price {
+
+  .curr-price-line {
+    stroke-dasharray: 4;
+    stroke-width: 1;
+  }
+
+  .curr-price-value-bg {
+  }
+
+  .curr-price-value-text {
+    fill: $kline-white;
+  }
+}

@@ -1,0 +1,28 @@
+.article-wrap {
+
+  .content {
+    padding: .2rem 0;
+    min-height: calc(100vh - 0.6rem - #{$footer-height});
+
+    &:before {
+      background: $background-3;
+    }
+  }
+
+  * {
+    text-align: left;
+  }
+
+  .h1 {
+    padding: 0 0 .1rem;
+    @extend .content-5;
+    color: $font-darker;
+    line-height: .4rem;
+    border-bottom: 1px solid $border;
+  }
+
+  .msg-pin:first-of-type {
+    margin: .2rem 0 0;
+    border-top: 1px solid $border;
+  }
+}

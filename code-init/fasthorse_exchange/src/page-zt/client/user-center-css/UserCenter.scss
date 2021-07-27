@@ -1,0 +1,99 @@
+.user-center {
+  $margin-1: .03rem;
+
+  @include flex(space-between, stretch);
+  background: $body-white;
+  padding: $margin-1 0 0;
+
+  $aside-width: 2.2rem;
+
+  .aside {
+    @include flex(flex-end, flex-start);
+    min-width: calc((#{$body-min-width} - #{$user-center-content-width}) / 2 + #{$aside-width});
+    width: calc((100vw - #{$user-center-content-width}) / 2 + #{$aside-width});
+    margin: 0 $margin-1 0 0;
+    background: $background-2-1;
+
+    .nav {
+      width: $aside-width;
+      height: 100%;
+      border-left: 1px solid $border;
+
+      .a {
+        @include flex(center);
+        position: relative;
+        color: $font !important;
+        line-height: .6rem;
+        border-bottom: 1px solid $border;
+        white-space: nowrap;
+
+        &.active {
+          color: $main-color !important;
+
+          &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: -1px;
+            width: .04rem;
+            background: $main-color;
+          }
+
+          .iconfont {
+            color: $main-color;
+          }
+        }
+
+        .nav-wrap {
+          @include flex();
+        }
+
+        .iconfont {
+          margin: 0 .1rem 0 0;
+          @extend .title;
+        }
+      }
+    }
+  }
+
+  .user-content-wrap {
+    @include flex(flex-start, flex-start);
+    flex: 1;
+    background: $body-white;
+
+    .user-content {
+      position: relative;
+      margin: 0 auto;
+      //width: calc(#{$user-center-content-width} - #{$aside-width} - #{$margin-1});
+      width: 11.89rem;
+      height: 100%;
+      padding: .1rem .4rem .4rem .4rem;
+      //border-right: 1px solid $border;
+      background: $body-white;
+      color: $font-black-c1;
+      .assets-manager-title {
+        padding-left: 0.3rem;
+        margin: 0.2rem 0;
+        height: 0.59rem;
+        line-height: 0.59rem;
+        background: $background-c1;
+        border-radius: 4px;
+        color: $font-black-c1;
+        font-size: 0.2rem;
+      }
+
+      .manage-wrap {
+        background: $background-c1;
+        //color: $font-black-c1;
+        .table-base-wrap {
+          padding-top: 0.2rem;
+          color: $font-black-c1;
+          .thead .tr {
+            color: $font-black-c5;
+          }
+        }
+      }
+    }
+  }
+}

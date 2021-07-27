@@ -1,0 +1,56 @@
+.drop-down {
+  display: inline-block;
+  position: relative;
+  padding: 0 0.3rem 0 0;
+  cursor: pointer;
+
+  @mixin pseudo($bg:$border, $direction: top, $borderWidth: size(.6)) {
+    position: absolute;
+    #{$direction}: -$borderWidth;
+    width: 0;
+    height: 0;
+    border: $borderWidth solid transparent;
+
+    @if ($direction==top) {
+      border-top: 0;
+      border-bottom-color: $bg;
+    } @else if ($direction==bottom) {
+      border-bottom: 0;
+      border-top-color: $bg;
+    } @else if ($direction==left) {
+      border-left: 0;
+      border-right-color: $bg;
+    } @else if ($direction==right) {
+      border-right: 0;
+      border-left-color: $bg;
+    }
+  }
+
+  .vue-popper {
+    width: auto;
+    padding: 0.04rem 0;
+    box-shadow: 0 1px size(1) rgba(0, 0, 0, .1);
+    background: $options-bg;
+  }
+
+  .icon-arrow {
+    display: block;
+    position: absolute;
+    right: size(.4);
+    top: 50%;
+    width: size(1);
+    height: size(.5);
+    margin: size(-0.25) 0 0;
+    transition: transform .3s ease;
+
+    &:before {
+      content: '';
+      @include pseudo($font, bottom, size(.5));
+      bottom: 0;
+    }
+
+    &.reverse {
+      transform: rotate(180deg);
+    }
+  }
+}

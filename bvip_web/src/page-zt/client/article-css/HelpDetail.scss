@@ -1,0 +1,39 @@
+.article-wrap {
+
+  .content {
+    padding: .2rem 0;
+    min-height: calc(100vh - 0.6rem - #{$footer-height});
+    width: 11.94rem;
+  }
+
+  .wrap {
+    //@include flex(space-between, stretch);
+    min-height: calc(100vh - 0.6rem - #{$footer-height} - .51rem - .4rem);
+
+    .detail-title {
+      margin-bottom: 0.3rem;
+      color: $font-black-c2;
+      font-size: 0.24rem;
+      font-weight: bold;
+    }
+  }
+
+  * {
+    text-align: left;
+    color: $font-black-c2;
+  }
+
+  .h1 {
+    //padding: 0 0 .1rem;
+    @extend .content-5;
+    color: $font-black-c2;
+    font-weight: bold;
+    line-height: .4rem;
+    border-bottom: none;
+  }
+
+  .msg-pin:first-of-type {
+    margin: 0;
+    border-bottom: 1px solid $border;
+  }
+}

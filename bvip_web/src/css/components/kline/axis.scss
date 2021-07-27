@@ -1,0 +1,19 @@
+.axis-line {
+  fill: $kline-axis-color;
+}
+
+.axis-coord {
+  fill: $kline-axis-color;
+
+  .axis-coord-text {
+    fill: $kline-axis-color;
+  }
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.axis-refline {
+  fill: $kline-axis-color-light;
+}

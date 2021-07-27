@@ -1,0 +1,87 @@
+.feedback-list {
+
+  .content {
+    height: 100%;
+    padding: .2rem;
+
+    &:before {
+      background: $background-3;
+    }
+  }
+
+  h1 {
+    @include flex(space-between);
+    position: relative;
+    padding: 0 0 .15rem 0;
+    border-bottom: 1px solid $border;
+    @extend .content-5;
+    color: $font-darker;
+
+    .new {
+      font-size: .14rem;
+      padding: 0 .2rem;
+    }
+  }
+
+  .search-wrap {
+    position: relative;
+
+    .search {
+      width: 2.8rem;
+      height: .3rem;
+      border: 1px solid $border;
+      border-left-width: .37rem;
+      border-radius: .04rem;
+      @extend .content-2;
+      color: $font-dark;
+      background: transparent;
+
+      &::placeholder {
+        color: $font-light;
+      }
+
+      &:focus {
+        border-color: $font-light;
+      }
+    }
+
+    .iconfont {
+      @include flex(center);
+      position: absolute;
+      left: .1rem;
+      top: .05rem;
+      width: .2rem;
+      height: .2rem;
+      font-size: .2rem;
+      color: $font;
+    }
+  }
+
+  .tbody .tr {
+    cursor: pointer;
+  }
+
+  .td, .th {
+    white-space: nowrap;
+
+    .t-img {
+      max-width: .8rem;
+      max-height: .8rem;
+      margin: 0 .05rem 0 0;
+      vertical-align: middle;
+
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+
+    .btn {
+      border: none;
+    }
+  }
+
+  .pagination {
+    margin: 0;
+    padding: .2rem 0 .4rem;
+  }
+}

@@ -1,0 +1,15 @@
+.bind-email {
+  @import '../../common/special/sign-in';
+  @import '../../common/special/user-center';
+  .detail-content {
+    margin-bottom: 0.3rem;
+    padding: 0.3rem;
+    background: $body-white-c2;
+    border-radius: 0.04rem;
+    .detail-title {
+      padding-bottom: 0.2rem;
+      border-bottom: 1px solid $color-gray-5;
+      font-size: 0.16rem;
+    }
+  }
+}

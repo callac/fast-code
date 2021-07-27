@@ -1,0 +1,127 @@
+.security {
+  .level {
+    @include flex();
+    min-height: auto;
+    padding: .25rem;
+
+    .img {
+      width: .7rem;
+    }
+
+    .u-content {
+      margin: 0 0 0 .2rem;
+
+      .h3 {
+        margin: 0 0 .15rem;
+        color: $font-light;
+
+        .username {
+          font-size: .22rem;
+          color: $font-darker;
+        }
+
+        .btn {
+          @include lineHeight(.18rem);
+          margin: 0 .4rem 0 0;
+          font-size: .12rem;
+        }
+      }
+
+      .uid {
+        font-size: .16rem;
+        text-indent: .04rem;
+      }
+    }
+  }
+
+  .security-item {
+    @include flex(space-between);
+    width: 100%;
+    height: .5rem;
+    //padding: .15rem;
+    //line-height: .2rem;
+    border-bottom: 1px solid $border;
+
+    &:last-of-type {
+      border: none;
+    }
+
+    .icon {
+      margin: 0 .2rem;
+    }
+
+    .name {
+      flex: .15
+    }
+
+    .status {
+      flex: .15;
+    }
+
+    .value {
+      flex: .5;
+      color: $font-light;
+    }
+
+    .operate {
+      flex: .2;
+      padding: 0 .1rem 0 0;
+      text-align: right;
+
+      .op {
+        display: inline-block;
+        position: relative;
+        height: .2rem;
+        padding: 0 .1rem;
+        border: none;
+        background: transparent;
+
+        &:before {
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 50%;
+          width: 1px;
+          height: .14rem;
+          margin: -.07rem 0 0;
+          background: $font-light;
+        }
+
+        &:last-child {
+
+          &:before {
+            content: none;
+          }
+        }
+      }
+    }
+
+    .progress {
+      display: inline-block;
+      position: relative;
+      width: 2.3rem;
+      height: .1rem;
+      margin: 0 .1rem 0 0;
+      background: $background-4;
+
+      .bar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+      }
+    }
+  }
+
+  .tip {
+    display: block;
+    width: 4.2rem;
+    margin: -.3rem 0 .4rem calc((100% - 4.2rem) / 2 + 1rem);
+  }
+
+  @import './components/BindEmail/BindEmail';
+  @import './components/BindGoogleVerify/BindGoogleVerify';
+  @import './components/BindPhone/BindPhone';
+  @import './components/ResetPassword/ResetPassword';
+  @import './components/SetFundPassword/SetFundPassword';
+}

@@ -1,0 +1,428 @@
+.home {
+
+  @import 'components/client/Banner';
+  @import 'components/client/Tab-58';
+
+  background: $background-2;
+
+  $gradient-home: linear-gradient(to right, $main-color, $main-color-darker);
+  /*$gradient-home-1: linear-gradient(to bottom right, $main-color, $main-color-darker 50%);*/
+  $gradient-home-1: -webkit-gradient(linear, left top, right bottom, from($main-color),
+    color-stop(50%, $main-color-darker));
+  $gradient-home-bg: linear-gradient(to bottom right, $background, $background-2);
+
+  .banner-wrap {
+    margin: .9rem 0 0;
+    height: 6rem !important;
+  }
+
+  .main-prices {
+    @include flex(flex-start, stretch);
+    height: 1.2rem;
+    margin-top: -1.2rem;
+
+    &:before {
+      background: rgba(#000, .7);
+    }
+
+    .main-price {
+      @include flex-column(center, center);
+      border-left: 1px solid $white-lightest;
+      width: 25%;
+
+      &:last-child {
+        border-right: 1px solid $white-lightest;
+      }
+
+      h2 {
+        margin: 0 0 .1rem;
+        color: #8ba9d5;
+
+        .rate {
+          margin: 0 0 0 .2rem;
+        }
+      }
+
+      .price {
+        font-size: .24rem;
+        color: $green;
+
+        .unit {
+          color: #8ba9d5;
+        }
+      }
+    }
+  }
+
+  .market {
+    padding: .5rem 0;
+
+    &:before {
+      background: $background-2;
+    }
+
+    .prices {
+      .tab-wrap {
+        margin: 0 0 .2rem;
+      }
+
+      table {
+        color: $font;
+        background: $background-2;
+        border: 1px solid $border;
+
+        thead tr, tbody tr:nth-child(even) {
+          background: $background-1;
+        }
+      }
+    }
+  }
+
+  .join {
+    padding: 2rem 0 0;
+
+    h2 {
+      padding: 0 0 .3rem;
+      @extend .title-1;
+      color: $font-darker;
+      font-size: .46rem;
+      text-align: center;
+
+      span {
+        padding: 0 0 0 .1rem;
+        font-size: inherit;
+        color: $main-color;
+      }
+    }
+
+    .btn {
+      display: block;
+      width: 2.8rem;
+      @include lineHeight(.56rem);
+      margin: .2rem auto 0;
+      border-radius: .28rem;
+      background: $gradient-home;
+      color: $font-darker;
+      opacity: 1;
+      @extend .head;
+    }
+
+    img {
+      display: block;
+      position: relative;
+      width: 11.8rem;
+      max-width: 100%;
+      margin: -.6rem auto 0;
+      z-index: -1;
+    }
+  }
+
+  .features {
+    padding: .7rem 0 .6rem;
+
+    &:before {
+      background: $background;
+    }
+
+    h2 {
+      margin: 0 0 .2rem;
+      font-size: .36rem;
+      color: $font-dark;
+      text-align: center;
+    }
+
+    .items {
+      @include flex(space-between, stretch);
+      width: 100%;
+      margin: .6rem 0 0;
+
+      .item {
+        @include flex-column(center, center);
+        position: relative;
+        width: 2.3rem;
+        margin: 0 .2rem 0 0;
+
+        img {
+          width: 1.78rem;
+        }
+
+        h3 {
+          position: relative;
+          width: 100%;
+          margin: -.1rem 0 0;
+          @extend .content-5;
+          font-weight: 600;
+          color: $font-dark;
+          text-align: center;
+        }
+
+        p {
+          position: relative;
+          width: 100%;
+          height: calc(.28rem * 3);
+          max-width: 100%;
+          margin: .2rem 0 0;
+          line-height: .28rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .apps {
+    @include flex-column(center, flex-start);
+    position: relative;
+    height: 3.2rem;
+    padding: 1.5rem 0 1.5rem 6.8rem;
+
+    &:before {
+      background: linear-gradient(to bottom, #ff903e, #f66144);
+    }
+
+    img {
+      position: absolute;
+      left: -.5rem;
+      top: 0;
+      z-index: -1;
+      width: 6.26rem;
+    }
+
+    h2 {
+      @extend .title-1;
+      font-size: .32rem;
+      color: $white;
+    }
+
+    p {
+      line-height: .4rem;
+      font-size: .16rem;
+      color: $white;
+    }
+
+    .btns {
+      @include flex(flex-start, center, wrap);
+      margin: .4rem 0 0;
+
+      .btn {
+        @include flex(center);
+        position: relative;
+        width: 1.6rem;
+        height: .4rem;
+        margin: 0 .2rem .2rem 0;
+        border: 1px solid $white;
+        color: $white;
+        background: transparent;
+        vertical-align: text-top;
+        opacity: 1;
+        overflow: hidden;
+
+        .iconfont {
+          padding: 0 .1rem 0 0;
+          font-size: .3rem;
+          color: inherit;
+        }
+
+        &:hover {
+          border-color: transparent;
+          background: $white;
+          color: $main-color-darker;
+        }
+      }
+    }
+  }
+
+  /*.news {
+    padding: .6rem 0 2rem;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: calc(.6rem + .5rem + 1.35rem + .7rem);
+      left: 50%;
+      width: 100vw;
+      border-bottom: 1px solid $border;
+      margin: 0 0 0 -50vw;
+    }
+
+    h2 {
+      height: .5rem;
+      @include flex(space-between);
+      color: $font-darker;
+      font-size: .32rem;
+
+      .type {
+        display: inline-block;
+        margin: 0 0 0 .2rem;
+        cursor: pointer;
+
+        &:hover {
+          color: rgba($main-color, .7);
+        }
+
+        &.active {
+          color: $main-color;
+        }
+      }
+    }
+
+    .news-wrap-content {
+      position: relative;
+      width: 100%;
+      margin: 1.35rem 0 0;
+      overflow: hidden;
+
+      .iconfont {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+        width: .2rem;
+        height: .2rem;
+        font-size: .2rem;
+        cursor: pointer;
+
+        &:hover {
+          color: $main-color;
+        }
+
+        &.left {
+          right: auto;
+          left: 0;
+          transform: rotate(180deg);
+        }
+      }
+
+      .news-wrap {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 1000rem;
+        overflow: hidden;
+
+        .news-item {
+          float: left;
+          padding: 0 .45rem;
+          margin: 0 .2rem 0 0;
+          cursor: pointer;
+          opacity: 1;
+
+          &:hover, &.now {
+
+            time {
+              display: block;
+              color: $font-darker;
+
+              &:before {
+                left: .4rem;
+                background: $main-color;
+              }
+
+              &:after {
+                left: calc(.4rem - .06rem);
+                opacity: 1;
+              }
+            }
+
+            .c {
+
+              &:before, img {
+                opacity: 1;
+              }
+
+              h3 {
+                padding-top: .45rem;
+                padding-bottom: .2rem;
+                color: $font-darker;
+              }
+
+              p {
+                color: $font-dark;
+              }
+            }
+          }
+
+          time {
+            display: block;
+            position: relative;
+            line-height: .4rem;
+            padding: 0 0 .3rem;
+            font-size: .26rem;
+            color: $font-dark;
+
+            &:before, &:after {
+              content: '';
+              position: absolute;
+              left: .1rem;
+              bottom: -.04rem;
+              width: .07rem;
+              height: .07rem;
+              border-radius: .35rem;
+              background: $font-light;
+              transition: .5s cubic-bezier(.4, 0, .2, 1);
+            }
+
+            &:after {
+              left: calc(.1rem - .06rem);
+              bottom: -.10rem;
+              width: .19rem;
+              height: .19rem;
+              border-radius: .95rem;
+              background: rgba($main-color, .2);
+              opacity: 0;
+              transition: .5s cubic-bezier(.4, 0, .2, 1);
+            }
+          }
+
+          .c {
+            position: relative;
+            height: 2.1rem;
+            margin: .36rem -.45rem 0;
+            border-radius: .05rem;
+
+            &:before {
+              content: '';
+              position: absolute;
+              left: calc(.45rem + .4rem - .06rem);
+              top: -.1rem;
+              width: 0;
+              border-right: .1rem solid transparent;
+              border-left: .1rem solid transparent;
+              border-bottom: .1rem solid $background;
+              opacity: 0;
+              transition: .5s cubic-bezier(.4, 0, .2, 1);
+            }
+
+            img {
+              position: absolute;
+              left: 0;
+              top: 0;
+              z-index: -1;
+              width: 100%;
+              height: 2.1rem;
+              border-radius: .08rem;
+              opacity: 0;
+              transition: .5s cubic-bezier(.4, 0, .2, 1);
+            }
+
+            h3, p {
+              padding: 0 .45rem;
+            }
+
+            h3 {
+              padding-top: .2rem;
+              padding-bottom: .1rem;
+              @extend .content-4;
+              color: $font-dark;
+            }
+
+            p {
+              line-height: .3rem;
+              @extend .content-2;
+            }
+          }
+        }
+      }
+    }
+  }*/
+}

@@ -1,0 +1,44 @@
+@import '../../special/sign-in';
+
+@include css(sign-up)
+
+.sign-up {
+
+  .user-agreement {
+    @include flex();
+
+    .font-green {
+      margin: 0 0 0 .1rem;
+    }
+  }
+
+  .window {
+    width: 8rem;
+    height: 60vh;
+    background: $background;
+    box-shadow: 0 .1rem .2rem rgba(#000, .3);
+
+    .agreement {
+      width: 100%;
+      height: 100%;
+      padding: .2rem;
+      overflow: hidden;
+
+      .float-header {
+        @include flex(space-between);
+        padding: 0 0 .1rem 0;
+      }
+
+      .txt-content {
+        width: calc(100% + .4rem);
+        padding: 0 .2rem 0 0;
+        height: calc(100% - .4rem);
+        overflow-y: auto;
+      }
+    }
+  }
+
+  .options {
+    box-shadow: 0 0 size(3) rgba(#000, .2);
+  }
+}

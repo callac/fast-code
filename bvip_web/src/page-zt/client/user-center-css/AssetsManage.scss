@@ -1,0 +1,57 @@
+.assets-manage {
+  @import "../../common/special/user-center";
+  .assets-manager-title {
+    padding-left: 0.3rem;
+    margin: 0.2rem 0;
+    height: 0.59rem;
+    line-height: 0.59rem;
+    background: $background-c1;
+    border-radius: 4px;
+    color: $font-black-c1;
+    font-size: 0.2rem;
+  }
+  .my-capital {
+    background: $background-c1;
+    color: $font-black-c1;
+    .capital-title {
+      padding: 0.21rem 0.3rem;
+      border-bottom: 1px solid $body-white;
+      font-size: 0.18rem;
+    }
+    .convert {
+      @include flex();
+      padding: .56rem 0 .5rem;
+      border-radius: 4px;
+
+      .item {
+        margin: 0 0.8rem 0 0.59rem;
+        text-align: center;
+        color: $font-black-c5;
+
+        .value {
+          display: inline-block;
+          margin: 0 0 .1rem;
+          @extend .title-1;
+          color: $font-black-c1;
+        }
+      }
+    }
+  }
+  .vue-popper {
+    color: $font-black-c1;
+    //background: #fff;
+    .scrollbar-wrap {
+      .scrollbar-content {
+        .option {
+          &:hover {
+            background: rgba($background-c1, 0.5);
+          }
+        }
+        .selected {
+          background: $color-colours-4;
+        }
+      }
+    }
+  }
+}
+

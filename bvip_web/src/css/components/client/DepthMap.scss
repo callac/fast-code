@@ -1,0 +1,73 @@
+.depth-map {
+  position: relative;
+  background: $background-2-1;
+
+  .tab-wrap {
+    z-index: 1;
+  }
+
+  .rows-depth {
+    @include flex-column(flex-start, flex-start);
+    height: calc(100vh - 4.2rem);
+    min-height: 4.6rem;
+
+    &.up {
+      justify-content: flex-end;
+    }
+  }
+
+  .table-head {
+    position: relative;
+    z-index: 1;
+  }
+
+  .tbody {
+    @include flex-column(center, flex-start);
+    position: relative;
+    height: calc(100% - .32rem - .24rem);
+    z-index: 0;
+
+    &.upper {
+      justify-content: flex-end;
+    }
+
+    &.under {
+      justify-content: flex-start;
+    }
+
+    .current-price {
+      @include flex(space-between);
+      width: 100%;
+      padding: .1rem 0;
+
+      .price, .rate, .img {
+        padding: 0 .1rem
+      }
+
+      .rate, .img {
+        text-align: right;
+      }
+
+      .price {
+        width: 30%;
+        margin: 0;
+        @extend .content-4;
+        color: $font-darker;
+        cursor: pointer;
+      }
+
+      .rate {
+        width: 35%;
+        @extend .content-4;
+        margin: 0;
+      }
+
+      .img {
+        width: 35%;
+        img{
+          height: 0.17rem;
+        }
+      }
+    }
+  }
+}

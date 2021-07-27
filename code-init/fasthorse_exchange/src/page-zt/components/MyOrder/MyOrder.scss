@@ -1,0 +1,64 @@
+.my-order {
+  .tab-head {
+    //margin: 0 0 .4rem;
+  }
+
+  .t-head {
+    display: flex;
+    margin-top: 0.3rem;
+    background: $color-gray-4;
+    height: 0.48rem;
+    line-height: 0.48rem;
+    color: $font-black-c5;
+    p {
+      text-align: center;
+    }
+    .item1 {
+      flex: 1;
+    }
+    .item2 {
+      flex: 2;
+    }
+    .item3 {
+      flex: 2;
+    }
+    .item4 {
+      flex: 2;
+    }
+    .item5 {
+      flex: 4;
+    }
+    .item6 {
+      flex: 1;
+    }
+  }
+
+  .order-pin {
+    position: static;
+  }
+
+  .link {
+    position: relative;
+    float: right;
+    z-index: 2;
+    display: block;
+    padding: 0.05rem 0.14rem;
+    text-align: right;
+    margin: 0.1rem 0.2rem -.5rem;
+    background: $color-colours-4;
+    color: $font-white-c1;
+    img {
+      vertical-align: bottom;
+      margin-right: 0.05rem;
+      width: 0.17rem;
+    }
+  }
+
+  .order-pin:last-of-type {
+    border-bottom: 1px solid $border;
+  }
+
+  .pagination {
+    margin: .2rem 0 .4rem;
+  }
+}

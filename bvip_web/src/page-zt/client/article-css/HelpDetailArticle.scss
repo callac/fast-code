@@ -1,0 +1,7 @@
+.article-wrap {
+  @include flex(flex-start, flex-start, wrap);
+  margin: 0 auto;
+  width: 11.86rem;
+  padding: .2rem 0;
+  background: $body-white-c2;
+}

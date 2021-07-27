@@ -1,0 +1,636 @@
+.home {
+
+  @import 'components/client/Banner-jp';
+  @import 'components/client/Tab';
+
+  background: $background-2;
+
+  $gradient-home: linear-gradient(to right, $main-color-darker, $main-color);
+  /*$gradient-home-1: linear-gradient(to bottom right, $main-color, $main-color-darker 50%);*/
+  $gradient-home-1: -webkit-gradient(linear, left top, right bottom, from($main-color),
+    color-stop(50%, $main-color-darker));
+  $gradient-home-bg: linear-gradient(to bottom right, $background, $background-2);
+  $gradient-home-bg-hover: linear-gradient(to bottom right, $background, $background-1);
+
+  @media screen and (max-width: 1560px) {
+    .content {
+      width: 90%;
+      margin-left: calc((1560px * .1) / 2) !important;
+
+      &:before {
+        width: 1560px !important;
+        margin-left: calc(-1560px / 2) !important;
+      }
+    }
+  }
+
+  @media screen and (orientation: portrait) {
+    .content {
+      width: 95%;
+      margin-left: calc((100vw * .05) / 2) !important;
+
+      &:before {
+        width: 100vw !important;
+        margin-left: calc(-100vw / 2) !important;
+      }
+    }
+  }
+
+  .content {
+    padding: 1rem 0;
+
+    h2 {
+      font-size: .36rem;
+      color: $font-darker;
+      text-align: center;
+    }
+
+    .desc {
+      margin: 0 0 .44rem;
+      text-align: center;
+      line-height: .24rem;
+    }
+  }
+
+  .banner-wrap {
+    margin: $header-height 0 0;
+    height: 5.6rem !important;
+  }
+
+  .market {
+    padding-top: .4rem;
+
+    &:before {
+      background: $background-1;
+    }
+
+    .prices {
+      position: relative;
+
+      .tab-wrap {
+        border-bottom: 1px solid $border;
+
+        .tab.selected {
+          background: $main-color;
+
+          &:before {
+            content: none;
+          }
+        }
+      }
+
+      .search-wrap {
+        position: absolute;
+        right: 0;
+        top: .06rem;
+        border: 1px solid $border;
+        border-radius: .04rem;
+
+        .search {
+          width: 2.5rem;
+          height: .3rem;
+          border-left: .3rem solid transparent;
+          @extend .content-2;
+          color: $font-dark;
+          background: transparent;
+
+          &::placeholder {
+            color: $font-light;
+          }
+        }
+
+        .iconfont {
+          @include flex(center);
+          position: absolute;
+          left: .1rem;
+          top: .05rem;
+          width: .2rem;
+          height: .2rem;
+          font-size: .2rem;
+          color: $font-light;
+        }
+      }
+
+      table {
+        color: $font;
+        background: $background-1;
+        border: none;
+
+        thead tr, tbody tr {
+          border: none;
+        }
+
+        tbody tr {
+          height: .5rem;
+
+          &:nth-child(odd) {
+            background: rgba($main-color, .05);
+          }
+
+          &:hover {
+            background: rgba($main-color, .02) !important;
+          }
+        }
+      }
+    }
+
+    .main-prices {
+      @include flex(space-between);
+      margin: .2rem 0;
+
+      .main-price {
+        flex: 1;
+        height: 1.4rem;
+        margin: 0 .3rem 0 0;
+        padding: .2rem;
+        background: $main-price-bg;
+        box-shadow: 0 0 0 #000;
+        transition: all .3s;
+
+        &:hover {
+          box-shadow: 0 .02rem .2rem rgba(#000, .5);
+        }
+
+        &:last-child {
+          margin: 0;
+        }
+
+        h2 {
+          @include flex(space-between);
+        }
+
+        .price {
+          display: block;
+          padding: .2rem 0;
+          @extend .title-1;
+          text-align: center;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .features {
+
+    &:before {
+      background: $background-2;
+    }
+
+    .items {
+      @include flex(center, stretch);
+      flex-wrap: wrap;
+      width: 100%;
+      margin: -.4rem 0 0;
+
+      .item {
+        @include flex(center, center);
+        margin: 1rem calc((100% - 2 * (1.28rem + 0.2rem + 3rem)) / 4) 0;
+        border-radius: .05rem;
+        cursor: pointer;
+        //overflow: hidden;
+
+        img {
+          width: 1.28rem;
+          margin: 0 .2rem 0 0;
+        }
+
+        .text {
+          width: 3rem;
+          //height: 100%;
+        }
+
+        h3 {
+          width: 100%;
+          font-size: .20rem;
+          font-weight: 600;
+          color: $font-dark;
+          white-space: nowrap;
+        }
+
+        p {
+          width: 100%;
+          //min-height: calc(.28rem * 3);
+          max-width: 100%;
+          margin: .1rem 0 0;
+          line-height: .28rem;
+          font-size: .14rem;
+          color: $font;
+          //text-align: justify;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .description {
+
+    &:before {
+      background: $background-1;
+    }
+
+    .wrap {
+      padding: 1rem;
+      border-radius: .2rem;
+      box-shadow: 0 0 .14rem rgba(146, 146, 146, 0.18);
+    }
+
+    h2 {
+      margin: 0 0 .4rem;
+    }
+
+    .desc {
+      text-align: left;
+
+      &.ja {
+        text-indent: .15rem;
+      }
+
+      &.zh {
+        text-indent: .3rem;
+      }
+    }
+
+    .logos {
+      @include flex(center);
+
+      .logo {
+        @include flex(center);
+        width: 1.6rem;
+        height: .9rem;
+        margin-right: .6rem;
+        border-radius: .1rem;
+        border: 1px solid $border;
+        overflow: hidden;
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .history {
+    width: auto;
+    margin: 0 !important;
+
+    h2 {
+      margin: 0 0 .2rem;
+    }
+
+    .history-wrap {
+      position: relative;
+      height: calc(4.6rem + 1px);
+      margin: .6rem 1.5rem 0;
+
+      &:hover {
+
+        .btns {
+          opacity: 1;
+        }
+      }
+
+      .btns {
+        @include flex(space-between);
+        position: absolute;
+        left: -1.5rem;
+        right: -1.5rem;
+        top: 50%;
+        z-index: 2;
+        transform: translate(0, -50%);
+        opacity: 0;
+        @extend .transition;
+
+        .iconfont {
+          @include flex(center);
+          width: .4rem;
+          height: .4rem;
+          font-size: .2rem;
+          background: #fff;
+          box-shadow: 0 0 .1rem rgba(#000, .1);
+          cursor: pointer;
+        }
+
+        .btn-next {
+          transform: rotate(180deg);
+        }
+      }
+
+      .wrap {
+        position: relative;
+        height: 100%;
+        z-index: 1;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: -1.5rem;
+        right: -1.5rem;
+        top: calc(50% - 1px);
+        height: 1px;
+        background: $border;
+      }
+
+      .history-item {
+        position: absolute;
+        width: 3.2rem;
+        height: 1.8rem;
+        padding: .3rem;
+        border-radius: .2rem;
+        background: $background-1;
+        cursor: pointer;
+
+        @each $n, $r, $f in (even, top, -1), (odd, bottom, 1) {
+          &:nth-child(#{$n}) {
+            box-shadow: 0 calc(.01rem * #{-$f}) .15rem rgba(146, 146, 146, 0.1);
+            #{$r}: 0;
+
+            &:hover {
+              box-shadow: 0 calc(.01rem * #{-$f}) .15rem rgba($main-color, 0.2);
+            }
+
+            &:before {
+              content: '';
+              position: absolute;
+              left: .3rem;
+              #{$r}: 100%;
+              border-left: .15rem solid transparent;
+              border-right: .15rem solid transparent;
+              border-#{$r}: .15rem solid $background-1;
+            }
+
+            &:after {
+              content: '';
+              box-sizing: border-box;
+              position: absolute;
+              left: .45rem;
+              #{$r}: calc(100% + .5rem + 1px);
+              width: .08rem;
+              height: .08rem;
+              border-radius: 50%;
+              background: rgba($border, 1);
+              transform: translate(-50%, 50% * $f);
+              @extend .transition;
+            }
+          }
+        }
+
+        &.selected {
+
+          &:after {
+            width: .3rem;
+            height: .3rem;
+            border: .08rem solid rgba(#fff, .6);
+            background: $main-color;
+          }
+        }
+
+        time {
+          font-size: .20rem;
+          font-weight: 600;
+          color: $font-dark;
+        }
+
+        .text {
+          margin: .1rem 0 0;
+          line-height: .22rem;
+        }
+      }
+    }
+  }
+
+  .apps {
+    @include flex-column(center, flex-start);
+    position: relative;
+    height: 4.6rem;
+    padding: 0 10% 0 35%;
+
+    &:before {
+      background: $background-1;
+    }
+
+    .app-img {
+      position: absolute;
+      right: 60%;
+      top: .2rem;
+      z-index: -1;
+      width: 2.62rem;
+      margin: 0 1rem 0 0;
+    }
+
+    h2 {
+      padding: 0 0 .3rem;
+      @extend .title-1;
+      font-size: .46rem;
+      color: $font-darker;
+      text-align: left;
+    }
+
+    p {
+      line-height: .4rem;
+      @extend .content-5;
+      color: $font-dark;
+      text-align: left !important;
+    }
+
+    .btns {
+      @include flex(flex-start, center, wrap);
+      margin: .2rem 0 0;
+
+      .img {
+        position: relative;
+        width: 1.6rem;
+        height: 1.6rem;
+        margin: 0 0 0 -.15rem;
+
+        .qrcode {
+          width: 100%;
+        }
+
+        .text {
+          @include flex(center);
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          background: rgba(#fff, .9);
+          padding: .3rem;
+          text-align: center;
+        }
+      }
+
+      .btn {
+        @include flex(center);
+        position: relative;
+        width: 2rem;
+        height: .5rem;
+        margin: 0 0 .2rem;
+        border: 2px solid $border;
+        border-radius: .25rem;
+        background: transparent;
+        vertical-align: text-top;
+        opacity: 1;
+        overflow: hidden;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          z-index: -1;
+          background: #000;
+          transition: .6s ease;
+          opacity: 0;
+        }
+
+        .iconfont {
+          padding: 0 .1rem 0 0;
+          font-size: .3rem;
+          color: inherit;
+        }
+
+        &:hover {
+          border-color: transparent;
+          color: $white;
+
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .news {
+    position: relative;
+    margin-top: .4rem;
+    padding: .6rem 0 1rem;
+
+    &:before {
+      background: $background-1;
+    }
+
+    h2 {
+      margin: 0 0 .6rem;
+
+      .type {
+        display: inline-block;
+        margin: 0 0 0 .2rem;
+        cursor: pointer;
+
+        &:hover {
+          color: rgba($main-color, .7);
+        }
+
+        &.active {
+          color: $main-color;
+        }
+      }
+    }
+
+    .btn-more {
+      @include flex(center);
+      width: 1.6rem;
+      height: .4rem;
+      border-radius: .2rem;
+      margin: .4rem auto 0;
+    }
+
+    .news-wrap-content {
+      @include flex(space-between, flex-start);
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+
+      .news-item-1 {
+        width: 45%;
+        opacity: 1;
+
+        &:hover {
+
+          h3 {
+            color: $main-color;
+          }
+        }
+
+        img {
+          display: block;
+          width: 100%;
+        }
+
+        h3 {
+          margin: .26rem 0 .1rem;
+          @extend .content-4;
+          color: $font-darker;
+        }
+
+        p {
+          @include flex(space-between);
+        }
+
+        time {
+          @extend .content-2;
+          color: $font;
+        }
+      }
+
+      .right {
+        width: 50%;
+      }
+
+      .news-item {
+        @include flex(space-between);
+        position: relative;
+        height: .6rem;
+        padding: 0 0 0 .34rem;
+        border-bottom: 1px solid $border;
+        cursor: pointer;
+
+        &:last-child {
+          border: none;
+        }
+
+        &.before:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 50%;
+          width: .1rem;
+          height: .1rem;
+          border-radius: 50%;
+          background: $main-color;
+          transform: translate(0, -50%);
+        }
+
+        &:hover {
+
+          h3 {
+            color: $main-color;
+          }
+        }
+
+        time {
+          display: block;
+          line-height: .24rem;
+          @extend .content-2;
+          color: $font;
+          text-align: center;
+        }
+
+        h3 {
+          line-height: .24rem;
+          @extend .content-4;
+          color: $font-darker;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

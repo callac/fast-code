@@ -1,0 +1,92 @@
+.mobile-input {
+  @include flex();
+  position: relative;
+  width: 100%;
+  margin: 0 0 .2rem;
+
+  .label {
+    display: block;
+    width: 1rem;
+    color: $font;
+  }
+
+  .input-base {
+    @include flex(flex-start, center);
+    flex: 1;
+    height: .42rem;
+    padding: 0 .1rem;
+    border: none !important;
+    color: $main-color;
+    background: $input-bg;
+
+    &::placeholder {
+      color: $font-light;
+    }
+
+    &.default {
+      color: $font-light;
+      /*background: transparent;*/
+    }
+
+    &.value {
+      @include ellipsis(100%);
+    }
+
+    &.red {
+      color: $red !important;
+    }
+
+    &.have-icon {
+      text-indent: .32rem;
+    }
+  }
+
+  .prefix, .unit, .btn, .img-code, .iconfont {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    padding: 0 .1rem;
+    height: .4rem;
+    margin: -.2rem 0 0;
+    line-height: .4rem;
+    color: $font;
+    @extend .content-2;
+
+    &.is-select {
+      right: .2rem;
+    }
+  }
+
+  .img-code {
+    padding: 0;
+    background: $font-darker;
+  }
+
+  .iconfont {
+    right: auto;
+    left: 0;
+    font-size: .22rem;
+  }
+
+  .prefix {
+    right: auto;
+    left: 0;
+    font-size: inherit;
+    color: $main-color !important;
+  }
+
+  .btn {
+    border: none !important;
+    color: $main-color !important;
+    background: transparent !important;
+  }
+
+  .error-text {
+    position: absolute;
+    bottom: -.2rem;
+    right: .1rem;
+    line-height: .2rem;
+    @extend .content-2;
+    color: $red;
+  }
+}

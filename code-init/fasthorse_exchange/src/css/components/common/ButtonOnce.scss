@@ -1,0 +1,11 @@
+.button-once {
+
+  &[disabled] {
+    opacity: 1 !important;
+  }
+
+  .loading {
+    vertical-align: middle;
+    margin: 0 !important;
+  }
+}

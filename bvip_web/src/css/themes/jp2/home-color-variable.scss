@@ -1,0 +1,32 @@
+/* Home component color variable */
+
+$announce-bg: #18203f;
+$announce-text: #7291a1;
+
+$main-price-h2: #7291a1;
+$main-price-price: $white;
+$main-price-rate: #7291a1;
+$main-price-bg: #18203f;
+
+$app-download-bg: url('../assets/client/home/home-app-bg-default-white_gray.jpg') no-repeat center center/19.2rem auto;
+$main-price-bg: url('../assets/client/home/home-market-card-bg-jp2-jp2.png') no-repeat center center / 100% 100%;
+$swiper-button-pre-bg: url('../assets/client/home/swiper-button-prev-jp2-jp2.png') no-repeat center center / 100% 100%;
+$swiper-button-next-bg: url('../assets/client/home/swiper-button-next-jp2-jp2.png') no-repeat center center / 100% 100%;
+$app-download-height: 3.9rem;
+
+/* If use gradient color, the value must be set to webkit hook(IE can not support text gradient) */
+/*$app-download-title: -webkit-gradient(linear, left top, right bottom, from($main-color),
+  color-stop(100%, $main-color-darker));*/
+$app-download-title: $white;
+
+$app-download-button-text: $main-color;
+$app-download-button-text-hover: $white;
+$app-download-button-border: $main-color;
+$app-download-button-border-hover: transparent;
+$app-download-button-background: transparent;
+$app-download-button-background-hover: $main-color;
+
+$feature-item-describe-color: rgba(204, 204, 204, 1);
+$price-font-green-color: #0DAC67;
+$price-font-red-color: #EE1448;
+$price-coin-color: #120726;

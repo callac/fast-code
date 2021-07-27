@@ -1,0 +1,34 @@
+.indicator-line {
+  fill: none;
+  stroke-width: 1;
+}
+
+.indicator-bar {
+  fill: none;
+  stroke-width: 3;
+}
+
+.MACD-DIF, .KDJ-K, .RSI-5, .WR-6 {
+  color: $kline-indicator-color-1;
+  stroke: $kline-indicator-color-1;
+}
+
+.MACD-DEA, .KDJ-D, .RSI-10, .WR-10 {
+  color: $kline-indicator-color-2;
+  stroke: $kline-indicator-color-2;
+}
+
+.KDJ-J, .RSI-14 {
+  color: $kline-indicator-color-3;
+  stroke: $kline-indicator-color-3;
+}
+
+.MACD-MACD-up, .MACD-MACD.up {
+  color: $kline-up-color;
+  stroke: $kline-up-color;
+}
+
+.MACD-MACD-down, .MACD-MACD.down {
+  color: $kline-down-color;
+  stroke: $kline-down-color;
+}

@@ -1,0 +1,24 @@
+.article-wrap {
+
+  .content {
+    margin: 0 auto;
+    padding: .2rem 0;
+    min-height: calc(100vh - 0.6rem - #{$footer-height});
+  }
+
+  * {
+    text-align: left;
+  }
+
+  .h1 {
+    //padding: 0 0 .1rem;
+    @extend .content-5;
+    //color: $font-black-c2;
+    line-height: .4rem;
+    border-bottom: none;
+  }
+
+  .msg-pin {
+    border-bottom: 1px solid rgba(139, 137, 200, 0.2);
+  }
+}

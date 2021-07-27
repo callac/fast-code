@@ -1,0 +1,88 @@
+.currency-account {
+  @import '../../common/special/user-center';
+  position: relative;
+  background: $background-c1;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+
+  .convert {
+    @include flex();
+    padding: .4rem 0 .6rem;
+
+    .item {
+      margin: 0 .5rem 0 0;
+
+      .value {
+        display: inline-block;
+        margin: 0 0 .1rem;
+        @extend .title-1;
+        color: $font-darker;
+      }
+    }
+  }
+
+  .btn {
+    @include lineHeight(.24rem);
+    padding: 0 .1rem;
+    @extend .content-2;
+    background: transparent;
+    color: $color-colours-4;
+    border: 1px solid $color-colours-4;
+
+    &:hover {
+      background: $color-colours-4;
+      color: $font-white-c1;
+    }
+
+    &.btn-blue {
+      background: transparent;
+    }
+  }
+
+  .btn-disabled {
+    color: $font-black-c5;
+    border: 1px solid $font-black-c5;
+    cursor: not-allowed;
+    &:hover {
+      background: transparent;
+      color: $font-black-c5;
+    }
+  }
+
+  .check-box {
+    position: absolute;
+    top: -0.4rem;
+    right: 0.2rem;
+  }
+
+  .table-base-wrap {
+    .table-base {
+      color: $font-black-c1;
+      .thead {
+        color: $font-black-c5;
+        .tr {
+          .th {
+            text-align: center;
+          }
+        }
+      }
+      .td {
+        text-align: center;
+      }
+    }
+  }
+  .table-base thead tr {
+    background: $color-gray-4 !important;
+    color: $font-black-c5;
+  }
+
+  .dark {
+    margin-top: 0.2rem;
+    .btn {
+      padding: 0 0.25rem;
+      height: 100%;
+      background: $color-colours-4;
+      border-radius: 0;
+    }
+  }
+}

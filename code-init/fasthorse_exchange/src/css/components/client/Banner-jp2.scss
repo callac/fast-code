@@ -1,0 +1,53 @@
+.banner {
+  position: relative;
+  width: 100%;
+
+  .wrap {
+    @include flex(flex-start);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    &.transition {
+      transition: ease .5s;
+    }
+  }
+
+  .b {
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+  }
+
+  .nav {
+    @include flex(center);
+    flex-wrap: nowrap;
+    position: absolute;
+    left: 50%;
+    bottom: 2.2rem;
+    width: 1rem;
+    margin: 0 0 0 -.5rem;
+
+    .bar {
+      width: .11rem;
+      height: .11rem;
+      border-radius: 50%;
+      // opacity:0.2;
+      background: $white-lightest;
+      margin: 0 .1rem 0 0;
+      cursor: pointer;
+
+      &:hover, &.active {
+        width: .33rem;
+        height: .1rem;
+        background: $white-lighter;
+        border-radius: .05rem;
+      }
+
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+}

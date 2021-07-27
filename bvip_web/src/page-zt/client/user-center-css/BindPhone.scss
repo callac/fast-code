@@ -1,0 +1,31 @@
+.bind-phone {
+  @import "../../common/special/bind";
+  @import "../../common/special/user-center";
+  .edit-phone-tips{
+    width: 5rem;
+    line-height: 0.42rem;
+    text-align: center;
+    height:0.42rem;
+    color: #333333;
+    background:#FDF9F2;
+    border:0.01rem solid rgba(242, 213, 171, 1);
+    border-radius:0.02rem;
+    margin-bottom: 0.24rem;
+    .icon-tanhao{
+      margin-right: 0.1rem;
+      font-size: 0.16rem;
+      color: #FEC252;
+    }
+  }
+  .detail-content {
+    margin-bottom: 0.3rem;
+    padding: 0.3rem;
+    background: $body-white-c2;
+    border-radius: 0.04rem;
+    .detail-title {
+      padding-bottom: 0.2rem;
+      border-bottom: 1px solid $color-gray-5;
+      font-size: 0.16rem;
+    }
+  }
+}

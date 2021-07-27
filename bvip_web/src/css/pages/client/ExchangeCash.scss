@@ -1,0 +1,56 @@
+.exchange-cash {
+  background: $background-3;
+
+  .content {
+    position: static;
+    border: 1px solid $border;
+    border-bottom: none;
+
+    &:before {
+      content: '';
+    }
+
+    &:first-of-type {
+      border-top: none;
+    }
+  }
+
+  .content.forms {
+    @include flex(space-between, flex-start);
+    padding-top: .2rem;
+
+    .exchange-cash-form {
+      position: static;
+      flex: 1;
+    }
+  }
+
+  .tips {
+    padding: .4rem;
+
+    .h2 {
+      @extend .content-4;
+      opacity: .7;
+    }
+
+    .p {
+      padding: .1rem 0 .1rem .18rem;
+      text-indent: -.18rem;
+      color: $font-light-1;
+
+      &:first-of-type {
+        padding-top: .2rem;
+      }
+    }
+  }
+
+  .my-order {
+    padding: .2rem .4rem .4rem;
+  }
+
+  .popup {
+    width: 6.98rem;
+    height: 4.04rem;
+    cursor: pointer;
+  }
+}

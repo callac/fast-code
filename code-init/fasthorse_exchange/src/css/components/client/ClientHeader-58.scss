@@ -1,0 +1,51 @@
+.client-header {
+  @import 'components/client/UserPin-58';
+  @import 'components/client/LangPin-58';
+  @import 'components/client/HeaderCoins-58';
+
+  $height: .9rem;
+
+  position: relative;
+  z-index: 1001;
+  @include flex(space-between);
+  height: $header-height;
+  padding: 0 .3rem;
+
+  &:before {
+    background: #262a42;
+  }
+
+  &.home {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: $height;
+  }
+
+  &.header-1 {
+    width: 100%;
+    padding: .3rem;
+    margin: 0;
+  }
+
+  .logo {
+    display: block;
+    width: auto;
+    height: .26rem;
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .nav {
+    @include flex(flex-start);
+    flex: 1;
+    margin: 0 0 0 .4rem;
+
+    .a {
+      padding: .2rem;
+      font-size: .16rem;
+      color: $white;
+    }
+  }
+}

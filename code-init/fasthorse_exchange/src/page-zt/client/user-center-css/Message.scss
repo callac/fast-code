@@ -1,0 +1,19 @@
+.message {
+  @import "../../common/special/bind";
+
+  .h1 {
+    margin: .2rem 0 .1rem;
+    @extend .content-5;
+  }
+
+  .time {
+    display: block;
+    margin: 0 0 .3rem;
+    color: $font-light;
+  }
+
+  .p {
+    margin: .3rem 0;
+    color: $font-light-1;
+  }
+}

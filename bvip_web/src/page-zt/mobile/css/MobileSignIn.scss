@@ -1,0 +1,103 @@
+.mobile-sign-in {
+  display: block;
+  min-height: 100vh;
+  //background: linear-gradient($background-2 70%, $background-4);
+  background: #132229;
+  //overflow: hidden;
+  .header {
+    @include lineHeight(.44rem);
+    @extend .content-4;
+    text-align: center;
+  }
+
+  .forms {
+    //padding: 0 .1rem;
+    margin: .2rem 0 0.35rem 0;
+    .mobile-input {
+      //margin: 0 0 .1rem;
+      border-bottom: 0.01rem solid #3D4E57 !important;
+      margin: 0;
+      .input-base{
+        background: none;
+        height: 0.5rem;
+        color: #C2D9E4;
+        border-bottom: none !important;
+        &::placeholder{
+          color: #C2D9E4;
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    //padding: 0 .1rem;
+    margin: 0 0 .2rem;
+
+    .submit {
+      @include flex(center);
+      width: 100%;
+      min-width: 100% !important;
+      @include lineHeight(.4rem);
+      background:rgba(14,181,161,1);
+    }
+  }
+
+  .footer {
+    width: 100%;
+    margin: 0 0 .1rem;
+    text-align: center;
+
+    .btn {
+      border: none;
+      background: transparent !important;
+    }
+  }
+
+  .verify-items {
+    width: 80vw;
+    padding: .15rem;
+    border-radius: .05rem;
+    background: #fff;
+    color: #0EB5A1;
+    .verify-items-h {
+      margin: 0 0 .2rem;
+      @extend .content-4;
+    }
+    .mobile-input{
+      border-bottom: 0.01rem solid #EBF1F5 !important;
+      .input-base{
+        height: 0.4rem;
+        color: #1A2A33;
+        &::placeholder{
+          color: #C2D9E4;
+          opacity: 1;
+        }
+      }
+      .btn[disabled]{
+         opacity: 0.5;
+      }
+    }
+
+    .btns {
+      padding-top: 0.16rem;
+      .btn {
+        //padding: 0 .2rem;
+        @include lineHeight(.3rem);
+        width: 100%;
+      }
+      .btn-green-fill{
+        background: #0EB5A1;
+        opacity: 1;
+        margin-bottom: 0.05rem;
+      }
+      .btn-cancel {
+        border: none;
+        color: #0EB5A1;
+      }
+    }
+  }
+}
+.agreement.article-content p:first-of-type{
+  color: #556a7c;
+}

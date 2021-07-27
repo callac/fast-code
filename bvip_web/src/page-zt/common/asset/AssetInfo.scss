@@ -1,0 +1,100 @@
+.asset-info {
+
+  .head {
+    @include flex(flex-start, flex-start);
+    margin: 0 0 .6rem;
+
+    .icon-wrap {
+      width: 1.48rem;
+      height: 1.48rem;
+      padding: .17rem;
+      margin: 0 .2rem 0 0;
+      border: 1px solid $border;
+
+      .icon {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+
+      div.icon {
+        @include flex(center);
+        @extend .content-5;
+        color: $white;
+        background: $main-color;
+      }
+    }
+
+    .right {
+      flex: 1;
+    }
+
+    h3 {
+      @extend .content-5;
+      color: $font-dark;
+      margin: .1rem 0;
+      line-height: .26rem;
+
+      .full-name {
+        @extend .content-2;
+        line-height: .20rem;
+      }
+    }
+  }
+
+  .card {
+    display: inline-block;
+    border: 1px solid $border;
+    vertical-align: top;
+    margin-bottom: calc(100% * 2 / 120);
+    //background: $background-4;
+
+    &:nth-child(2n) {
+      width: calc(100% * 68 / 120);
+      margin-right: calc(100% * 2 / 120);
+    }
+
+    &:nth-child(2n+1) {
+      width: calc(100% * 50 / 120)
+    }
+
+    h4 {
+      @include flex();
+      height: .5rem;
+      padding: 0 .2rem;
+      border-bottom: 1px solid $border;
+      @extend .content-5;
+      color: $font-dark;
+    }
+
+    .info {
+      @include flex();
+      height: .48rem;
+      margin: 0 .2rem;
+      border-bottom: 1px solid $border;
+
+      &:last-child {
+        border: none;
+      }
+
+      .name {
+        display: block;
+        min-width: .9rem;
+        margin-right: .2rem;
+        color: $font-light-1;
+      }
+
+      .value {
+        color: $font-dark;
+      }
+    }
+
+    .detail-intro {
+      padding: .2rem;
+
+      * {
+        color: $font-dark;
+      }
+    }
+  }
+}

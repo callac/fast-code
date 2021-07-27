@@ -1,0 +1,430 @@
+.mobile-page-container{
+  background: url("../assets/mobile/mobile-ban.png") no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  a{
+    opacity: 1;
+  }
+  .btn-green-fill{
+    opacity: 1;
+  }
+  .sign-header {
+    padding: 0.65rem 0.3rem 0.52rem 0.3rem;
+    .website{
+      img{
+        height: 0.28rem;
+      }
+    }
+    .description{
+      padding: 0.16rem 0 0.28rem 0;
+      font-size: 0.12rem;
+      color: #C2D9E4;
+      opacity: 0.5;
+    }
+    .tab-content{
+      width:1.4rem;
+      height:0.23rem;
+      line-height: 0.23rem;
+      background: rgba(14, 181, 161, 0.31);
+      display: flex;
+      border-radius:0.12rem;
+      a{
+        flex: 1;
+        color:rgba(194,217,228,0.5);
+        font-size: 0.12rem;
+        text-align: center;
+      }
+      .acitve{
+        width:0.7rem;
+        background:rgba(14,181,161,1);
+        border-radius:0.12rem;
+        color: #FFFFFF;
+      }
+    }
+  }
+  .wrap{
+    padding: 0 0.3rem;
+    .mobile-input {
+      margin: 0;
+      border-bottom: 0.005rem solid #3D4E57 !important;
+      .label{
+        padding-left: 0.1rem;
+        color: #C2D9E4;
+      }
+      .input-base{
+        background: none;
+        height: 0.5rem;
+        color: #C2D9E4;
+        border-bottom: none !important;
+        &::placeholder{
+          color: #C2D9E4;
+          opacity: 0.5;
+        }
+      }
+      .btn{
+        color: #0EB5A1 !important;
+        font-size: 0.14rem;
+      }
+    }
+  }
+
+  .select-base .icon-arrow{
+    background: url("../assets/mobile/right.png") no-repeat;
+    width: 0.06rem;
+    height: 0.11rem;
+    background-size: 100% auto;
+    &:before{
+      display: none;
+    }
+    &:after{
+      display: none;
+    }
+    &.reverse{
+      transform: rotate(0deg);
+    }
+  }
+}
+//首页
+.mobile-home{
+  background: #132229;
+  .mobile-page-container{
+    background: url("../assets/mobile/home-ban.png") no-repeat;
+    background-size: cover;
+  }
+  .mobile-wrap{
+    padding:0 0.3rem;
+    .logo{
+      text-align: center;
+      padding: 0.42rem 0 0.28rem 0;
+      img{
+        width: 1.55rem;
+      }
+    }
+    .abstract{
+      font-size:0.11rem;
+      line-height: 1.8;
+      font-weight:500;
+      color:rgba(194,217,228,1);
+      padding-bottom: 0.48rem;
+    }
+    .coin-list{
+      .coin-item{
+        float: left;
+        margin-bottom: 0.36rem;
+        color:rgba(255,255,255,1);
+        font-size:0.12rem;
+        &:nth-child(2){
+          float: right;
+        }
+        .coin-name{
+          font-size:0.18rem;
+          font-weight:bold;
+          padding-bottom: 0.12rem;
+        }
+        .price{
+          display: inline-block;
+          min-width: 0.8rem;
+        }
+      }
+      &:after{
+        content: '';
+        display: block;
+        width: 100%;
+        clear: both;
+      }
+    }
+    .operate-content{
+      padding-bottom: 0.45rem;
+      display: flex;
+      a{
+        cursor: pointer;
+        flex: 1;
+        opacity: 1;
+        height: 0.42rem;
+        line-height: 0.42rem;
+        font-size: 0.18rem;
+        text-align: center;
+        color: #0EB5A1;
+        border: 0.01rem solid #0EB5A1;
+        border-radius: 0.6rem;
+      }
+      .reg-btn{
+        margin-left: 0.22rem;
+        color: #ffffff;
+        background: #0EB5A1;
+      }
+    }
+    .sub-title{
+      font-size:0.2rem;
+      font-weight:bold;
+      color:rgba(255,255,255,1);
+      padding-bottom: 0.25rem;
+      text-align: center;
+    }
+    .advantage-content{
+      .advantage-item{
+        width: 50%;
+        float: left;
+        height: 1.2rem;
+        margin-bottom: 0.2rem;
+        text-align: center;
+        &:nth-child(odd){  //奇数
+          .item-text{
+            .describe{
+              padding-right: 0.16rem;
+            }
+          }
+        }
+        &:nth-child(even){  //偶数
+          .item-text{
+            .describe{
+              padding-left: 0.16rem;
+            }
+          }
+        }
+        .item-head{
+          height: 0.46rem;
+          img{
+            width: auto;
+            max-width: 0.51rem;
+            height: 0.44rem;
+          }
+        }
+        .item-text{
+          padding-top: 0.1rem;
+          .title{
+            font-size:0.12rem;
+            color:rgba(255,255,255,1);
+            padding-bottom: 0.08rem;
+          }
+          .describe{
+            font-size:0.09rem;
+            font-weight:500;
+            color:rgba(194,217,228,1);
+            opacity:0.6;
+          }
+        }
+      }
+      &:after{
+        content: '';
+        display: block;
+        width: 100%;
+        clear: both;
+      }
+    }
+    .app-btns{
+      display: flex;
+      .app-btn{
+        flex: 1;
+        height:0.33rem;
+        line-height: 0.33rem;
+        border:1px solid rgba(255,255,255,1);
+        border-radius:0.16rem;
+        font-size:0.16rem;
+        font-weight:bold;
+        text-align: center;
+        color: #ffffff;
+        &:nth-child(1){
+          margin-right: 0.22rem;
+        }
+      }
+    }
+  }
+  .down-layer-container{
+    height: 0.7rem;
+    .down-layer{
+      position: fixed;
+      height: 0.7rem;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background:rgba(0,0,0,0.8);
+      padding: 0.12rem 0.28rem;
+      display: flex;
+      .logo{
+        padding-right: 0.08rem;
+        img{
+          height: 0.44rem;
+        }
+      }
+      .web-name{
+        flex: 1;
+        padding-top: 0.14rem;
+        img{
+          width: 0.78rem;
+        }
+      }
+      .down-app-btn{
+        margin-top: 0.06rem;
+        width:1.02rem;
+        height:0.32rem;
+        line-height: 0.32rem;
+        text-align: center;
+        background:rgba(14,181,161,1);
+        border-radius:0.16rem;
+        color: #FFFFFF;
+        cursor: pointer;
+      }
+    }
+  }
+}
+//ios下载页面
+.ios-down-container{
+  padding:0 0.3rem 0.54rem 0.3rem;
+  .sub-title{
+    font-size:0.24rem;
+    font-weight:bold;
+    color:rgba(255,255,255,1);
+    padding-bottom: 0.12rem;
+  }
+  .ios-down-content{
+    font-size:0.12rem;
+    color:rgba(194,217,228,1);
+    padding-bottom: 0.18rem;
+  }
+  .down-tips{
+    font-size:0.12rem;
+    font-weight:500;
+    color:rgba(255,32,32,1);
+    padding-bottom: 0.28rem;
+  }
+  .down-btn{
+    display: block;
+    width:2.10rem;
+    height:0.45rem;
+    line-height: 0.45rem;
+    background:#0EB5A1;
+    opacity: 1;
+    border-radius:0.23rem;
+    text-align: center;
+    font-size:0.16rem;
+    font-weight:bold;
+    color:rgba(255,255,255,1);
+    position: relative;
+    z-index: 2;
+    &:after{
+      content: '';
+      display: block;
+      width: 2.4rem;
+      height: 1rem;
+      background: url("../assets/mobile/btn-shadow.png") no-repeat;
+      background-size: 2.4rem auto;
+      position: absolute;
+      top: -0.2rem;
+      left: 50%;
+      z-index: 1;
+      margin-left: -1.2rem;
+      opacity: 0.5;
+    }
+  }
+}
+//教程
+.down-rule-container{
+  background: #ffffff;
+  padding: 0.26rem 0.2rem 0.3rem 0.2rem;
+  .rule-title{
+    text-align: center;
+    font-size:0.24rem;
+    font-weight:bold;
+    color:rgba(19,34,41,1);
+    padding-bottom: 0.28rem;
+  }
+  .course-step{
+    display: flex;
+    padding-bottom: 0.2rem;
+    .step-num{
+      width:0.22rem;
+      height:0.15rem;
+      line-height: 0.15rem;
+      text-align: center;
+      background: url("../assets/mobile/numerical-ban.png") no-repeat;
+      background-size: cover;
+      span{
+        font-size:0.14rem;
+        color:rgba(255,255,255,1);
+      }
+    }
+    .step-content{
+      padding-left: 0.08rem;
+      flex: 1;
+      padding-right: 0.28rem;
+      p{
+        font-size:0.11rem;
+        font-weight:bold;
+        color:rgba(19,34,41,1);
+        line-height: 1.8;
+      }
+      img{
+        margin: 0.2rem 0;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+//安卓下载页面
+.mobile-android-down{
+  background: url("../assets/mobile/android-btn.png") no-repeat center 0;
+  background-size: 105% auto;
+  min-height: 100vh;
+  .android-down-logo{
+    text-align: center;
+    padding: 1.14rem 0 1.4rem 0;
+    img{
+      width: 1.7rem;
+    }
+  }
+  .down-btn{
+    display: block;
+    width:2.10rem;
+    height:0.45rem;
+    line-height: 0.45rem;
+    background:#0EB5A1;
+    border-radius:0.23rem;
+    text-align: center;
+    font-size:0.16rem;
+    font-weight:bold;
+    opacity: 1;
+    color:rgba(255,255,255,1);
+    position: relative;
+    margin: 0 auto;
+    z-index: 2;
+    &:after{
+      content: '';
+      display: block;
+      width: 2.4rem;
+      height: 1rem;
+      background: url("../assets/mobile/btn-shadow.png") no-repeat;
+      background-size: 2.4rem auto;
+      position: absolute;
+      top: -0.16rem;
+      left: 50%;
+      z-index: 1;
+      margin-left: -1.2rem;
+      opacity: 0.5;
+    }
+  }
+}
+
+//微信浏览器内下载提示
+.wx-down-tips{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  background:rgba(0,0,0,0.6);
+  z-index: 100;
+  img{
+    width: 2.5rem;
+    height: 1.55rem;
+    position: fixed;
+    right: 0.26rem;
+    top: 0.22rem;
+  }
+}
+
+
+.mobile #udesk_container{
+  display: none;
+}

@@ -1,0 +1,66 @@
+.pagination {
+  @include flex(flex-end);
+
+  @function size($val:1) {
+    @return $val * .1rem
+  }
+
+  margin: .2rem 0;
+  font-size: size(1.4);
+  color: $font;
+  overflow: hidden;
+
+  .label {
+    height: size(2.8);
+    line-height: size(2.8);
+    user-select: none;
+    font-size: .12rem;
+    color: $font-light;
+  }
+
+  .input {
+    box-sizing: border-box;
+    width: size(9);
+    height: size(2.8);
+    padding: 0 size();
+    margin: 0 size(2) 0 size();
+    border-radius: size(.3);
+    line-height: size(2.6);
+    color: $font-black-c1;
+    background: $background-c1;
+    border: 1px solid $color-gray-7;
+  }
+
+  .page-btn {
+    box-sizing: border-box;
+    min-width: size(2.8);
+    height: size(2.8);
+    line-height: size(2.6);
+    padding: 0 size(.4);
+    margin: 0 0 0 size();
+    border: 1px solid $border;
+    border-radius: .03rem;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: middle;
+    user-select: none;
+    color: $color-colours-4;
+
+    &:hover {
+      background: $color-colours-4;
+      color: #fff;
+    }
+
+    &.disabled {
+      cursor: default;
+      background: rgba(#000, .1);
+      border-color: rgba($border, .1);
+    }
+
+    &.active {
+      color: #fff;
+      background: $color-colours-4;
+      border-color: $color-colours-4;
+    }
+  }
+}

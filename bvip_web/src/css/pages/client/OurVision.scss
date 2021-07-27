@@ -1,0 +1,188 @@
+.our-vision {
+  //margin: -1.5rem 0 0;
+  background: $background-2;
+  color: $white;
+
+  @media screen and (max-width: 1560px) {
+    .content {
+      width: 90%;
+      margin-left: calc((1560px * .1) / 2) !important;
+
+      &:before {
+        width: 1560px !important;
+        margin-left: calc(-1560px / 2) !important;
+      }
+    }
+  }
+
+  @media screen and (orientation: portrait) {
+    .content {
+      width: 95%;
+      margin-left: calc((100vw * .05) / 2) !important;
+
+      &:before {
+        width: 100vw !important;
+        margin-left: calc(-100vw / 2) !important;
+      }
+    }
+  }
+
+  .banner-wraps {
+    margin-top: 1.1rem;
+    padding-top: 2.28rem;
+    height: 4.34rem !important;
+    background-image: url('../assets/client/our-vision/our-vision-banner.jpg');
+    background-size: cover;
+    text-align: center;
+    font-size: 0.42rem;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+  }
+
+  .market {
+    .prices {
+      table {
+        color: $font;
+        // background: $background-2;
+        border: none;
+        thead {
+          border-bottom: 1px solid $font-price;
+        }
+
+        thead tr, tbody tr:nth-child(even) {
+          // background: $background-1;
+        }
+
+        tbody {
+          .check-box {
+            span {
+              color: $font-tbody-thead !important;
+            }
+          }
+          .table-value {
+            color: black;
+          }
+        }
+
+        span {
+          color: inherit;
+        }
+      }
+    }
+    .seamless-warp2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1.1rem;
+      padding: 0.2rem 0;
+      overflow: hidden;
+      border-bottom: 1px solid $border-2;
+      z-index: 1001;
+      .scroll-box {
+        width: 100%;
+        tr {
+          width: 100%;
+          td {
+            width: 3.5rem;
+            height: 0.8rem;
+            .main-price {
+              @include flex(space-around);
+              width: 100%;
+              height: 0.8rem;
+              padding: .1rem;
+              border-left: 1px solid $border-2;
+              transition: all .3s;
+
+              &:last-child {
+                //border-left: none;
+              }
+
+              h2 {
+                //@include flex(space-between);
+                color: $white-lighter;
+              }
+
+              .price {
+                display: block;
+                @extend .title-1;
+                font-size: .22rem;
+                margin-top: .1rem;
+                color: $white;
+                white-space: nowrap;
+              }
+
+              .rate {
+                color: $font;
+              }
+
+              .unit {
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .content-body {
+    height: 10.5rem;
+    background: $white;
+    box-sizing: border-box;
+    overflow: hidden;
+    color: $black-darker;
+    div {
+      width: 12.69rem;
+      margin: auto;
+    }
+    .containers {
+      margin: 0.94rem auto;
+      background: $white;
+      .cont1 {
+        padding: 0 0 0.2rem 0.42rem;
+        font-size: 0.32rem;
+        border-bottom: 1px solid $black-lighter;
+      }
+      .cont2 {
+        margin-top: 0.2rem;
+        padding-left: 0.42rem;
+        font-size: 0.16rem;
+      }
+    }
+    .price-table {
+      .price-title {
+        padding: 0 0.42rem;
+        font-size: 0.32rem;
+      }
+      .table-detail {
+        margin-top: 0.2rem;
+        font-size: 0.16rem;
+        .table-item {
+          display: flex;
+          align-items: center;
+          padding: 0 0.42rem;
+          box-sizing: border-box;
+          height: 1rem;
+          border-top: 1px solid $black-lighter;
+          border-bottom: 1px solid $black-lighter;
+          p:first-child {
+            flex: 1.5;
+            font-size: 0.2rem;
+            font-weight: bold;
+          }
+          p:last-child {
+            flex: 8.5;
+          }
+          &:last-child {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+  .footer-img {
+    height: 4.89rem;
+    background-image: url('../assets/client/our-vision/our-vision-footer.jpg');
+    background-size: cover;
+  }
+}

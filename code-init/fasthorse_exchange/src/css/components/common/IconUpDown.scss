@@ -1,0 +1,30 @@
+.icon-up-down {
+  display: inline-block !important;
+  position: relative !important;
+  color: inherit !important;
+
+  .iconfont {
+    position: absolute !important;
+    left: 50%;
+    top: 50%;
+    color: inherit !important;
+    width: .12rem;
+    height: .12rem;
+    margin: -.06rem 0 0 -.06rem;
+    font-size: .12rem;
+    transform: scale(.8);
+    opacity: .5;
+
+    &.is {
+      opacity: 1;
+    }
+
+    &.icon-arrowdropdown-copy-1 {
+      margin-top: -.1rem;
+    }
+
+    &.icon-arrowdropdown {
+      margin-top: -.02rem;
+    }
+  }
+}

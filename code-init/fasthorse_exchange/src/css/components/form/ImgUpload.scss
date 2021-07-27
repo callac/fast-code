@@ -1,0 +1,62 @@
+.img-upload {
+  align-items: stretch !important;
+
+  .img {
+    @include flex(center, center);
+    position: relative;
+    width: 1.8rem;
+    margin: 0 .1rem .1rem 0;
+    background: $input-bg;
+
+    &:hover {
+      .name {
+        opacity: 1;
+      }
+    }
+
+    img {
+      cursor: pointer;
+    }
+
+    .name {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      @include lineHeight(.3rem);
+      @include ellipsis(100%);
+      padding: 0 .1rem;
+      @extend .content-2;
+      color: $font-darker;
+      background: rgba(0, 0, 0, .3);
+      opacity: 0;
+    }
+  }
+
+  .iconfont {
+    @include flex-column(center, center);
+    width: 1.8rem;
+    height: 1.2rem;
+    margin: 0 .1rem .1rem 0;
+    border: 1px dashed $border;
+    font-size: .2rem;
+    cursor: pointer;
+
+    &:hover {
+      border-color: $border-hover;
+
+      &:before {
+        color: $font-darker;
+      }
+    }
+
+    .tip {
+      @extend .content-2;
+      padding: 0 .2rem;
+      margin: .1rem 0 0;
+      color: $font-light;
+      text-align: center;
+      transform: scale(.8);
+    }
+  }
+}

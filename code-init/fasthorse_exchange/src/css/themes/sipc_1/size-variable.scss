@@ -1,0 +1,24 @@
+$margin: .3rem;
+$padding: .2rem;
+$status-bar-height: .44rem;
+$bottom-bar-height: .49rem;
+$tabs-height: .35rem;
+$filter-height: .4rem;
+
+$header-height: .8rem;
+$footer-height: 3rem;
+$copyright-height: .6rem;
+
+$announce-height: .5rem;
+
+$body-min-width: 1280px;
+
+$content-width: 12rem;
+
+$user-center-content-width: 12rem;
+
+$base-size: .1rem;
+
+@function size($val) {
+  @return $val * $base-size;
+}

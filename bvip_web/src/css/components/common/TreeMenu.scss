@@ -1,0 +1,44 @@
+.tree-menu {
+  width: 100%;
+  padding: 0 0 0 $margin;
+  background: #fff;
+
+  .branch {
+
+    &:last-of-type, &:last-child {
+
+      .name .text-wrap {
+        border: none;
+      }
+    }
+
+    .name {
+      @include flex(flex-start, flex-start);
+
+      .icon-checkbox {
+        width: .12rem;
+        height: .12rem;
+        margin: .14rem .1rem 0 0;
+      }
+
+      .text-wrap {
+        @include flex-column(flex-start, flex-start);
+        flex: 1;
+        width: 100%;
+        min-height: .3rem;
+        padding: .1rem 0 0;
+        border-bottom: 1px solid $border;
+
+        .text {
+          width: 100%;
+          line-height: .2rem;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .tree-menu-sub {
+    padding: 0;
+  }
+}

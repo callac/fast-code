@@ -1,0 +1,19 @@
+[
+  { "name": "default", "klineTheme": "dark" },
+  { "name": "zg", "klineTheme": "dark" },
+  { "name": "white_green", "klineTheme": "light" },
+  { "name": "white_blue", "klineTheme": "light" },
+  { "name": "white_gray", "klineTheme": "light" },
+  { "name": "black_blue", "klineTheme": "dark" },
+  { "name": "gray_dark", "klineTheme": "dark" },
+  { "name": "blue", "klineTheme": "dark" },
+  { "name": "self_help", "klineTheme": "dark" },
+  { "name": "jp", "klineTheme": "light" },
+  { "name": "jp_white", "klineTheme": "light" },
+  { "name": "jp2", "klineTheme": "light" },
+  { "name": "yellow", "klineTheme": "light" },
+  { "name": "dark_mj", "klineTheme": "dark" },
+  { "name": "sipc", "klineTheme": "light" },
+  { "name": "sipc_1", "klineTheme": "light" },
+  { "name": "gaga_white", "klineTheme": "light" }
+]

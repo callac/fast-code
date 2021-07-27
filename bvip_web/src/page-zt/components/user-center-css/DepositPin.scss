@@ -1,0 +1,82 @@
+.deposit-pin-wrap {
+  .deposit-pin {
+    @import '../../common/special/user-center';
+    background: $background-c1;
+    margin-top: -0.2rem;
+    padding: 0.34rem;
+    color: $font-black-c1;
+    //.address {
+    //  position: relative;
+    //
+    //  .img {
+    //    position: absolute;
+    //    left: 6.2rem;
+    //    top: 0;
+    //    width: .42rem;
+    //
+    //    &:hover {
+    //      width: 1.3rem;
+    //    }
+    //  }
+    //}
+    .img {
+      margin-left: 2rem;
+    }
+
+    .address {
+      position: relative;
+      margin: .2rem 0;
+
+      .img {
+        position: absolute;
+        left: 6.2rem;
+        top: 0;
+        width: .42rem;
+
+        &:hover {
+          width: 1.3rem;
+        }
+      }
+    }
+
+    .tips {
+      margin: 0 0 .4rem .15rem;
+
+      .li {
+        @extend .content-2;
+        margin: 0.06rem 0;
+        color: $font-light;
+      }
+    }
+
+    .my-input {
+      margin: .2rem 0 !important;
+    }
+  }
+  .record-table {
+    margin-top: 0.2rem;
+    background: $background-c1;
+    .h2 {
+      padding: .2rem .3rem;
+      font-weight: bold;
+      font-size: .18rem;
+    }
+    .table-base-wrap {
+      .table-base {
+        color: $font-black-c1;
+        .thead {
+          color: $font-black-c5;
+          .tr {
+            .th {
+              text-align: center;
+            }
+          }
+        }
+        .td {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+

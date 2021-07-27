@@ -1,0 +1,77 @@
+.currency-account {
+  margin: -1.5rem 0 0;
+
+  .convert {
+    text-align: right;
+    height: 1.5rem;
+    line-height: .7rem;
+
+    .item {
+      display: inline-block;
+      margin: 0 .25rem 0 0;
+      color: $font-light;
+
+      .value-sipc {
+        display: inline-block;
+        padding: 0 .1rem;
+        margin: 0 0 .1rem;
+        @extend .title-1;
+        color: $font-darker;
+
+        .unit {
+          font-size: .16rem;
+        }
+      }
+
+      .value {
+
+      }
+    }
+  }
+
+  .check-box {
+    position: relative;
+    z-index: 3;
+    float: right;
+    margin: -.4rem .25rem 0 0;
+  }
+
+  .btn-1 {
+    @include lineHeight(.24rem);
+    padding: 0 .1rem;
+    @extend .content-2;
+
+    &.btn-blue {
+      background: transparent;
+    }
+  }
+
+  .table-base thead tr {
+    background: $background !important;
+  }
+
+  .tbody .tr:last-child {
+    border: none;
+  }
+
+  .td {
+    white-space: nowrap;
+
+    &:last-child {
+
+      button {
+        margin: 0 0 0 .1rem;
+        padding: 0;
+        background: transparent;
+      }
+    }
+  }
+
+  .window {
+
+    .tip {
+      display: block;
+      padding: 0 0 .2rem;
+    }
+  }
+}

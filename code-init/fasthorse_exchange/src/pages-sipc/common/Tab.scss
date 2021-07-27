@@ -1,0 +1,25 @@
+.tab-wrap, .tab-head {
+  @include lineHeight(.58rem);
+  padding: 0 .2rem;
+  box-shadow: 0 .03rem .07rem 0 rgba($border, 0.8);
+
+  .tab {
+    position: relative;
+    height: .58rem !important;
+    display: inline-block;
+    padding: 0 .15rem;
+    font-size: .16rem !important;
+    cursor: pointer;
+
+    &.selected:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: .36rem;
+      height: .02rem;
+      margin: 0 0 0 -.18rem;
+      background: $font;
+    }
+  }
+}

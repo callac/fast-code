@@ -1,0 +1,17 @@
+.cross-curve {
+
+  .cross-h, .cross-v {
+    stroke-dasharray: 4;
+    stroke: $kline-axis-color-darker;
+    stroke-width: 1;
+    cursor: crosshair;
+  }
+
+  .cross-time, .cross-value {
+    fill: $kline-axis-color-darkest;
+
+    text {
+      fill: $kline-white;
+    }
+  }
+}

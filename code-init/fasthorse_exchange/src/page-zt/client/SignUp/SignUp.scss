@@ -1,0 +1,42 @@
+
+
+@include css(sign-up)
+
+.sign-up {
+  @import '../../common/special/sign-in';
+  @import '../../common/special/user-center';
+  letter-spacing: 0;
+
+  .user-agreement {
+    @include flex();
+
+    .font-green {
+      margin: 0 0 0 .1rem;
+    }
+    .look-detail {
+      margin: 0 0 0 0.1rem;
+      color: $font-blue-c1;
+    }
+  }
+
+  .window {
+    width: 8rem;
+    height: 60vh;
+    overflow: hidden;
+    box-shadow: 0 .1rem .2rem rgba(#000, .3);
+    .content-wrap {
+      padding: 0;
+    }
+
+    .agreement {
+      width: 8.2rem;
+      height: 60vh;
+      padding: .2rem;
+      overflow-y: auto;
+    }
+  }
+
+  .options {
+    box-shadow: 0 0 size(3) rgba(#000, .2);
+  }
+}

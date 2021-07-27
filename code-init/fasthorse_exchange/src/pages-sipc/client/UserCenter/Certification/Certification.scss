@@ -1,0 +1,48 @@
+.certification {
+
+  .tab-tip {
+    line-height: .58rem;
+    margin: -.58rem 0 0 ;
+    padding: 0 0 0 1rem;
+    color: $font-light;
+  }
+
+  .step-1 {
+    margin: 0 0 .2rem;
+  }
+
+  .my-input {
+
+    &:first-child {
+      margin-top: .2rem;
+    }
+  }
+
+  .no-edit {
+    margin: 0 0 0 1rem;
+  }
+
+  .step-loading {
+    display: block;
+    margin: .4rem auto 0;
+  }
+
+  .step-wrap {
+    padding: .25rem;
+  }
+
+  .tip {
+    display: block;
+    margin: 0 0 .4rem calc((100% - 4.2rem) / 2 + 1rem);
+  }
+
+  @import "./components/CertificateFast/CertificateFast";
+  @import "./components/CertificateManual/CertificateManual";
+}
+
+[lang=en] .certification {
+
+  .tab-tip {
+    padding: 0 0 0 1.27rem;
+  }
+}

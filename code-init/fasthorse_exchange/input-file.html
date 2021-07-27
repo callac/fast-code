@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html style="font-size:625%">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <!--<link rel="shortcut icon" href="https://ztstatic.oss-cn-hangzhou.aliyuncs.com/static/ico.png">-->
+  <script type="text/javascript">
+  function scale(noScale) {
+    window.isMobile = /Android|webOS|iPhone|iPod|iPad|BlackBerry|Windows Phone/i.test(navigator.userAgent)
+    // canScale用来应付特殊情况
+    if (window.isMobile) { // 判断访问环境是 Android|webOS|iPhone|iPod|BlackBerry(移动端)
+      var scale = window.devicePixelRatio || 1
+      var content = 'width=device-width, initial-scale=1, minimum-scale=1'
+      if (!noScale && scale !== 1) {
+        document.documentElement.style.fontSize = 625 * scale + '%'
+        var specialScale = window.location.pathname.indexOf('/mobile') !== 0
+        console.log(window.screen.availWidth)
+        var s = specialScale ? 1 / scale / scale / (1200 / scale / window.screen.availWidth) : 1 / scale
+        content = 'width=device-width, initial-scale=' + s + ', minimum-scale=' + s
+      }
+      var meta = document.createElement('meta')
+      meta.setAttribute('name', 'viewport')
+      meta.setAttribute('content', content)
+      document.head.appendChild(meta)
+    }
+  }
+
+  scale(/noScale/i.test(location.href))
+  </script>
+</head>
+<body>
+<div id="app"></div>
+<input type="file" id="input">
+<img id="img" alt="">
+<span id="text"></span>
+<!-- built files will be auto injected -->
+<script>
+function blobToBase64(blob) {
+  return new Promise(function (res, rej) {
+    try {
+      var a = new FileReader()
+      a.onload = function (e) {
+        res(e.target.result)
+      }
+      a.readAsDataURL(blob)
+    } catch (e) {
+      rej(e)
+    }
+  })
+}
+
+document.getElementById('input').addEventListener('change', function (e) {
+  var file = e.target.files[0]
+  blobToBase64(file).then(function (url) {
+    document.getElementById('img').src = url
+    document.getElementById('text').innerText = url
+  })
+})
+</script>
+</body>
+</html>

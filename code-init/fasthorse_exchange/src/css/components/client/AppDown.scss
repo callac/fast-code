@@ -1,0 +1,79 @@
+.app-down {
+  @include flex(space-between);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 1.6rem;
+  padding: 0 .6rem;
+  background: rgba(#fff, .6);
+
+  .left {
+    @include flex();
+  }
+
+  img {
+    width: 1rem;
+    margin: 0 .2rem 0 0;
+  }
+
+  h2, p {
+    color: $background-3;
+  }
+
+  h2 {
+    font-size: .46rem;
+  }
+
+  p {
+    font-size: .3rem;
+  }
+
+  a {
+    @include lineHeight(.9rem);
+    padding: 0 .4rem;
+    border-radius: .1rem;
+    @include btn-fill($background-3);
+    font-size: .42rem;
+  }
+}
+.down-layer-container{
+  width: 100vw;
+  height: 1.6rem;
+  .down-layer{
+    position: fixed;
+    height: 1.6rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:rgba(0,0,0,0.8);
+    padding: 0.3rem 0.6rem;
+    display: flex;
+    .logo{
+      padding-right: 0.2rem;
+      img{
+        height: 0.92rem;
+      }
+    }
+    .web-name{
+      flex: 1;
+      padding-top: 0.3rem;
+      img{
+        width: 1.8rem;
+      }
+    }
+    .down-app-btn{
+      margin-top: 0.1rem;
+      width:2.4rem;
+      height:0.8rem;
+      line-height: 0.8rem;
+      text-align: center;
+      background:rgba(14,181,161,1);
+      border-radius:0.4rem;
+      font-size: 0.3rem;
+      color: #FFFFFF;
+      cursor: pointer;
+    }
+  }
+}

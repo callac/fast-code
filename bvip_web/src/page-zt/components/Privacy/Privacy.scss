@@ -1,0 +1,15 @@
+.article-content {
+  @import "../../common/special/user-center";
+  .assets-manager-title {
+    margin: 0.2rem auto;
+    width: 11.89rem;
+  }
+  .assets-manager-detail {
+    margin: 0.2rem auto;
+    width: 11.89rem;
+    padding: 0.3rem;
+    background: $body-white-c2;
+    border-radius: 0.03rem;
+  }
+}
+

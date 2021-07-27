@@ -1,0 +1,52 @@
+.currency-account {
+  @import '../../../special/user-center';
+
+  .convert {
+    @include flex();
+    padding: .4rem 0 .6rem;
+
+    .item {
+      margin: 0 .5rem 0 0;
+
+      .value {
+        display: inline-block;
+        margin: 0 0 .1rem;
+        @extend .title-1;
+        color: $font-darker;
+      }
+    }
+  }
+
+  .check-box {
+    position: relative;
+    z-index: 3;
+    float: right;
+    margin: -.4rem 0 0;
+  }
+
+  .btn-1 {
+    @include lineHeight(.24rem);
+    padding: 0 .1rem;
+    @extend .content-2;
+
+    &.btn-blue {
+      background: transparent;
+    }
+  }
+
+  .table-base thead tr {
+    background: $background !important;
+  }
+
+  .td {
+    white-space: nowrap;
+  }
+
+  .window {
+
+    .tip {
+      display: block;
+      padding: 0 0 .2rem;
+    }
+  }
+}

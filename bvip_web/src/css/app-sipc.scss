@@ -1,0 +1,227 @@
+/*
+ * common css，确保在文件最开始位置
+ */
+@import 'themes/<<theme>>/common-variable';
+@import 'common';
+/*
+ * components css
+ */
+@import 'components/client/ClientHeader-<<template>>';
+@import 'components/client/Agreement';
+@import 'components/client/ClientFooter-sipc';
+@import 'components/client/ExchangeCashForm';
+@import 'components/client/GlobalPopup';
+@import 'components/client/HelpAside';
+@import 'components/client/HistoryOrder';
+@import 'components/client/KLine';
+@import 'components/client/MsgPin';
+@import 'components/client/MyInput';
+@import 'components/client/MyOrder';
+@import 'components/client/MyOverlay';
+@import 'components/client/OrderPin';
+@import 'components/client/ConversionCurrency';
+@import 'components/client/Privacy';
+@import 'components/client/RowsDepth';
+@import 'components/client/user-center/AddressManage';
+@import 'components/client/user-center/DoughnutChart';
+@import 'components/client/user-center/TokenStatement';
+@import 'components/common/Back';
+@import 'components/common/BtnCode';
+@import 'components/common/ButtonOnce';
+@import 'components/common/Download';
+@import 'components/common/IconUpDown';
+@import 'components/common/NoResult';
+@import 'components/common/Overlay';
+@import 'components/common/OverlayConfirm';
+@import 'components/common/PageContainer';
+@import 'components/common/Query';
+@import 'components/common/TreeMenu';
+@import 'components/common/Warning';
+@import 'components/common/DropDown';
+@import 'components/form/CheckBox';
+@import 'components/form/FileInput';
+@import 'components/form/ImgUpload';
+@import 'components/form/Linkage';
+@import 'components/form/MyFileInput';
+@import 'components/form/SelectBase';
+@import 'components/image/ImageFullScreen';
+@import 'components/mobile/MobileInput';
+@import 'components/pdf/PDFPage';
+@import 'components/pdf/PDFSign';
+@import 'components/pdf/PDFViewer';
+@import 'components/table/Rows';
+@import 'components/table/MyTable';
+@import 'components/kline/index';
+@import 'animation';
+@import 'datepicker';
+@import 'popper';
+@import 'pagination';
+// iconfont
+@import 'iconfont/iconfont';
+/*
+ * pages css
+ */
+@import 'pages/client/BaseRoot';
+@import '../pages-sipc/client/Exchange/Exchange';
+@import 'pages/client/ExchangeCash-sipc';
+@import 'pages/client/Frame';
+@import '../pages-sipc/client/RepairOrder/RepairOrder';
+@import '../pages-sipc/client/SignIn/SignIn';
+@import '../pages-sipc/client/SignUp/SignUp';
+@import '../pages-sipc/client/PasswordReset/PasswordReset';
+// article
+@import 'pages/client/article/AboutUs';
+@import 'pages/client/article/Article';
+@import 'pages/client/article/ArticleList';
+@import 'pages/client/article/Help';
+@import 'pages/client/article/HelpList';
+@import 'pages/client/article/PrivacyPolicy';
+@import 'pages/client/article/UserAgreement';
+// user-center
+@import '../pages-sipc/common/Common';
+@import '../pages-sipc/client/UserCenter/AssetsManage/AssetsManage';
+@import '../pages-sipc/client/UserCenter/Deposit/Deposit';
+@import '../pages-sipc/client/UserCenter/Withdraw/Withdraw';
+@import '../pages-sipc/client/UserCenter/Security/Security';
+@import '../pages-sipc/client/UserCenter/CashPaySet/CashPaySet';
+@import '../pages-sipc/client/UserCenter/Certification/Certification';
+@import 'pages/client/user-center/UserInvite';
+// asset
+@import 'pages/client/asset/AssetsList';
+@import 'pages/client/asset/AssetInfo';
+// feedback
+@import 'pages/client/feedback/Feedback';
+@import 'pages/client/feedback/FeedbackList';
+// otc
+@import 'pages/client/otc/Otc';
+@import 'pages/client/otc/OtcOrderDetail';
+// home
+@import 'themes/<<theme>>/home-color-variable';
+@import 'pages/client/Home-<<template>>';
+@import '../../node_modules/vue-scrollbar-live/lib/css/index.css';
+// mobile
+@import 'pages/mobile/MobileActivity';
+@import 'pages/mobile/MobileFrame';
+@import 'pages/mobile/MobileSignUp';
+@import 'pages/mobile/MobileSignIn';
+@import 'pages/NotFound';
+
+.scrollbar {
+  background: rgba($main-color, .4) !important;
+  box-shadow: none !important;
+  text-transform: none;
+}
+
+.snack-bar-wrap {
+  z-index: 10001 !important;
+}
+
+.no-result {
+  height: 1.1rem;
+  padding: .56rem 0 0.2rem;
+  line-height: .3rem;
+  font-size: .12rem;
+  color: $font-light;
+  background: url('../assets/icon-no-result.png') no-repeat center top .2rem/.36rem auto;
+}
+
+.query {
+  min-height: 1.1rem;
+}
+
+.page-head {
+  min-height: auto !important;
+  height: .7rem !important;
+  padding: 0 .25rem !important;
+  margin-bottom: .2rem;
+  line-height: .7rem !important;
+  font-size: .16rem;
+  background: $background-4;
+}
+
+.type-1 {
+  margin-top: .2rem;
+
+  .input-base {
+    border: 1px solid $border-input !important;
+
+    &.img-upload {
+      border: none !important;
+    }
+  }
+}
+
+.input, input, .input-base, select, .select-base {
+  border-radius: .03rem;
+  border: 1px solid $border-input;
+
+  &:focus {
+    border-color: $border-hover !important;
+    box-shadow: 0 0 .05rem rgba($border-hover, .3);
+  }
+}
+
+.container, .page-container {
+  background: $background;
+}
+
+.th:first-child, .td:first-child {
+  padding-left: 0;
+}
+
+.th:last-child, .td:last-child {
+  padding-right: 0;
+}
+
+.tbody .tr:hover {
+  background: $exchange-tr-hover !important;
+}
+
+.overlay {
+
+  .btn-green-fill {
+    background: $main-color;
+  }
+}
+
+.my-input {
+
+  .label {
+    padding: .14rem 0;
+    color: $font-light;
+  }
+
+  .input-base {
+    height: .48rem;
+  }
+
+  .prefix, .unit, .btn, .img-code {
+    top: .25rem;
+  }
+
+  .unit {
+    color: $font-light;
+  }
+
+  .img-code {
+    right: .1rem;
+    height: .3rem;
+    margin: -.15rem 0 0;
+  }
+}
+
+.icon-checkbox-sipc {
+  display: inline-block;
+  width: .18rem;
+  height: .18rem;
+  background: url('../assets/client/icon-checkbox-sipc.png') no-repeat center center/100% auto;
+  vertical-align: middle;
+}
+
+.icon-checkbox-checked-sipc {
+  display: inline-block;
+  width: .18rem;
+  height: .18rem;
+  background: url('../assets/client/icon-checkbox-checked-sipc.png') no-repeat center center/100% auto;
+  vertical-align: middle;
+}

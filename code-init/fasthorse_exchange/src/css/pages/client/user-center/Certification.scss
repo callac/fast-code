@@ -1,0 +1,25 @@
+.certification {
+  @import '../../../special/user-center';
+
+  .step-1 {
+    margin: 0 0 .2rem;
+  }
+
+  .my-input:first-of-type {
+    margin-top: .2rem;
+  }
+
+  .no-edit {
+    margin: 0 0 0 1rem;
+  }
+
+  .step-loading {
+    display: block;
+    margin: .4rem auto 0;
+  }
+
+  .tip {
+    display: block;
+    margin: 0 0 .4rem 1rem;
+  }
+}

@@ -1,0 +1,74 @@
+.certificate-manual {
+  margin: .2rem 0;
+  padding-left: 2.8rem;
+
+  .tip {
+    padding: 0.08rem .1rem;
+    margin: .2rem 0 !important;
+    line-height: .24rem;
+    background: rgba(#000, .2);
+  }
+
+  .warn {
+    margin: 0 0 .4rem;
+  }
+
+  h2 {
+    color: $font-dark;
+  }
+
+  .input-content {
+    @include flex(space-between, stretch);
+    margin: 0 0 .4rem;
+
+    h3 {
+      margin: .05rem 0 .1rem;
+      line-height: .3rem;
+    }
+
+    .img {
+      width: 3.5rem;
+    }
+
+    .img-wrap {
+      position: relative;
+
+      .mask {
+        position: absolute;
+        left: 2.5rem;
+        top: 1.7rem;
+        font-size: .2rem;
+        color: #000;
+        //background: #fff3fd;
+        filter: blur(.006rem);
+      }
+    }
+  }
+
+  .input-content-column {
+    @include flex-column();
+
+    .input {
+      @include flex(flex-start, flex-start);
+      margin: 0 0 .2rem !important;
+
+      h3 {
+        width: 1.6rem;
+        font-weight: 500;
+      }
+    }
+
+    .file-input {
+      margin-bottom: 0;
+    }
+  }
+
+  .file-input {
+    width: 3.5rem;
+    height: 2.5rem;
+  }
+
+  .submit {
+    margin-left: 0 !important;
+  }
+}

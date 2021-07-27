@@ -1,0 +1,138 @@
+.order-pin {
+  position: static;
+  //color: $font;
+  color: $font-black-c1;
+
+  .wrap {
+    @include flex(space-between);
+    padding: .3rem 0;
+    text-align: center;
+
+    h3 {
+      @extend .content-5;
+      flex: 1;
+    }
+
+    .order-num {
+      flex: 2;
+    }
+
+    .time {
+      flex: 2;
+    }
+
+    .status-wrap {
+      flex: 1;
+      //@include flex-column(center, flex-end);
+
+      h4 {
+        margin: 0 0 .1rem;
+        @extend .content-4;
+        //color: $font-light-1;
+      }
+
+      .left {
+        margin: .1rem 0 0;
+      }
+    }
+
+    .btn-status {
+      @include lineHeight(.24rem);
+      padding: 0 .1rem;
+      opacity: 1;
+    }
+
+    .btn-orange {
+      background: $color-colours-3;
+      color: #fff;
+    }
+
+    .btn-cancel {
+      background: rgba($color-colours-3, 0.2);
+      color: $color-colours-3;
+    }
+
+    .money {
+      //@include flex-column();
+      flex: 2;
+
+      .total {
+        @extend .content-5;
+        margin: 0 0 .04rem;
+        //color: $font-dark;
+      }
+
+      .unit {
+        color: inherit;
+      }
+    }
+
+    .pay-type {
+      @include flex-column(center, center);
+      width: 5%;
+    }
+
+    .payee {
+      @include flex-column();
+      flex: 4;
+
+      .item {
+        margin: 0 auto;
+        white-space: nowrap;
+      }
+
+      .fuzhi {
+        color: $color-colours-4;
+        cursor: pointer;
+        .iconfont {
+          font-size: 0.2rem;
+        }
+      }
+    }
+  }
+
+  .name {
+    display: inline-block;
+    //width: .7rem;
+    //color: $font-light;
+    white-space: nowrap;
+  }
+
+  .btn-status {
+    height: .24rem;
+  }
+}
+
+[lang=en] .order-pin {
+
+  .name {
+    //width: 1.5rem;
+  }
+
+  .wrap {
+
+    .money {
+
+      .name {
+        //width: 1.05rem;
+      }
+    }
+  }
+}
+
+[lang=ja] .order-pin {
+
+  .name {
+    //width: .9rem;
+  }
+
+  .wrap {
+
+    .money {
+
+      .name {
+        //width: 1.45rem;
+      }
+    }
+  }
+}

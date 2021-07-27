@@ -1,0 +1,24 @@
+/* Home component color variable */
+
+$announce-bg: #18203f;
+$announce-text: #7291a1;
+
+$main-price-h2: #7291a1;
+$main-price-price: $white;
+$main-price-rate: #7291a1;
+$main-price-bg: #18203f;
+
+$app-download-bg: url('../assets/client/home/home-app-bg-default-white_green.jpg') no-repeat center center/19.2rem auto;
+$app-download-height: 5.2rem;
+
+/* If use gradient color, the value must be set to webkit hook(IE can not support text gradient) */
+/*$app-download-title: -webkit-gradient(linear, left top, right bottom, from($main-color),
+  color-stop(100%, #00f6ff));*/
+$app-download-title: $white;
+
+$app-download-button-text: $main-color;
+$app-download-button-text-hover: $white;
+$app-download-button-border: $main-color;
+$app-download-button-border-hover: transparent;
+$app-download-button-background: transparent;
+$app-download-button-background-hover: $main-color;

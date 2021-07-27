@@ -1,0 +1,13 @@
+.volume {
+  stroke-width: 1;
+
+  &.up {
+    stroke: $kline-up-color;
+    fill: rgba($kline-up-color, .6);
+  }
+
+  &.down {
+    stroke: $kline-down-color;
+    fill: rgba($kline-down-color, .6);
+  }
+}

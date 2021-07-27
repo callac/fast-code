@@ -1,0 +1,30 @@
+.family-msg {
+  display: block;
+  width: 3.77rem;
+  border-bottom: 1px solid $color-gray-2;
+  opacity: 1;
+
+  &:hover {
+
+    .title {
+      color: $font-gray-c5;
+    }
+  }
+
+  .title {
+    @include flex(space-between);
+    margin: 0 0 .2rem;
+    @extend .content-4;
+    color: $font-black-c1;
+
+    .time {
+      @extend .content-2;
+      color: $font-gray-c5;
+    }
+  }
+
+  .brief {
+    color: $font-light;
+    width: 70%;
+  }
+}

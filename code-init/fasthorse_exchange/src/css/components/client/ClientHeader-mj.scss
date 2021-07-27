@@ -1,0 +1,82 @@
+.client-header {
+  @import 'components/client/UserPin-t3';
+  @import 'components/client/LangPin';
+  @import 'components/client/HeaderCoins';
+
+  position: relative;
+  z-index: 1001;
+  @include flex(space-between);
+  height: $header-height;
+  background: $background-1;
+  padding: 0 .3rem;
+
+  &.home {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    background: transparent;
+
+    .lang-pin {
+      background: transparent !important;
+    }
+  }
+  &.ab {
+    position: absolute;
+    top: 1.1rem;
+  }
+
+  &.bg {
+    background: $background-1;
+
+    .lang-pin {
+      background: $background-1;
+    }
+  }
+
+  .logo {
+    display: block;
+    width: auto;
+    height: .26rem;
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .nav {
+    @include flex(flex-start);
+    flex: 1;
+    margin: 0 0 0 .4rem;
+
+    .a {
+      padding: .2rem;
+      // color: $font-darker;
+      color: #fff;
+    }
+  }
+
+  .lang-pin {
+    background: $background-1;
+    color: #fff !important;
+  }
+  .zone {
+
+    &:hover {
+      background: $background-3 !important;
+    }
+
+    .coins-table {
+      display: block;
+
+      .table-base {
+
+        tr, .no-result {
+
+          &:hover {
+            background: $background-3 !important;
+          }
+        }
+      }
+    }
+  }
+}

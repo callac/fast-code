@@ -1,0 +1,61 @@
+.certification {
+  @import "../../common/special/bind";
+  @import "../../common/special/user-center";
+  .content-detail {
+    margin-bottom: 0.3rem;
+    .nav-box {
+      padding-right: 0.6rem;
+      box-sizing: border-box;
+      height: 0.99rem;
+      background: $background-c2;
+    }
+    .nav-detail {
+      padding: 0.3rem;
+      background: $body-white-c2;
+      overflow: hidden;
+      .status {
+        //@include flex(space-between);
+        margin-left: 2.8rem;
+        //width: 2.5rem;
+        color: $font-gray-c2;
+      }
+    }
+  }
+  .step-1 {
+    margin: 0 0 .2rem;
+    padding-left: 2.8rem;
+    .no-border {
+      border-bottom: 1px solid #eee;
+      .input-base {
+        padding-left: 0.5rem;
+        border: none;
+      }
+    }
+  }
+
+  .my-input:first-of-type {
+    margin-top: .2rem;
+  }
+
+  .no-edit {
+    margin: 0 0 0 1rem;
+  }
+
+  .step-loading {
+    display: block;
+    margin: .4rem auto 0;
+  }
+
+  .tip {
+    //display: block;
+    //margin: 0 0 .4rem 1rem;
+    color: $color-colours-1;
+    //text-align: left;
+  }
+  .shenfen-tip {
+    margin-top: -0.3rem;
+  }
+  .certificate-manual {
+    color: $font-gray-c2;
+  }
+}

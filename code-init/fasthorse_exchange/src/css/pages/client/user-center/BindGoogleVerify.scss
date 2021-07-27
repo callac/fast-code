@@ -1,0 +1,55 @@
+.bind-google-verify {
+  @import "../../../special/bind";
+
+  .item {
+    width: 5rem !important;
+  }
+
+  .tip {
+    @include flex-column(center);
+    position: absolute;
+    right: 2rem;
+    top: .9rem;
+
+    .span {
+      width: 1.3rem;
+      @extend .content-2;
+      margin: .1rem 0 0;
+      text-align: center;
+    }
+
+    .qrcode {
+      width: 1.3rem;
+    }
+  }
+
+  .download-tip {
+    margin: .4rem 0 .2rem;
+
+    .h3 {
+      padding: 0 .2rem;
+      line-height: .46rem;
+      background: $background;
+    }
+
+    .client {
+      @include flex(space-between);
+      padding: .09rem .2rem;
+      line-height: .22rem;
+      border-bottom: 1px solid $border;
+
+      .h4 {
+        flex: 2;
+      }
+
+      .span {
+        flex: 6;
+      }
+
+      .a {
+        flex: 2;
+        text-align: right;
+      }
+    }
+  }
+}

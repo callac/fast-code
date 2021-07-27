@@ -1,0 +1,79 @@
+/* Base */
+$black-darker: #171717;
+$black-dark: #333;
+$black: #666;
+$black-light: #999;
+$black-lighter: #ccc;
+
+$white: rgba(255, 255, 255, .9);
+$white-pure: rgba(255, 255, 255, 1);
+$white-light: rgba(255, 255, 255, .7);
+// $white-lighter: rgba(255, 255, 255, .5);
+$white-lighter: rgba(237, 189, 65, 1);
+$white-lightest: rgba(255, 255, 255, .3);
+$white-lighten: rgba(255, 255, 255, .15);
+
+$red: #FA4A61;
+
+$gray: rgba(155, 155, 158, 1);
+
+$blue: #008add;
+$blue-light: #43779C;
+$blue-lighter: #778FA6;
+
+$green: #0db27c;
+
+$yellow: #ffac00;
+
+/* custom */
+$main-color: #38B183;
+$main-color-darker: #216b4f;
+$disabled: #ddd;
+
+$font-darker: $black-darker;
+$font-dark: $black-dark;
+$font: $black;
+$font-light: $black-lighter;
+$font-light-1: $black-light;
+
+$border: rgba(114, 145, 161, .2);
+$border-input: #E5E6F1;
+$border-hover: rgba(114, 145, 161, .4);
+
+$background: #fff;
+$background-1: rgba(242, 243, 247, 1);
+$background-2: #f7f9fa;
+$background-2-1: #f7f9fb;
+$background-3: #f7f9fb;
+$background-4: #ebf4fb;
+$background-5: #fcf7ed;
+$background-6: #f7f7f7;
+
+$option-font: inherit;
+$option-selected-bg: $main-color-darker;
+$option-selected-font: #fff;
+$options-bg: #fff;
+$input-bg: #eee;
+$option-hover-bg: rgba($main-color-darker, .5);
+$input-bg-disabled: $input-bg;
+
+$kline-btn-font: $white;
+$kline-btn-font-hover: $yellow;
+$kline-btn-bg-hover: rgba(255, 172, 0, .1);
+
+$sign-in-bg: #fff;
+
+$rank-head-icon: #6a65df;
+
+$footer-font: #7291A1;
+$footer-bg: #101c24;
+
+$kline-bg: #fff;
+
+$exchange-tr-hover: #F2F3F8;
+$exchange-table-bg: #fff;
+
+$exchange-font-1:#667680;
+$exchange-font-2:#CFDDE6;
+
+$exchange-table-color:#B8CDD9;

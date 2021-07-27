@@ -1,0 +1,155 @@
+/* 不要在 svg 元素上使用 css width / height，IE不兼容 */
+
+.kline-wrap {
+  position: relative;
+  font-size: $kline-font-size;
+  letter-spacing: size(.1);
+  color: $kline-font-color;
+  background: $kline-svg-bg;
+
+  &.full-screen {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10000000000;
+    width: 100vw !important;
+    height: 100vh !important;
+
+    //&.mobile {
+    //  display: block;
+    //  left: calc((100vw - 100vh) / 2);
+    //  top: calc((100vh - 100vw) / 2);
+    //  width: 100vh;
+    //  height: 100vw;
+    //  transform: rotate(90deg);
+    //}
+  }
+
+  svg {
+    overflow: hidden;
+  }
+
+  .content-wrap {
+    position: relative;
+    z-index: 998;
+  }
+
+  .kline {
+    background: transparent;
+
+    .cursor {
+      cursor: crosshair;
+      fill: transparent;
+    }
+  }
+
+  .h-line {
+    fill: $kline-axis-color;
+  }
+
+  .loading-wrap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: $kline-loading-bg;
+
+    .loading {
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -100%);
+    }
+
+    @for $kline-i from 1 through 12 {
+      .loading-circle-#{$kline-i} {
+        fill: $kline-loading-circle-color;
+        animation: fade 1s linear #{-1 + ($kline-i - 1) / 12}s infinite;
+      }
+    }
+  }
+
+  .no-data, .see-landscape {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: $kline-loading-bg;
+
+    .text {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      font-size: size(1.8);
+      text-shadow: 0 0 size(.5) rgba($kline-font-color, .1);
+      transform: translate(-50%, -100%);
+      text-align: center;
+
+      .back-to-portrait {
+        margin: size(2) 0 0;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        font-size: inherit;
+        color: $kline-main;
+      }
+    }
+  }
+
+  text {
+    user-select: none;
+    letter-spacing: 0;
+  }
+
+  .up {
+    color: $kline-up-color;
+    fill: $kline-up-color;
+
+    line {
+      stroke: $kline-up-color;
+    }
+  }
+
+  line.up {
+    stroke: $kline-up-color;
+  }
+
+  .down {
+    color: $kline-down-color;
+    fill: $kline-down-color;
+
+    line {
+      stroke: $kline-down-color;
+    }
+  }
+
+  line.down {
+    stroke: $kline-down-color;
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 1;
+    }
+    //50% {
+    //  opacity: 0
+    //}
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @import 'axis';
+  @import 'candles';
+  @import 'cross-curve';
+  @import 'curr-price';
+  @import 'volumes';
+  @import 'tool-bar';
+  @import 'tech-indicator';
+  @import 'legends';
+}

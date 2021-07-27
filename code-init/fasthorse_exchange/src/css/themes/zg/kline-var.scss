@@ -1,0 +1,40 @@
+$kline-main: $main-color;
+$kline-font-color: $font;
+$kline-font-color-dark: $font-dark;
+$kline-font-color-light: $font-light;
+$kline-font-size: size(1.4);
+$kline-white: #fff;
+$kline-svg-bg: $exchange-table-bg;
+
+$kline-up-color: $green;
+$kline-down-color: $red;
+
+$kline-axis-color-light: rgba(#fff, .03);
+$kline-axis-color: $font-light;
+$kline-axis-color-darker: $kline-font-color-dark;
+$kline-axis-color-darkest: #666;
+
+$kline-period-hover-bg: rgba(#000, .1);
+$kline-period-hover-text-color: $kline-font-color;
+$kline-period-selected-bg: rgba(#000, .1);
+$kline-period-selected-text-color: $kline-main;
+
+$kline-options-bg: $background-4;
+$kline-options-shadow: rgba(0, 0, 0, .1);
+$kline-option-height: size(2.6);
+
+$kline-tool-tip-bg: $kline-main;
+$kline-tool-tip-text-color: $kline-white;
+$kline-tool-tip-shadow: rgba(0, 0, 0, .1);
+$kline-tool-bar-height: size(3);
+$kline-tool-border: $background-4;
+
+$kline-loading-bg: rgba(#000, .6);
+$kline-loading-circle-color: $kline-main;
+
+$kline-indicator-color-1: #69c6ee;
+$kline-indicator-color-2: #bc98ee;
+$kline-indicator-color-3: #a1e9b6;
+$kline-indicator-color-4: #efd63f;
+
+$kline-legend-bg: rgba($kline-svg-bg, .5);

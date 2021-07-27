@@ -1,0 +1,215 @@
+.home {
+
+  @import 'components/client/Banner';
+  @import 'components/client/Tab';
+
+  .banner-wrap {
+    height: 5.25rem !important;
+  }
+
+  .announce-wrap {
+    @include flex(flex-start);
+    height: $announce-height;
+
+    &:before {
+      background: $announce-bg;
+    }
+
+    .icon-horn {
+      margin: .1rem;
+      font-size: .24rem;
+      color: $announce-text;
+    }
+
+    .h, .announce {
+      color: $announce-text;
+    }
+  }
+
+  .market {
+    padding: $margin 0 0;
+
+    &:before {
+      background: $background-2;
+    }
+
+    .main-prices {
+      @include flex(space-betweeen);
+      padding: 0 0 $margin;
+
+      .main-price {
+        @include flex-column();
+        flex: 1;
+        padding: $padding;
+        margin: 0 $margin 0 0;
+        border: 1px solid $border;
+        background: $main-price-bg;
+        opacity: 1;
+
+        &:last-of-type {
+          margin: 0;
+        }
+
+        h2 {
+          color: $main-price-h2;
+          font-weight: 600;
+        }
+
+        .price {
+          line-height: .46rem;
+          @extend .title;
+          color: $main-price-price;
+
+          .unit {
+            @extend .content-3;
+            color: $main-price-price;
+          }
+        }
+
+        .rate {
+          color: $main-price-rate;
+        }
+      }
+    }
+
+    .prices {
+      border: 1px solid $border;
+
+      table {
+        color: $font;
+        background: $background-1;
+      }
+
+      .tab-wrap {
+        background: $background-2;
+      }
+
+      .table thead tr {
+        height: .5rem;
+        background: $background-2;
+      }
+    }
+  }
+
+  .advantages, .partners {
+    padding: 0 0 .5rem;
+
+    h2 {
+      padding: .5rem 0;
+      @extend .title-1;
+      color: $font-darker;
+      text-align: center;
+    }
+
+    .wrap {
+      @include flex(space-between, flex-start, wrap);
+    }
+  }
+
+  .advantages {
+    &:before {
+      background: $background-2;
+    }
+
+    h2 {
+      padding: 1rem 0;
+    }
+
+    .wrap {
+      margin: .2rem 0;
+
+      h3 {
+        margin: 0 0 .25rem;
+        @extend .content-4;
+        font-weight: 600;
+        color: $main-color;
+      }
+
+      .ad {
+        @include flex-column(center, center);
+        flex: 1;
+        width: 2.2rem;
+        margin: 0 $margin;
+
+        .description {
+          width: 100%;
+          margin: $margin 0 0;
+          text-align: center;
+          color: $font;
+        }
+      }
+    }
+  }
+
+  .apps {
+    @include flex-column(center, flex-start);
+    height: $app-download-height;
+
+    &:before {
+      background: $app-download-bg;
+    }
+
+    h2 {
+      margin: 0 0 0 62.5%;
+      @extend .title-1;
+      color: $main-color;
+      color: $app-download-title;
+      background: $app-download-title;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      margin: .3rem 0 .85rem 62.5%;
+      color: $white;
+    }
+
+    .btn {
+      @include flex();
+      width: 2.5rem;
+      height: .4rem;
+      margin: 0 0 .4rem 62.5%;
+      border: 1px solid $app-download-button-border;
+      background: $app-download-button-background;
+      color: $app-download-button-text;
+      border-radius: .2rem;
+      opacity: 1;
+
+      &:hover {
+        border: 1px solid $app-download-button-border-hover;
+        background: $app-download-button-background-hover;
+        color: $app-download-button-text-hover;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      .iconfont {
+        margin: 0 .15rem 0 .5rem;
+        font-size: .3rem;
+        color: inherit;
+      }
+    }
+  }
+
+  .partners {
+    &:before {
+      background: $background;
+    }
+  }
+
+  .bg {
+    position: relative;
+    height: 11.5rem;
+
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 19.2rem;
+      height: 11.5rem;
+      margin: -5.75rem 0 0 -9.6rem;
+    }
+  }
+}

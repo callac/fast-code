@@ -1,0 +1,72 @@
+@import '../../common/Mixins';
+
+@include sign(sign-in)
+
+.sign-in {
+
+  .forget-p {
+    display: block;
+    width: 4.6rem;
+    margin: .1rem auto 0;
+    padding: 0 0 0 1rem;
+  }
+
+  .content.wrap {
+    padding: 1.2rem 0;
+  }
+
+  .bottom {
+    margin-top: .6rem;
+  }
+
+  .tip {
+    display: block;
+    padding: 0 !important;
+    margin: .4rem 0 0;
+  }
+
+  .verify-items {
+    width: 4.2rem;
+    padding: .3rem;
+    border-radius: .02rem;
+    margin: 0 0 .1rem;
+    background: $sign-in-bg;
+    box-shadow: 0 .02rem .2rem rgba(#000, .15);
+
+    .h2 {
+      margin: 0 0 .3rem;
+      @extend .content-4;
+
+      .iconfont {
+        position: absolute;
+        right: .2rem;
+        top: .2rem;
+        padding: .05rem;
+        cursor: pointer;
+        opacity: .8;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    .my-input {
+      width: 100%;
+    }
+
+    .submit, .btn-cancel {
+      width: 1.5rem;
+      @include lineHeight(.40rem);
+    }
+
+    .btns {
+      @include flex(space-between);
+      margin: .3rem 0 0;
+    }
+
+    .btn-cancel {
+      @include btn-fill(rgba(#5a698d, .4));
+    }
+  }
+}

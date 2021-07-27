@@ -1,0 +1,195 @@
+.cash-pay-set {
+  @import "../../common/special/user-center";
+
+  .tip {
+    padding: .26rem 0;
+    line-height: .24rem;
+    color: $font-light;
+    text-align: left;
+  }
+
+  .btn-add {
+    height: .34rem;
+    padding: 0 .3rem;
+  }
+  .cash-pay-set-detail {
+    padding: 0.3rem;
+    background: $body-white-c2;
+    .cash-pay-set-title {
+      font-size: 0.18rem;
+      padding-bottom: 0.2rem;
+      border-bottom: 1px solid $color-gray-8;
+    }
+  }
+  .btn-main {
+    position: absolute;
+    right: .4rem;
+    top: .2rem;
+    border: none;
+  }
+
+  .cards {
+    @include flex(flex-start, center, wrap);
+  }
+
+  .card {
+    width: 2.7rem;
+    padding: .2rem 0;
+    margin: 0 .2rem 0 0;
+
+    .wrap {
+      @include flex-column(center, center);
+      height: 1.6rem;
+      border-radius: .1rem;
+      background: $blue-lighter;
+      box-shadow: 0 .02rem .05rem rgba(#000, .1);
+
+      h3, p {
+        color: $font-darker;
+        @extend .content-4;
+      }
+
+      h3 {
+        margin: 0 0 .3rem;
+        @extend .content-5;
+      }
+    }
+
+    .btn-group {
+      @include flex(space-between);
+
+      .btn {
+        height: auto;
+        padding: .04rem;
+        border: none;
+        background: transparent;
+      }
+    }
+  }
+
+  .pay-types {
+    padding: .4rem 0;
+  }
+
+  .pay-type {
+    @include flex(space-between);
+    padding: .1rem 0;
+    border-top: 1px solid $border;
+
+    &:last-child {
+      border-bottom: 1px solid $border;
+    }
+
+    .icon-pay {
+      margin: 0 .1rem 0 0;
+    }
+
+    .left {
+      @include flex();
+    }
+
+    .name {
+      @include flex();
+
+      img {
+        width: .3rem;
+        height: .3rem;
+      }
+    }
+
+    .qrcode {
+      @include flex(center);
+      position: relative;
+      z-index: 1;
+      width: .22rem;
+      height: .22rem;
+      margin: 0 0 0 .2rem;
+      cursor: pointer;
+
+      .icon {
+        @extend .transition;
+        width: .22rem;
+        height: .22rem;
+        padding: .02rem;
+        border-radius: .03rem;
+        background: #fff;
+        box-shadow: 0 .02rem .1rem rgba($border, .4);
+      }
+
+      .qrcode-origin {
+        @extend .transition;
+        position: absolute;
+        left: 0;
+        top: 0;
+        max-height: 60vh;
+        border-radius: .03rem;
+        background: #fff;
+        box-shadow: 0 .05rem .2rem rgba($border, .4);
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      &:hover {
+
+        .qrcode-min {
+          opacity: 0;
+        }
+
+        .qrcode-origin {
+          opacity: 1;
+          pointer-events: auto;
+        }
+      }
+    }
+
+    .btn-group {
+      @include flex(space-between);
+      margin: 0 0 0 .3rem;
+
+      .btn {
+        height: auto;
+        padding: 0 .04rem;
+        border: none;
+        background: transparent;
+      }
+    }
+  }
+
+  .forms {
+    padding: .2rem 0;
+
+    .file-input {
+      width: 3.2rem;
+      height: 2rem;
+    }
+
+    .btn-group {
+      @include flex(space-between);
+      width: 3.2rem;
+      margin: .4rem 0 0 1rem;
+
+      .btn {
+        flex: 1;
+        height: .4rem;
+        margin: 0 0 0 .2rem;
+      }
+
+      .btn-sure {
+        margin: 0;
+      }
+    }
+  }
+
+  h2 {
+    margin: .1rem 0 0;
+    @extend .content-2;
+    color: $font-light;
+    line-height: .3rem;
+  }
+
+  .decoration {
+    width: 100%;
+    margin: 0 0 .2rem;
+    border-bottom: 1px solid $border;
+  }
+}

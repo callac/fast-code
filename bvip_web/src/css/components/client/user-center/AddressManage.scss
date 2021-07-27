@@ -1,0 +1,38 @@
+.address-manage {
+  @import '../../../special/user-center';
+
+  .add {
+    width: 2rem;
+    height: .4rem;
+    margin: .2rem 0;
+  }
+
+  .btn {
+    padding: 0;
+    border: none;
+  }
+
+  .submit {
+    margin-bottom: .2rem;
+  }
+
+  .select-base {
+    position: absolute !important;
+    right: .4rem;
+    top: .9rem;
+    min-width: 1rem;
+    border: none !important;
+    color: $font-dark !important;
+    background: $input-bg !important;
+  }
+
+  .my-overlay {
+
+    .select-base {
+      position: relative !important;
+      right: 0;
+      top: 0;
+      min-width: 1rem;
+    }
+  }
+}

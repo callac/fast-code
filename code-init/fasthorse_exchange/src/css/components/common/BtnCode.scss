@@ -1,0 +1,19 @@
+.btn-code {
+  position: absolute;
+  right: 1px;
+  top: 50%;
+  min-width: .5rem;
+  height: .2rem;
+  border-radius: 0;
+  padding: 0 .1rem !important;
+  margin: -.1rem 0 0;
+  color: $blue;
+  border: none;
+  border-left: 1px solid $border;
+  background: transparent;
+
+  &[disabled] {
+    color: $black-light;
+    background: #fff;
+  }
+}

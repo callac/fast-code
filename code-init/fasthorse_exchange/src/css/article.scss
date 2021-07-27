@@ -1,0 +1,72 @@
+.article-content {
+  flex: 1;
+  color: $font-light-1;
+  text-indent: 0 !important;
+  line-height: .3rem;
+
+  p {
+    margin: .2rem 0;
+
+    &:first-of-type {
+      margin: .3rem 0 0;
+    }
+  }
+
+  h1, .h1 {
+    @extend .content-5;
+    color: $font-darker;
+  }
+
+  .subhead {
+    display: block;
+    padding: 0 0 .1rem;
+    border-bottom: 1px solid $border;
+  }
+
+  p, .p {
+    margin: .2rem 0;
+    color: $font-light-1;
+
+    &.h2 {
+      @extend .content-4;
+      color: $white-light;
+    }
+
+    &.h3 {
+      color: $font;
+    }
+
+    &.li {
+      line-height: .24rem;
+      margin: .1rem 0;
+      text-indent: .2rem !important;
+    }
+  }
+
+  h2 {
+    @extend .content-4;
+    color: $white-light;
+  }
+
+  h3 {
+    color: $font;
+  }
+
+  li {
+    line-height: .24rem;
+    margin: .1rem 0;
+    text-indent: .2rem !important;
+  }
+
+  .float-header {
+
+    .iconfont {
+      font-size: .2rem;
+      cursor: pointer;
+
+      &:hover {
+        color: $font-darker;
+      }
+    }
+  }
+}

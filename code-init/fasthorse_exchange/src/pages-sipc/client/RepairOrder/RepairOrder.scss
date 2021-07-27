@@ -1,0 +1,22 @@
+.repair-order {
+
+  h1 {
+    margin: 0 0 .4rem;
+    @extend .content-4;
+  }
+
+  .forms {
+    @include flex-column(center, center);
+    padding: .2rem 0 .4rem;
+  }
+
+  .my-input, .wrap {
+    width: 7rem !important;
+  }
+
+  .btn {
+    width: 2rem;
+    @include lineHeight(.4rem);
+    margin: .2rem 0 0 1rem;
+  }
+}

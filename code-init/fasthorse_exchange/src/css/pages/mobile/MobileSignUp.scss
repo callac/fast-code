@@ -1,0 +1,100 @@
+.mobile-sign-up {
+  display: block;
+  min-height: 100vh;
+  background: linear-gradient($background-2 70%, $background-4);
+
+  header {
+    @include lineHeight(.44rem);
+    @extend .content-4;
+    text-align: center;
+  }
+
+  .tabs {
+    padding: 0 .1rem;
+    margin: 0 0 .2rem;
+
+    a {
+      display: inline-block;
+      margin: 0 .2rem 0 0;
+      @extend .subhead;
+      @include lineHeight(.4rem);
+
+      &.selected {
+        position: relative;
+        color: $main-color;
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: .02rem;
+          background: $main-color;
+        }
+      }
+    }
+  }
+
+  .forms {
+    padding: 0 .1rem;
+    margin: 0 0 .2rem;
+
+    .mobile-input {
+      margin: 0 0 .1rem;
+    }
+  }
+
+  .bottom {
+    padding: 0 .1rem;
+    margin: 0 0 .2rem;
+
+    .submit {
+      width: 100%;
+      min-width: 100% !important;
+      @include lineHeight(.4rem);
+    }
+
+    .tip {
+      display: block;
+      width: 100%;
+      margin: .5rem 0 0;
+      text-align: center;
+      color: $font-light;
+
+      a {
+        color: $main-color;
+      }
+    }
+  }
+
+  footer {
+    @include flex(center, center, wrap);
+    width: 100%;
+    padding: 0 0 .3rem;
+    text-align: center;
+
+    button {
+      border: none;
+      background: transparent !important;
+    }
+
+    .check-box {
+      margin: 0 .05rem 0 0;
+    }
+  }
+
+  .window {
+    $height: calc(100vh - .4rem);
+    position: fixed;
+    left: .1rem;
+    right: .1rem;
+    top: .2rem;
+    height: $height;
+    padding: .1rem;
+    border-radius: .05rem;
+    overflow-y: auto;
+    background: $background;
+    box-shadow: 0 0 .2rem rgba(#000, .2);
+  }
+}

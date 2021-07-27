@@ -1,0 +1,57 @@
+@mixin font($fontSize) {
+  font-size: $fontSize;
+  font-weight: 400;
+  letter-spacing: .01rem;
+}
+
+.title-xl {
+  @include font(.48rem);
+}
+
+.title-lg {
+  @include font(.34rem);
+}
+
+.title-1 {
+  @include font(.3rem);
+}
+
+.title {
+  @include font(.24rem);
+}
+
+.head {
+  @include font(.20rem);
+}
+
+.subhead {
+  @include font(.15rem);
+}
+
+.content-1 {
+  @include font(.10rem);
+}
+
+.content-2 {
+  @include font(.12rem);
+}
+
+.content-3 {
+  @include font(.14rem);
+}
+
+.content-4 {
+  @include font(.16rem);
+}
+
+.content-5 {
+  @include font(.18rem);
+}
+
+.content-6 {
+  @include font(.11rem);
+}
+
+.content-7 {
+  @include font(.13rem);
+}

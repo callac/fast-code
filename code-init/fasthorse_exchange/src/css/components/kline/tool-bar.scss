@@ -1,0 +1,183 @@
+.tool-bar {
+  position: relative;
+  z-index: 999;
+  padding: 0 size(17) 0 0;
+  border-bottom: 1px solid $kline-tool-border;
+  vertical-align: middle;
+
+  button {
+    border: none;
+    color: inherit;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    font-size: inherit;
+    vertical-align: middle;
+  }
+
+  .periods {
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  .periods.mobile, .period, .candle-types, .indicators {
+    display: inline-block;
+    padding: 0 size(1);
+    height: $kline-tool-bar-height;
+    line-height: $kline-tool-bar-height;
+    vertical-align: middle;
+
+    &:hover {
+      color: $kline-period-hover-text-color;
+      background: $kline-period-hover-bg;
+    }
+
+    &.selected {
+      color: $kline-period-selected-text-color;
+      background: $kline-period-selected-bg;
+    }
+  }
+
+  .periods.mobile, .candle-types, .indicators {
+    position: relative;
+    cursor: pointer;
+
+    .options {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 100%;
+      padding: size(1) 0;
+      border-radius: size(.4);
+      box-shadow: 0 size(.2) size(.5) $kline-options-shadow;
+      background: $kline-options-bg;
+
+      &.show {
+        display: block;
+      }
+
+      .caption {
+        padding: 0 size(1);
+        margin: 0 0 size(.5);
+        line-height: normal;
+        font-size: size(1.2);
+        font-weight: 500;
+        color: $kline-font-color-light;
+      }
+
+      .decoration {
+        height: 1px;
+        margin: size(.5) size(1) size(1);
+        background: $kline-options-shadow;
+      }
+
+      .option-group {
+        width: size(20);
+
+        .option {
+          display: inline-block;
+          width: 50%;
+          vertical-align: middle;
+        }
+      }
+
+      .option {
+        display: block;
+        padding: 0 size(2) 0 size(1);
+        width: 100%;
+        height: $kline-option-height;
+        line-height: $kline-option-height;
+        text-align: left;
+        white-space: nowrap;
+
+        &:before {
+          $kline-size: size(.6);
+          content: '';
+          display: inline-block;
+          position: relative;
+          top: -$kline-option-height/2 + $kline-size/2;
+          width: $kline-size;
+          height: $kline-size;
+          margin: 0 size(.5) 0 0;
+          border-radius: $kline-size;
+          background: $kline-main;
+          opacity: 0;
+          vertical-align: bottom;
+        }
+
+        &:hover {
+          color: $kline-main;
+        }
+
+        &.selected {
+          color: $kline-main;
+
+          &:before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .icon-full {
+    position: absolute;
+    right: size(1);
+    top: 0;
+    height: $kline-tool-bar-height;
+    vertical-align: middle;
+
+    .icon-full-screen {
+      $kline-size: size(1.6);
+      display: inline-block;
+      width: $kline-size;
+      height: $kline-size;
+      margin: ($kline-tool-bar-height - $kline-size)/2 0;
+      cursor: pointer;
+      vertical-align: middle;
+      fill: $kline-font-color;
+
+      &:hover {
+        background: $kline-period-hover-bg;
+        fill: $kline-font-color-dark;
+      }
+    }
+
+    &:hover {
+
+      .tool-tip {
+        display: inline-block;
+      }
+    }
+
+    .tool-tip {
+      $kline-height: size(2.4);
+      display: none;
+      position: relative;
+      z-index: 3;
+      height: $kline-height;
+      padding: 0 size(1);
+      border-radius: size(.2);
+      font-size: size(1.2);
+      line-height: $kline-height;
+      margin: ($kline-tool-bar-height - $kline-height)/2 size(1) ($kline-tool-bar-height - $kline-height)/2 0;
+      color: $kline-tool-tip-text-color;
+      background: $kline-tool-tip-bg;
+      box-shadow: 0 0 size(.5) $kline-tool-tip-shadow;
+      vertical-align: middle;
+
+      &:before {
+        $kline-width: size(.5);
+        content: '';
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        border-left: $kline-width solid $kline-tool-tip-bg;
+        border-top: $kline-width solid transparent;
+        border-bottom: $kline-width solid transparent;
+        margin: -$kline-width 0 0;
+      }
+    }
+  }
+}

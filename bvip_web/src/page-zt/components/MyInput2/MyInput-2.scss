@@ -1,0 +1,223 @@
+.type-0 {
+  position: relative;
+
+  &.can-not-edit {
+    .input-base {
+      border-bottom-style: dashed;
+    }
+  }
+
+  &.dark {
+    .input-base {
+      color: #333;
+    }
+  }
+
+  &.white {
+    .input-base {
+      color: $font-gray-c2;
+      letter-spacing: 0;
+    }
+  }
+  .icon {
+    width: 0.24rem;
+    height: 0.26rem;
+  }
+  label, .prefix, .error, .unit, .btn {
+    display: block;
+    @extend .content-1;
+    color: $font;
+    width: auto !important;
+    line-height: .2rem !important;
+    height: .2rem !important;
+  }
+
+  label {
+    text-align: left;
+  }
+
+  .prefix, .unit, .btn, .img-code {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: auto;
+    margin: -.1rem 0 0;
+    cursor: pointer;
+  }
+
+  .prefix {
+    left: 0.5rem;
+    right: auto;
+    margin: calc(-.1rem - 1px) 0 0;
+    font-size: inherit;
+    color: $font-black;
+  }
+
+  .btn {
+    border-left: 1px solid $color-gray-1;
+    color: $font-gray-c2;
+  }
+
+  .img-code {
+    width: 0.9rem;
+    height: .34rem;
+    top: 0.05rem;
+    bottom: .22rem;
+    margin: 0;
+  }
+
+  .error-text {
+    display: block;
+    @include lineHeight(.2rem);
+    color: $red;
+    padding: 0 .1rem 0 0;
+  }
+
+  .input-base {
+    width: 80%;
+    height: .27rem;
+    padding: 0;
+    border: none;
+    //border-bottom: 3px solid rgba($font, .2);
+    @extend .content-4;
+    text-align: left;
+    background: transparent;
+    color: $font-black;
+
+    &::placeholder {
+      color: rgba($font-gray-c3, .8);
+    }
+
+    &.default {
+      color: $font-gray-c3;
+    }
+
+    &:focus {
+      border-color: $font-gray-c4;
+
+      &::placeholder {
+        color: $font-gray-c4;
+      }
+    }
+
+    &.error {
+      color: $red !important;
+      border-color: $red;
+    }
+  }
+
+  .select-base {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+
+    .icon-arrow {
+
+      &:after {
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+      }
+    }
+
+    .placeholder {
+      color: rgba($font, .8) !important;
+    }
+  }
+}
+
+.type-1 {
+  @include flex(flex-start, flex-start);
+  position: relative;
+  width: 4.2rem;
+  margin: 0 0 .2rem;
+
+  .label {
+    display: block;
+    width: 1rem;
+    line-height: .2rem;
+    padding: .1rem 0;
+    color: $font-black-c5;
+  }
+
+  .input-base {
+    @include flex(flex-start, center, wrap);
+    flex: 1;
+    height: .42rem;
+    padding: 0 .1rem;
+    //border: none !important;
+    color: $font-black-c1;
+    background: $background-c1;
+    border: 1px solid $color-gray-7;
+
+    &::placeholder {
+      color: $color-gray-7;
+    }
+
+    &.default {
+      color: $font-light;
+      /*background: transparent;*/
+    }
+
+    &.value {
+      @include ellipsis(100%);
+    }
+
+    &.red {
+      color: $red !important;
+    }
+
+    &.img-upload {
+      padding: 0;
+      background: transparent;
+      height: auto;
+    }
+  }
+
+  textarea {
+    padding: .1rem !important;
+  }
+
+  .prefix, .unit, .btn, .img-code {
+    position: absolute;
+    right: 0;
+    //top: 50%;
+    padding: 0 .1rem;
+    height: .42rem;
+    //margin: -.21rem 0 0;
+    line-height: .4rem;
+    color: $font-black-c1;
+    @extend .content-2;
+
+  }
+
+  .img-code {
+    padding: 0;
+    background: $font-darker;
+    cursor: pointer;
+  }
+
+  .prefix {
+    right: auto;
+    left: 1rem;
+    font-size: inherit;
+    color: $main-color !important;
+  }
+
+  .btn {
+    border: none !important;
+    color: $font-white-c1 !important;
+    background: $color-colours-4;
+    padding: 0 0.3rem;
+  }
+
+  .error-text {
+    position: absolute;
+    bottom: -.2rem;
+    left: 1rem;
+    line-height: .2rem;
+    @extend .content-2;
+    color: $red;
+  }
+}

@@ -1,0 +1,175 @@
+/*
+ * common css，确保在文件最开始位置
+ */
+@import 'themes/<<theme>>/common-variable';
+@import '../page-zt/common/common';
+@import '../page-zt/common/common-zt';
+/*
+ * components css
+ */
+@import 'components/client/ClientHeader-<<template>>';
+@import 'components/client/Agreement';
+@import 'components/client/ClientFooter';
+@import 'components/client/user-center/CertificationFast';
+@import 'components/client/user-center/CertificationManual';
+@import '../page-zt/common/DepthMap';
+@import '../page-zt/components/ExchangeCashForm/ExchangeCashForm';
+@import '../page-zt/components/ExchangeForm/ExchangeForm';
+@import '../page-zt/common/ExchangeForms';
+@import 'components/client/GlobalPopup';
+@import '../page-zt/client/article-css/HelpAside';
+@import '../page-zt/client/article-css/ArticleAside';
+@import '../page-zt/client/article-css/HelpDetailArticle';
+@import 'components/client/HistoryOrder';
+@import 'components/client/KLine';
+@import '../page-zt/components/MsgPin/MsgPin';
+@import '../page-zt/components/FamiliarList/FamiliarList';
+@import 'components/client/MyExchange';
+//@import 'components/client/MyInput';
+@import '../page-zt/components/MyInput2/MyInput-2';
+@import '../page-zt/components/MyOrder/MyOrder';
+@import '../page-zt/common/MyOverlay';
+@import '../page-zt/components/OrderPin/OrderPin';
+@import 'components/client/ConversionCurrency';
+@import '../page-zt/components/Privacy/Privacy';
+@import 'components/client/RowsDepth';
+@import '../page-zt/components/user-center-css/AddressManage';
+@import '../page-zt/components/user-center-css/CurrencyAccount';
+@import '../page-zt/components/user-center-css/DoughnutChart';
+@import '../page-zt/components/user-center-css/DepositPin';
+@import '../page-zt/components/user-center-css/TabHead';
+@import '../page-zt/components/user-center-css/NavHead';
+@import '../page-zt/components/user-center-css/TokenStatement';
+@import "../page-zt/components/user-center-css/WithdrawPin";
+@import 'components/common/Back';
+@import '../page-zt/common/BtnCode';
+@import 'components/common/ButtonOnce';
+@import 'components/common/Download';
+@import '../page-zt/common/DropDown';
+@import 'components/common/IconUpDown';
+@import '../page-zt/common/NoResult';
+@import 'components/common/Overlay';
+@import '../page-zt/components/OverlayConfirm/OverlayConfirm';
+@import '../page-zt/common/PageContainer';
+@import 'components/common/Query';
+@import 'components/common/TreeMenu';
+@import 'components/common/Warning';
+@import 'components/form/CheckBox';
+@import 'components/form/FileInput';
+@import 'components/form/ImgUpload';
+@import 'components/form/Linkage';
+@import 'components/form/MyFileInput';
+@import '../page-zt/common/SelectBase';
+@import 'components/image/ImageFullScreen';
+@import 'components/mobile/MobileInput';
+@import 'components/pdf/PDFPage';
+@import 'components/pdf/PDFSign';
+@import 'components/pdf/PDFViewer';
+@import '../page-zt/common/table/Rows';
+@import '../page-zt/common/table/MyTable';
+@import 'components/kline/index';
+@import '../page-zt/common/article';
+@import 'animation';
+@import '../page-zt/common/datepicker';
+@import 'popper';
+@import '../page-zt/common/pagination';
+
+// iconfont
+@import '../page-zt/common/iconfont/iconfont';
+//@import '../page-zt/common/iconfont/iconfont-user';
+/*
+ * pages css
+ */
+@import 'pages/client/BaseRoot';
+@import '../page-zt/common/Exchange';
+@import '../page-zt/client/ExchangeCash/ExchangeCash';
+@import 'pages/client/Frame';
+@import 'pages/client/PasswordReset';
+@import 'pages/client/RepairOrder';
+@import '../page-zt/client/SignIn/SignIn';
+@import '../page-zt/client/SignUp/SignUp';
+@import '../page-zt/client/PasswordResetCopy/PasswordResetCopy';
+// article
+@import '../page-zt/client/article-css/AboutUs';
+@import '../page-zt/client/article-css/Article';
+@import '../page-zt/client/article-css/ArticleList';
+@import '../page-zt/client/article-css/Help';
+@import '../page-zt/client/article-css/HelpList';
+@import '../page-zt/client/article-css/HelpDetail';
+@import '../page-zt/client/article-css/PrivacyPolicy';
+@import '../page-zt/client/article-css/UserAgreement';
+// user-center
+@import '../page-zt/client/user-center-css/AssetsManage';
+@import '../page-zt/client/user-center-css/BindEmail';
+@import '../page-zt/client/user-center-css/BindGoogleVerify';
+@import '../page-zt/client/user-center-css/BindPhone';
+@import '../page-zt/client/user-center-css/CashPaySet';
+@import '../page-zt/client/user-center-css/Certification';
+@import '../page-zt/client/user-center-css/Deposit';
+@import '../page-zt/client/user-center-css/ExchangeCashManage';
+@import '../page-zt/client/user-center-css/ExchangeManage';
+@import '../page-zt/client/user-center-css/Message';
+@import '../page-zt/client/user-center-css/MessageCenter';
+@import '../page-zt/client/user-center-css/ResetPassword';
+@import '../page-zt/client/user-center-css/Security';
+@import '../page-zt/client/user-center-css/SetFundPassword';
+@import '../page-zt/client/user-center-css/UserCenter';
+@import '../page-zt/client/user-center-css/UserInvite';
+@import '../page-zt/client/user-center-css/Withdraw';
+@import '../page-zt/client/user-center-css/APIManagenment';
+// asset
+@import '../page-zt/common/asset/AssetsList';
+@import '../page-zt/common/asset/AssetInfo';
+// feedback
+@import 'pages/client/feedback/Feedback';
+@import 'pages/client/feedback/FeedbackList';
+// otc
+@import 'pages/client/otc/Otc';
+@import 'pages/client/otc/OtcOrderDetail';
+// home
+@import 'themes/<<theme>>/home-color-variable';
+@import 'pages/client/Home-<<template>>';
+@import '../../node_modules/vue-scrollbar-live/lib/css/index.css';
+// mobile
+@import '../page-zt/mobile/css/MobileActivity';
+@import '../page-zt/mobile/css/MobileFrame';
+@import '../page-zt/mobile/css/MobileSignUp';
+@import '../page-zt/mobile/css/MobileSignIn';
+@import 'pages/NotFound';
+
+.scrollbar {
+  background: rgba($color-colours-4, .4) !important;
+  box-shadow: none !important;
+  text-transform: none;
+}
+
+.snack-bar-wrap {
+  z-index: 10001 !important;
+}
+
+//新增滚动条样式
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 5px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  width: 5px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 6px;
+}
+
+//币币交易页面日间版
+@import 'components/client/ExchangeWhite';
+//币币交易页面日间版

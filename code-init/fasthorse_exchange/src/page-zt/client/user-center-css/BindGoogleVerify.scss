@@ -1,0 +1,98 @@
+.bind-google-verify {
+  @import '../../common/special/sign-in';
+  @import '../../common/special/user-center';
+  .content-detail {
+    margin-bottom: 0.3rem;
+    .nav-box {
+      padding-right: 0.6rem;
+      box-sizing: border-box;
+      height: 0.99rem;
+      background: $background-c2;
+    }
+    .nav-detail {
+      background: $body-white-c2;
+      overflow: hidden;
+    }
+    .nav-detail-1 {
+      height: 4.73rem;
+      text-align: center;
+      div:first-child {
+        margin: 0.4rem 0;
+        text-align: center;
+        color: $font-gray-c5;
+      }
+      div:nth-child(2) {
+        .download-box {
+          @include flex(space-between);
+          margin: 0 auto;
+          width: 1.82rem;
+          font-size: 0.03rem;
+          .download-item {
+            margin-top: 0.1rem;
+            text-align: center;
+            img {
+              width: 0.75rem;
+            }
+          }
+        }
+      }
+      div:last-child {
+        margin-top: 0.15rem;
+        .next-step {
+          width: 1.78rem;
+          height: 0.44rem;
+          border-radius: 0.04rem;
+          background: $color-colours-4;
+          color: $font-white-c1;
+        }
+        p {
+          margin-top: 0.05rem;
+          color: $font-gray-c3;
+        }
+      }
+    }
+    .nav-detail-2 {
+      height: 8rem;
+      text-align: center;
+      &>div:first-child {
+        width: 6.7rem;
+        margin: 0.6rem auto 0 auto;
+        text-align: left;
+        .get-code {
+          margin-top: 0.5rem;
+          .qr-code {
+            text-align: center;
+            font-size: 0.06rem;
+            .qrcode {
+              width: 1.19rem;
+            }
+          }
+          .name-pwd {
+            overflow: hidden;
+            //@include flex(space-between);
+            margin: 0.28rem 0 0 0;
+            width: 6rem;
+            &>p {
+              text-align: center;
+            }
+          }
+        }
+      }
+      &>div:last-child {
+        width: 6.7rem;
+        margin: 0.5rem auto 0 auto;
+        text-align: left;
+      }
+    }
+    .nav-detail-3 {
+      height: 4.52rem;
+      text-align: center;
+      &>p:first-child {
+        margin-top: 0.87rem;
+      }
+      &>p:last-child {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}

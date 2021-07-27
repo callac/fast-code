@@ -1,0 +1,34 @@
+.msg-pin {
+  display: block;
+  padding: .2rem 0;
+  //border-bottom: 1px solid $border;
+  opacity: 1;
+
+  &:hover {
+
+    .title {
+      color: $font-gray-c3;
+    }
+  }
+
+  .title {
+    @include flex(space-between);
+    @extend .content-4;
+    .title-text {
+      width: 100%;
+      word-break:break-all
+      //overflow: hidden;
+      //white-space: nowrap;
+      //text-overflow: ellipsis;
+    }
+    .time {
+      @extend .content-2;
+      color: $font-light;
+    }
+  }
+
+  .brief {
+    color: $font-light;
+    width: 70%;
+  }
+}

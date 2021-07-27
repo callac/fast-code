@@ -1,0 +1,17 @@
+export default {
+  'platform.title': 'SIPCベースのデジタル資源プラットフォーム',
+  'platform.desc': 'デジタル経済時代を築く重要なインフラ',
+  'platform.links': '资源置換;资源市场;リソースマネジメント',
+  'advantages.title': '多重優位性',
+  'advantages.desc': 'ユーザーにセキュリティ、高速、便利、標準化されたデジタルリソースサービスを提供',
+  'advantages.1.title': '安全は信頼できる',
+  'advantages.1.desc': '数年デジタル資源サービスの経験、専門の分散型システムとディードス攻撃システム',
+  'advantages.2.title': 'SIPCエコロジー',
+  'advantages.2.desc': '複数のSIPCツールを融合して多業務形態を一体化したSIPCブロックチェーンの生態系を作る',
+  'advantages.3.title': 'リアルタイムサービス',
+  'advantages.3.desc': '7×24时间オンラインカスタマーサービス、リアルタイム、すばやい、効率的なサービスを提供し、ユーザーの操作をスムーズにする',
+  'advantages.4.title': 'リスク認識',
+  'advantages.4.desc': '銀行レベルユーザデータ暗号化、動的アイデンティティ検証、マルチレベルリスク識別制御、動作安全保障',
+  'apps.title': 'プラットフォーム全体アクセス',
+  'apps.desc': 'iOS、Android、Mac、Windowsの複数プラットフォームが全業務機能をサポートする',
+}

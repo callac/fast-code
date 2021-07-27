@@ -1,0 +1,16 @@
+.user-agreement {
+  @import "../../common/special/user-center";
+  background: #f0f0f5;
+  padding-top: 0.2rem;
+  .assets-manager-title {
+    margin: 0.2rem auto;
+    width: 11.89rem;
+  }
+  .content {
+    margin: 0.2rem auto;
+    width: 11.89rem;
+    padding: 0.3rem;
+    background: $body-white-c2;
+    border-radius: 0.03rem;
+  }
+}

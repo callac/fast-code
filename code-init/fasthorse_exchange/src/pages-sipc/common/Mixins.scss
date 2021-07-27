@@ -1,0 +1,81 @@
+@mixin sign($name) {
+  .#{$name} {
+    padding: .2rem 0;
+    min-height: calc(100vh - #{$header-height} - #{$footer-height});
+    background: $background;
+
+    .h1 {
+      @extend .content-5;
+      width: 4.6rem;
+      margin: 0 auto .5rem;
+      line-height: .4rem;
+      font-size: .16rem;
+      text-align: center;
+      border-bottom: 1px solid $border;
+
+      .tab {
+        position: relative;
+        display: inline-block;
+        padding: 0 .2rem;
+        white-space: nowrap;
+        color: $font-light !important;
+
+        &.selected {
+          color: $font !important;
+
+          &:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -1px;
+            width: .36rem;
+            height: .02rem;
+            margin: 0 0 0 -.18rem;
+            background: $font;
+          }
+        }
+      }
+    }
+
+    .wrap {
+      position: static;
+      margin-top: .2rem;
+      padding: .3rem;
+      border: 1px solid $border;
+      background: $sign-in-bg;
+    }
+
+    .my-input {
+      width: 4.6rem;
+      margin: .2rem auto 0;
+
+      .label {
+        color: $font-light-1;
+      }
+
+      .btn-code {
+        color: $blue !important;
+      }
+    }
+
+    .bottom {
+      position: relative;
+      width: 4.6rem;
+      margin: .3rem auto 0;
+      padding: 0 0 0 1rem;
+
+      .submit {
+        height: .4rem;
+        padding: 0 .5rem;
+      }
+
+      .tip {
+        padding: 0 .1rem;
+      }
+    }
+
+    a, .a {
+      color: $blue !important;
+    }
+  }
+}

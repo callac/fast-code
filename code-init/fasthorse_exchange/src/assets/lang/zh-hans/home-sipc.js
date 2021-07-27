@@ -1,0 +1,17 @@
+export default {
+  'platform.title': '基于SIPC的数字资源平台',
+  'platform.desc': '打造新数字经济时代的重要基础设施',
+  'platform.links': '资源置换;资源集市;资源管理',
+  'advantages.title': '多重优势',
+  'advantages.desc': '为用户提供安全、极速、便捷和标准化的数字资源服务',
+  'advantages.1.title': '安全可信赖',
+  'advantages.1.desc': '数年数字资源服务经验，专业分布式架构和防 DDOS 攻击系统',
+  'advantages.2.title': 'SIPC生态',
+  'advantages.2.desc': '融合多个SIPC工具打造多业务形态为一体的SIPC区块链生态圈',
+  'advantages.3.title': '实时服务',
+  'advantages.3.desc': '7×24小时在线客服服务，为用户提供实时、快捷、高效的服务，使用户操作畅通无阻',
+  'advantages.4.title': '风险识别',
+  'advantages.4.desc': '银行级用户数据加密、动态身份验证，多级风险识别控制，保障操作安全',
+  'apps.title': '全平台终端接入',
+  'apps.desc': 'iOS、Android、Mac、Windows多个平台支持全业务功能',
+}

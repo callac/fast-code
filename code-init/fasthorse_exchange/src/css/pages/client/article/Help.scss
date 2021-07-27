@@ -1,0 +1,32 @@
+.article-wrap {
+  padding: .2rem 0;
+  background: $background-3;
+
+  * {
+    text-align: left;
+  }
+
+  .wrap {
+    @include flex(space-between, stretch);
+
+    .help-aside {
+      min-height: calc(100vh - 0.6rem - #{$footer-height} - 1rem);
+    }
+
+    .article {
+      flex: 1;
+    }
+  }
+
+  .h1 {
+    padding: 0 0 .1rem;
+    @extend .content-5;
+    color: $font-darker;
+    line-height: .4rem;
+    border-bottom: 1px solid $border;
+  }
+
+  .article-content {
+    margin-top: .2rem;
+  }
+}

@@ -1,0 +1,36 @@
+.legends {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 998;
+  color: $kline-font-color-light;
+  pointer-events: none;
+  user-select: none;
+
+  .candle-legends, .volume-legends, .tech-indicator-legends {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    margin: size(.5);
+    font-size: size(1.2);
+    background: $kline-legend-bg;
+  }
+
+  .prices, .volume-legends, .tech-indicator-legends {
+  }
+
+  .base-indicator-legends {
+    margin-top: size(.5);
+  }
+
+  .name {
+    white-space: nowrap;
+  }
+
+  .item {
+    display: inline-block;
+    margin-right: size(1);
+    white-space: nowrap;
+  }
+}

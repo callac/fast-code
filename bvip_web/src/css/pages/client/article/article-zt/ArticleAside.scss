@@ -1,0 +1,70 @@
+.articleAside-wrap {
+  @include flex-column(flex-start, flex-start);
+  background: $background-c1;
+  //border-right: 1px solid $border;
+  width: 1.96rem;
+  margin: 0 .3rem 0 0;
+  padding: .1rem 0;
+  .aside-content {
+    width: 100%;
+    .h1 {
+      padding: 0;
+      font-weight: bold;
+      color: $font-black-c2;
+      border: none;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .aside-right {
+      width: 100%;
+      .a {
+        display: block;
+        position: relative;
+        width: 100%;
+        line-height: .4rem;
+        color: $font;
+        border: none;
+
+        &:hover {
+          //color: $main-color;
+        }
+
+        &.active {
+
+          &:before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: .03rem;
+            background: $main-color;
+          }
+        }
+      }
+      .msg-pin {
+        margin-top: 0;
+        padding: 0.11rem;
+        border-radius:4px;
+        border: none;
+      }
+      .router-link-active {
+        margin-top: 0;
+        padding: 0.11rem;
+        border-radius:4px;
+        background: $background-c2;
+        h3 {
+          color: $font-white-c1;
+          .title-text {
+            color: $font-white-c1;
+          }
+        }
+      }
+    }
+  }
+
+  .loading {
+    margin: .1rem 0 0;
+  }
+}

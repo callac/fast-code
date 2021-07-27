@@ -1,0 +1,34 @@
+.token-statement {
+  .inputs-wrap {
+    @include flex();
+    padding: .2rem 0 0;
+    border-bottom: 2px solid $border;
+
+    .my-input {
+      width: auto !important;
+    }
+  }
+
+  .pagination {
+    margin: .2rem 0;
+  }
+
+  .time {
+    @include flex();
+    margin: 0 0 .2rem;
+
+    label {
+      padding: 0 .1rem 0 0;
+
+      &.x {
+        padding: 0 .1rem;
+      }
+    }
+
+    .datepicker {
+      width: 1.5rem;
+      height: .3rem;
+    }
+  }
+
+}

@@ -1,0 +1,275 @@
+.otc {
+  padding: 1px 0;
+  background: $background-3;
+
+  .content {
+    margin-top: .6rem;
+    margin-bottom: .6rem;
+
+    &:before {
+      content: none;
+    }
+  }
+
+  .unit {
+    font-size: .12rem;
+    color: $font-light;
+  }
+
+  .tabs {
+    @include flex();
+    margin-bottom: 0;
+    border-bottom: 2px solid $border;
+
+    .tab {
+      @include flex-column();
+      margin: 0 .6rem 0 0;
+      font-size: .18rem;
+      font-weight: 600;
+      cursor: pointer;
+
+      .asset {
+        padding: .1rem 0 .15rem;
+        font-size: .14rem;
+      }
+
+      &.selected {
+        font-size: .2rem;
+        color: $font-dark;
+
+        .asset {
+          position: relative;
+          font-size: .16rem;
+
+          &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 100%;
+            height: 2px;
+            background: $main-color;
+          }
+        }
+      }
+    }
+  }
+
+  .td {
+    color: $font-dark;
+  }
+
+  .th, .td {
+    &:last-child {
+      width: 8%;
+      flex: none !important;
+      text-align: right;
+    }
+  }
+
+  .merchants {
+    margin-top: .34rem;
+
+    .prices {
+      @include flex();
+      margin: 0 0 .24rem;
+
+      .item {
+        margin-right: .2rem;
+
+        .price {
+          font-weight: 600;
+          color: $font-dark;
+
+          @each $name, $c in (red:$red, green:$green) {
+            .font-#{$name} {
+              padding: 0 .05rem;
+              font-weight: normal;
+              border-radius: 2px;
+              background: linear-gradient(to top, rgba($c, .3), rgba($c, .1) 90%);
+            }
+          }
+        }
+      }
+    }
+
+    .filters {
+      @include flex();
+      margin: 0 0 .24rem;
+
+      .check-box {
+        padding: 0 .1rem;
+      }
+    }
+
+    .tr {
+      @include flex();
+
+      .th, .td {
+        display: inline-block;
+        padding: 0 .1rem;
+        white-space: nowrap;
+        flex: 1;
+
+        img {
+          margin: 0 .1rem 0 0;
+          border-radius: 50%;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    .tr-h {
+      padding: .07rem 0;
+      font-size: .12rem;
+    }
+
+    .tr-b {
+      position: relative;
+      padding: .1rem 0;
+      margin: 0 0 .1rem;
+      border: 1px solid $border;
+      background: $background;
+
+      &.selected {
+        padding-bottom: 1rem;
+        box-shadow: 0 .05rem .1rem rgba($border, .3);
+      }
+
+      .btn-1 {
+        padding: 0 .2rem;
+        border-radius: 2px;
+      }
+
+      .form {
+        @include flex(flex-end);
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: .9rem;
+        border-top: 1px solid $border;
+        background: $background-3;
+
+        .my-input {
+          width: 2.4rem;
+          margin: 0 .1rem;
+
+          label {
+            width: 0;
+          }
+
+          .btn {
+            text-decoration: underline;
+          }
+        }
+
+        .iconfont {
+          font-size: .24rem;
+        }
+
+        .btn-2 {
+          @include flex(center);
+          margin: 0 .1rem;
+          padding: 0 .3rem;
+          height: .34rem;
+          min-height: auto !important;
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+
+  .orders {
+
+    .table-base-wrap {
+      margin: .2rem 0 0;
+    }
+
+    .thead .tr {
+      height: .32rem;
+
+      .th {
+        font-size: .12rem;
+      }
+    }
+
+    .tbody .td {
+      background: $background;
+
+      .link {
+        color: $main-color;
+      }
+    }
+  }
+
+  .tips {
+    padding: .3rem;
+    background: darken($background-3, 2%);
+
+    .title {
+      font-size: .16rem;
+      font-weight: bold;
+      color: $font-dark;
+    }
+
+    .p {
+      padding: .1rem 0 .1rem .18rem;
+      text-indent: -.18rem;
+
+      &:first-of-type {
+        padding-top: .2rem;
+      }
+    }
+  }
+
+  .my-overlay {
+
+    .form {
+      @include flex-column();
+      padding: 0 0 .1rem;
+
+      .label {
+        width: 1rem;
+      }
+
+      .check-box {
+        margin: 0 .1rem 0 0;
+      }
+    }
+
+    .btn-submit {
+      width: 3.2rem;
+      height: .4rem;
+      margin: .2rem 0 0 1rem;
+    }
+  }
+
+  .success-overlay {
+
+    .content-wrap {
+      @include flex-column(center, center);
+
+      .tip {
+        padding: .2rem 0;
+        font-size: .16rem;
+      }
+
+      .btns {
+        @include flex(center);
+      }
+
+      .btn-go, .btn-back {
+        @include flex(center);
+        height: .4rem;
+        padding: 0 .5rem;
+        margin: .3rem 0 0;
+        border-radius: 3px;
+      }
+
+      .btn-go {
+        margin-right: .3rem;
+      }
+    }
+  }
+}

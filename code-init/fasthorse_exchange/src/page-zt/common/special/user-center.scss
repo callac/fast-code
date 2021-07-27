@@ -1,0 +1,87 @@
+.h2 {
+  margin: .2rem 0 .14rem;
+  @extend .content-4;
+}
+
+.vue-popper {
+  background: $body-white-c2;
+  color: $font-black-c1;
+  .arrow {
+    &:before {
+      border-top-color: #fff;
+      border-bottom-color: #fff;
+    }
+  }
+}
+.assets-manager-title {
+  padding-left: 0.3rem;
+  margin: 0.2rem 0;
+  height: 0.59rem;
+  line-height: 0.59rem;
+  background: #fff;
+  border-radius: 4px;
+  color: #1E1E1E;
+  font-size: 0.2rem;
+}
+.table-base-wrap {
+  margin: 0 0 .6rem;
+  padding: 0.32rem 0;
+  .table-base {
+    color: $font-black-c1;
+    .thead {
+      color: $font-black-c5;
+      .tr {
+        .th {
+          text-align: center;
+        }
+      }
+    }
+    .td {
+      text-align: center;
+    }
+  }
+}
+
+a, .a, .btn, button {
+  opacity: 1;
+}
+
+.table {
+  margin: -.2rem;
+}
+
+.decoration {
+  width: 100%;
+  height: 1px;
+  margin: .2rem 0;
+  background: $border;
+}
+
+.submit {
+  width: 3.2rem;
+  height: .4rem;
+  margin: 0 0 .6rem 1rem;
+  background: $color-colours-4;
+  color: $font-white-c1;
+}
+
+.btn-blue {
+  background: $color-colours-4;
+  color: #fff;
+}
+
+.font-blue {
+  color: $font-blue-c1;
+}
+//.table-base thead tr {
+//  background: $color-gray-3;
+//}
+
+div::-webkit-scrollbar {
+  background: $color-colours-4;
+}
+div::-webkit-scrollbar-track{
+  //-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: $color-colours-4;
+  //border-radius: 3px;
+}

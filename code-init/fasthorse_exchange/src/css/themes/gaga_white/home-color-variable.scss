@@ -1,0 +1,46 @@
+/* Home component color variable */
+
+$announce-bg: #3A6388;
+$announce-text: #FF9808;
+$announce-more: url('../assets/more.png') no-repeat center center / 100% 100%;
+
+$main-price-h2: #7291a1;
+$main-price-price: $white;
+$main-price-rate: #7291a1;
+$main-price-bg: #18203f;
+
+$app-download-bg: url('../assets/client/home/home-app-bg-default-white_gray.jpg') no-repeat center center/19.2rem auto;
+$main-price-green-bg: url('../assets/client/home/home-market-card-green.png') no-repeat bottom center / 100% 1.81rem;
+$main-price-red-bg: url('../assets/client/home/home-market-card-red.png') no-repeat bottom center / 100% 1.81rem;
+$main-price-gray-bg: url('../assets/client/home/home-market-card-gray.png') no-repeat bottom center / 100% 1.81rem;
+$swiper-button-pre-bg: url('../assets/client/home/swiper-button-prev-jp2-jp2.png') no-repeat center center / 100% 100%;
+$swiper-button-next-bg: url('../assets/client/home/swiper-button-next-jp2-jp2.png') no-repeat center center / 100% 100%;
+$app-download-height: 3.9rem;
+
+/* If use gradient color, the value must be set to webkit hook(IE can not support text gradient) */
+/*$app-download-title: -webkit-gradient(linear, left top, right bottom, from($main-color),
+  color-stop(100%, $main-color-darker));*/
+$app-download-title: $white;
+
+$app-download-button-text: $main-color;
+$app-download-button-text-hover: $white;
+$app-download-button-border: $main-color;
+$app-download-button-border-hover: transparent;
+$app-download-button-background: transparent;
+$app-download-button-background-hover: $main-color;
+
+$feature-item-describe-color: rgba(204, 204, 204, 1);
+$price-font-green-color: #25CE94;
+$price-font-red-color: #D00000;
+$price-coin-color: #120726;
+
+$banner-bg: url('../assets/logo-fac-banner/banner-gaga-gaga_white.jpg') no-repeat center center / 100% 100%;
+$nav-bg: #333045;
+$view-bg: #417396;
+$log-bg: #2E4161;
+$created-bg: url('../assets/client/home/created-bg.png') no-repeat center center / 100% 100%;
+$app-bg: #202F42;
+$app-btn-bg: #0A1C33;
+
+$pair-title: #2B2B2B;
+$boundary-line: #EEEEEE;

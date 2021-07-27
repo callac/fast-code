@@ -1,0 +1,246 @@
+.otc-order-detail {
+  padding: 1px 0;
+  background: $background-3;
+
+  .content {
+    margin-top: .3rem;
+    margin-bottom: .4rem;
+
+    &:before {
+      content: none;
+    }
+
+    .back {
+      display: block;
+      margin: 0 0 .2rem;
+    }
+
+    .unit {
+      font-size: .14rem;
+      color: $font-light;
+    }
+
+    .order {
+      padding: 0 0 .4rem;
+      background: $background;
+      overflow: hidden;
+
+      .h1 {
+        @include flex();
+        height: 1rem;
+        padding: 0 .4rem;
+        margin: 0 0 .2rem;
+        font-size: .32rem;
+        color: $font-dark;
+
+        .tip {
+          margin: 0 0 0 .3rem;
+          padding: 0 .2rem;
+          line-height: .24rem;
+          font-size: .14rem;
+          font-weight: normal;
+          color: $font;
+          border-radius: .12rem;
+          background: $border;
+        }
+
+        .status-4, .status-6 {
+          @extend .font-red;
+        }
+
+        .status-7 {
+          @extend .font-green;
+        }
+
+        //.status-1, .status-2, .status-3, .status-5 {
+        //  color: $main-color;
+        //}
+      }
+
+      .left {
+        width: 65%;
+        float: left;
+      }
+
+      .section {
+        padding: 0 .4rem 0 .4rem;
+
+        .symbol, .merchant-info {
+          @extend .content-3;
+        }
+
+        .h2 {
+          position: relative;
+          padding: 0 0 .1rem;
+          font-size: .16rem;
+          font-weight: normal;
+          color: $font-light;
+          border-bottom: 1px solid $border;
+        }
+
+        .wrap {
+          padding: .2rem 0 .4rem;
+        }
+
+        .pay-type-hide {
+          padding: .05rem .1rem;
+          background: $background-3;
+        }
+
+        .table {
+          display: table;
+        }
+
+        .item {
+          display: table-row;
+          height: .34rem;
+
+          .label {
+            display: table-cell;
+            padding: 0 .1rem 0 0;
+            color: $font-light;
+            vertical-align: middle;
+          }
+
+          .value {
+            display: table-cell;
+            padding: 0 .1rem;
+            font-size: .18rem;
+            color: $font-dark;
+            vertical-align: middle;
+
+            &.id, &.merchantName, &.merchantPhone, &.type {
+              font-size: .14rem;
+            }
+
+            .unit {
+              color: inherit;
+            }
+          }
+        }
+
+        .pay-type {
+          @include flex();
+          padding: 0 0 .1rem;
+          cursor: pointer;
+
+          .icon {
+            width: .28rem;
+            height: .28rem;
+            margin: 0 .1rem 0 0;
+            vertical-align: middle;
+          }
+
+          .type-name {
+            padding: 0 .1rem 0 0;
+            font-size: .16rem;
+            color: $font-dark;
+          }
+
+          .type-value, .account {
+            padding: 0 .1rem 0 0;
+          }
+
+          .qrcode {
+            @include flex(center);
+            position: relative;
+            width: .22rem;
+            height: .22rem;
+
+            .qrcode-min {
+              @extend .transition;
+              @extend .transition;
+              width: .22rem;
+              height: .22rem;
+              padding: .02rem;
+              border-radius: .03rem;
+              background: #fff;
+              box-shadow: 0 .02rem .1rem rgba($border, .4);
+            }
+
+            .qrcode-origin {
+              @extend .transition;
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              max-height: 60vh;
+              border-radius: .03rem;
+              background: #fff;
+              box-shadow: 0 .05rem .2rem rgba($border, .4);
+              opacity: 0;
+              pointer-events: none;
+            }
+
+            &:hover {
+
+              .qrcode-min {
+                opacity: 0;
+              }
+
+              .qrcode-origin {
+                opacity: 1;
+                pointer-events: auto;
+              }
+            }
+          }
+        }
+      }
+
+      .tips {
+        float: left;
+        width: calc(35% - .4rem);
+        margin: 0 .4rem 0 0;
+        padding: 0 0 0 .3rem;
+        //background: $background-3;
+
+        .title {
+          font-size: .16rem;
+          font-weight: normal;
+          color: $font-light;
+        }
+
+        .p {
+          padding: 0 0 0 .18rem;
+          line-height: .3rem;
+          color: $font-dark;
+          text-indent: -.18rem;
+
+          &:first-of-type {
+            padding-top: .2rem;
+          }
+
+          .font-red {
+            color: inherit !important;
+          }
+
+          .bold {
+            font-weight: inherit !important;
+          }
+        }
+      }
+
+      .btn-group {
+        @include flex();
+        padding: 0 .4rem;
+        margin: 0 0 .4rem 0;
+
+        .btn {
+          padding: 0 .3rem;
+          margin: 0 .2rem 0 0;
+          height: .4rem;
+          border-radius: 3px;
+        }
+
+        .btn-cancel {
+          color: $green;
+          border-color: $border;
+          background: transparent;
+        }
+
+        .btn-end {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.page-container {
+  position: relative;
+  background: $background-c1;
+  .bg {
+    position: absolute;
+    left:0;
+    right: 0;
+    top:25%;
+    bottom: 0;
+    margin:auto;
+    text-align: center;
+    vertical-align:middle;
+  }
+}

@@ -1,0 +1,35 @@
+.tab-wrap {
+  @include flex();
+  position: relative;
+  background: $background;
+
+  .tab {
+    @include flex(center);
+    position: relative;
+    height: .5rem;
+    margin: 0 1px 0 0;
+    color: $font;
+    background: $background;
+    cursor: pointer;
+
+    &:last-of-type {
+      margin: 0;
+    }
+
+    &.selected {
+      color: $font-darker;
+      background: transparent;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 3px;
+        background: $main-color;
+      }
+    }
+  }
+}
+

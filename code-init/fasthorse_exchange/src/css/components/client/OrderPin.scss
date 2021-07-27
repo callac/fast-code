@@ -1,0 +1,123 @@
+.order-pin {
+  position: static;
+  color: $font;
+
+  h2 {
+    @include flex(space-between);
+    padding: 0 .2rem;
+    line-height: .42rem;
+    background: $background;
+  }
+
+  .wrap {
+    @include flex(space-between);
+    padding: .3rem 0;
+
+    h3 {
+      @extend .content-5;
+      width: 10%;
+    }
+
+    .status-wrap {
+      width: 15%;
+      @include flex-column(center, flex-end);
+
+      h4 {
+        margin: 0 0 .1rem;
+        @extend .content-4;
+        color: $font-light-1;
+      }
+
+      .left {
+        margin: .1rem 0 0;
+      }
+    }
+
+    .btn-status {
+      @include lineHeight(.24rem);
+      padding: 0 .1rem;
+    }
+
+    .money {
+      @include flex-column();
+      width: 20%;
+
+      .total {
+        @extend .content-5;
+        margin: 0 0 .04rem;
+        color: $font-dark;
+      }
+
+      .unit {
+        color: inherit;
+      }
+    }
+
+    .pay-type {
+      @include flex-column(center, center);
+      width: 5%;
+    }
+
+    .payee {
+      @include flex-column();
+      width: 40%;
+
+      .item {
+        white-space: nowrap;
+      }
+
+      .btn-green {
+        height: .2rem;
+        line-height: .18rem;
+        margin: 0 0 0 .1rem;
+        @extend .content-2;
+        color: $main-color;
+      }
+    }
+  }
+
+  .name {
+    display: inline-block;
+    width: .7rem;
+    color: $font-light;
+    white-space: nowrap;
+  }
+
+  .btn-status {
+    height: .24rem;
+  }
+}
+
+[lang=en] .order-pin {
+
+  .name {
+    width: 1.5rem;
+  }
+
+  .wrap {
+
+    .money {
+
+      .name {
+        width: 1.05rem;
+      }
+    }
+  }
+}
+
+[lang=ja] .order-pin {
+
+  .name {
+    width: .9rem;
+  }
+
+  .wrap {
+
+    .money {
+
+      .name {
+        width: 1.45rem;
+      }
+    }
+  }
+}

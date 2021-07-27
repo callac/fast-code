@@ -1,0 +1,49 @@
+.overlay-confirm {
+
+  .float-win {
+    width: 4.5rem;
+    margin: 0 0 .4rem;
+    padding: $margin;
+    border-radius: .03rem;
+    box-shadow: 0 .04rem .2rem rgba(#000, .5);
+    background: $background-2-1;
+    overflow: hidden;
+
+    h2 {
+      width: 100%;
+      line-height: .25rem;
+      padding: 0 $margin;
+      @extend .content-4;
+      background: $background;
+    }
+
+    .overlay-content {
+      @include flex(center);
+      min-height: 1rem;
+      padding: 0 0 $margin;
+
+      p {
+        width: 100%;
+        line-height: .34rem;
+        @extend .content-5;
+        text-align: center;
+        color: $font;
+      }
+    }
+
+    .btn-group {
+      @include flex(space-between, center);
+
+      .btn {
+        width: calc((100% - #{$margin}) / 2);
+        @include lineHeight(.44rem);
+        @extend .content-4;
+        opacity: .9;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

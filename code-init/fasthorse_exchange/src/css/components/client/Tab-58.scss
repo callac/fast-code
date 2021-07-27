@@ -1,0 +1,27 @@
+.tab-wrap {
+  @include flex();
+  position: relative;
+  background: $background;
+
+  .tab {
+    @include flex(center);
+    flex: 1;
+    position: relative;
+    width: 2rem;
+    height: .6rem;
+    margin: 0 1px 0 0;
+    font-size: .16rem;
+    color: $font;
+    background: $background;
+    cursor: pointer;
+
+    &:last-of-type {
+      margin: 0;
+    }
+
+    &.selected {
+      color: $white;
+      background: linear-gradient(to left, $main-color, $main-color-darker);
+    }
+  }
+}

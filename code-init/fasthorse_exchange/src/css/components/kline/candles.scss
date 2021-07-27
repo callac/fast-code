@@ -1,0 +1,41 @@
+.candle {
+  cursor: pointer;
+
+  &.line {
+    fill: none;
+    stroke-width: 1;
+    stroke: $kline-font-color-dark;
+  }
+}
+
+.indicator-line {
+  fill: none !important;
+  stroke-width: 1;
+  stroke: $kline-font-color-dark;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.MA-5, .EMA-12, .BOLL-MA {
+  color: $kline-indicator-color-1;
+  fill: $kline-indicator-color-1;
+  stroke: $kline-indicator-color-1;
+}
+
+.MA-10, .EMA-26, .BOLL-UP {
+  color: $kline-indicator-color-2;
+  fill: $kline-indicator-color-2;
+  stroke: $kline-indicator-color-2;
+}
+
+.MA-30, .BOLL-DOWN {
+  color: $kline-indicator-color-3;
+  fill: $kline-indicator-color-3;
+  stroke: $kline-indicator-color-3;
+}
+
+.MA-60 {
+  color: $kline-indicator-color-4;
+  fill: $kline-indicator-color-4;
+  stroke: $kline-indicator-color-4;
+}

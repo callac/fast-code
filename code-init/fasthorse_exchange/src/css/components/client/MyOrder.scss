@@ -1,0 +1,27 @@
+.my-order {
+  .tab-head {
+    margin: 0 0 .4rem;
+  }
+
+  .order-pin {
+    position: static;
+  }
+
+  .link {
+    position: relative;
+    float: right;
+    z-index: 2;
+    display: block;
+    line-height: .5rem;
+    text-align: right;
+    margin: 0 0 -.5rem;
+  }
+
+  .order-pin:last-of-type {
+    border-bottom: 1px solid $border;
+  }
+
+  .pagination {
+    margin: .2rem 0 .4rem;
+  }
+}

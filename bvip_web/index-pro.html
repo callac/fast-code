@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html style="font-size:625%">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script type="text/javascript" src="./static/chart_main/charting_library.min.js"></script>
+  <script src="https://cstaticdun.126.net/load.min.js?t=201903281201"></script>
+  <script>
+  !function(e,t){"object"==typeof exports&&"undefined"!=typeof module?module.exports=t():"function"==typeof define&&define.amd?define(t):(e=e||self).ErrorMonitor=t()}(this,function(){"use strict";var n="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},c=function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")},e=function(){function o(e,t){for(var r=0;r<t.length;r++){var o=t[r];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(e,o.key,o)}}return function(e,t,r){return t&&o(e.prototype,t),r&&o(e,r),e}}(),i=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var r=arguments[t];for(var o in r)Object.prototype.hasOwnProperty.call(r,o)&&(e[o]=r[o])}return e};function u(e){var t=e.message||e,r=new Error(t);return r.data=e,r}var t,r,o,l=(t=window,r=t.XMLHttpRequest,o=t.ActiveXObject,r||o?function(){return r?new r:new o("Microsoft.XMLHTTP")}:(alert("Your browser does not support XMLHTTP.\n      You may not be able to send messages to the server"),null));var f=function(){function t(e){c(this,t),this.baseUrl=e}return e(t,[{key:"send",value:function(e,t,r,o,n){var i=o.onResolve,s=o.onReject,a=l&&l();a&&(a.open(e,function(e,t){return/^http/.test(t)?t:e.replace(/\/*$/,"")+(t?t.replace(/^\/*/,"/"):"")}(this.baseUrl,t)),a.onreadystatechange=function(){var e=a.readyState,t=a.status,r=a.responseText,o=a.response;4===e&&200<=t&&(300<=t?s(u("Status: "+t)):i({data:r||o}))},a.onerror=function(){return s(u("Network Error!"))},a.ontimeout=function(){return s(u("Request timeout!"))},Object.keys(n).forEach(function(e){a.setRequestHeader(e,n[e])}),a.send(r))}},{key:"get",value:function(e,t,r){return this.send("GET",e,null,t,i({},r))}},{key:"post",value:function(e,t,r,o){return this.send("POST",e,"string"==typeof t?t:JSON.stringify(t),r,i({"content-type":"application/json"},o))}}]),t}();return function(){function l(e){var t=e.baseUrl,r=e.logsource,o=void 0===r?"http":r,n=e.dep,i=e.project,s=e.platform,a=e.probability,u=void 0===a?1:a;if(c(this,l),!t)throw new Error("Param `baseUrl` is needed");if(!n)throw new Error("Param `dep` is needed");if(!i)throw new Error("Param `project` is needed");if(!s)throw new Error("Param `platform` is needed");this.http=new f(t),this.probability=u,this.fields={logsource:o,dep:n,project:i,logtype:window.location.host},this.platform=s,this.init()}return e(l,[{key:"init",value:function(){var r=this;window.addEventListener("error",function(e){var t=function t(r){if("object"!==(void 0===r?"undefined":n(r)))return r;if(r===window)return"window";if(r===document)return"document";if(r instanceof Element)return r.outerHTML.split(/\\?>/)[0]+">...";var o={},e=function(e){!r[e]||r[e]instanceof Function||(o[e]=t(r[e]))};return r instanceof Event?["srcElement","path","currentTarget","target","type","timeStamp","message","lineno","filename"].forEach(e):Object.getOwnPropertyNames(r).forEach(e),o}(e);e.message?r.postMsg({type:"error-runtime",level:"Script error."===e.message?"warn":"error",message:e.message,details:{error:t}}):r.postMsg({type:"error-resource",message:t.target,details:{error:t}})},!0)}},{key:"postMsg",value:function(e,t){var r,o=this,n=e.type,i=e.level,s=e.message,a=e.position,u=e.details,l=e.callbacks;if(Math.random()<=(t||this.probability)){var c=l||{},f=c.onSuccess,p=c.onFailed;r=a,o.http.post("",o.buildMsg({type:n,level:i,message:s,position:r,details:u}),{onResolve:function(e){console.log("ErrorMonitor: Error post successed"),"function"==typeof f&&f(e)},onReject:function(e){console.log("ErrorMonitor: Error post failed("+e.message+")"),"function"==typeof p&&p(e)}})}}},{key:"buildMsg",value:function(e){var t=e.type,r=e.level,o=void 0===r?"error":r,n=e.message,i=e.position,s=e.details;return{fields:this.fields,platform:this.platform,type:t,level:o,url:window.location.pathname,message:n,position:i,userAgent:window.navigator.userAgent,details:s}}}]),l}()});
+  </script>
+  <script>
+  window.errorMonitor = new ErrorMonitor({
+    baseUrl: 'https://cuo.im',
+    dep: 'exchange',
+    project: 'bvip_web',
+    platform: 'web',
+  })
+  </script>
+</head>
+<body>
+<div id="app"></div>
+</body>
+</html>

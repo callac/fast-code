@@ -1,0 +1,128 @@
+.header-coins {
+  @include flex();
+  flex: 1;
+  margin: 0 0 0 .5rem;
+
+  .item {
+    @include flex-column(center, flex-start);
+    position: relative;
+    z-index: 200;
+    min-width: 1.2rem;
+    height: $header-height;
+    padding: 0 .2rem;
+
+    &:first-of-type {
+      min-width: 1.6rem;
+      padding: 0 .3rem;
+      margin: 0 .1rem 0 0;
+
+      &:before {
+        $height: .34rem;
+        $border-color: rgba($white, .5);
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        height: $height;
+        margin: -$height/2 0 0;
+        border-left: 1px solid $border-color;
+        border-right: 1px solid $border-color;
+      }
+    }
+
+    &:hover {
+
+      .value-wrap .coins {
+        opacity: 1;
+        pointer-events: initial;
+      }
+    }
+
+    .name {
+      margin: 0 0 .02rem;
+      @extend .content-2;
+      color: $white-light;
+    }
+
+    .value-wrap {
+      @include flex(space-between);
+      width: 100%;
+      font-style: normal;
+
+      .value {
+        @extend .content-4;
+        color: $white;
+      }
+
+      .coins {
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        top: $header-height;
+        box-shadow: 0 .04rem .1rem rgba(#000, .2);
+        opacity: 0;
+        pointer-events: none;
+
+        .zone {
+          @include flex(space-between);
+          height: .5rem;
+          border: 1px solid transparent;
+          border-bottom: 0;
+          padding: 0 .3rem;
+          color: $white-light;
+          background: #262a42;
+          background-clip: padding-box;
+          white-space: nowrap;
+          cursor: pointer;
+
+          &:hover {
+            background: #15172a;
+            background-clip: padding-box;
+
+            .table-wrap {
+              opacity: 1;
+              pointer-events: initial;
+            }
+          }
+
+          .table-wrap {
+            position: absolute;
+            top: 1px;
+            left: 100%;
+            min-height: 100%;
+            //overflow: hidden;
+            opacity: 0;
+            pointer-events: none;
+          }
+
+          .coins-table {
+            width: 340px;
+            color: $white-light;
+            border-color: rgba($font, .3);
+            background: #262a42;
+            box-shadow: 0 .04rem .1rem rgba(#000, .2);
+            overflow: hidden;
+
+            .thead .tr {
+              cursor: pointer;
+              border-bottom: 1px solid $border;
+            }
+
+            .tbody .tr {
+              height: .5rem;
+              color: $white;
+              cursor: pointer;
+              border-bottom: 1px solid $border;
+
+              &:last-child {
+                border: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

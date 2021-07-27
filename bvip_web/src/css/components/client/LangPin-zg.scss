@@ -1,0 +1,18 @@
+.lang-pin.select-base {
+  width: 1rem !important;
+  border: none !important;
+  color: $font-darker;
+  background: $background-1 !important;
+
+  &.tran {
+    background: transparent !important;
+  }
+
+  .icon-arrow {
+
+    &:after {
+      border-top-color: transparent;
+      border-bottom-color: transparent;
+    }
+  }
+}

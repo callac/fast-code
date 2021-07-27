@@ -1,0 +1,100 @@
+.depth-map {
+  position: relative;
+  border: 1px solid $border;
+  border-top: none;
+
+  .depth-map-title {
+    @include lineHeight(.42rem);
+    position: relative;
+    z-index: 1;
+    padding: 0 .15rem;
+    font-size: .16rem;
+    border-bottom: 1px solid $border;
+    background: $background;
+  }
+
+  .table-head {
+    position: relative;
+    z-index: 1;
+    font-size: .12rem;
+    color: $font-light;
+    background: $background;
+
+    & .tr {
+      border: none;
+      height: .36rem;
+    }
+  }
+
+  .tbody {
+    position: relative;
+    height: calc(100% - .42rem - .36rem);
+    z-index: 0;
+    overflow: hidden;
+
+    .current-price {
+      @include lineHeight(.4rem);
+      position: absolute;
+      left: 0;
+      top: 50%;
+      z-index: 1;
+      width: 100%;
+      padding: 0 .15rem;
+      margin: -.2rem 0 0;
+      box-shadow: 0 0 1px $border;
+      background: $background;
+
+      .price {
+        padding: 0 .15rem 0 .1rem;
+      }
+
+      .price {
+        width: 30%;
+        margin: 0;
+        font-size: .16rem;
+        color: $font-darker;
+        cursor: pointer;
+      }
+
+      .img {
+        position: relative;
+        top: -.03rem;
+        width: .07rem;
+        vertical-align: middle;
+      }
+
+      .ex {
+        color: $font-light;
+      }
+    }
+
+    .rows-depth {
+      position: absolute;
+      left: 0;
+      line-height: .22rem;
+
+      &.sell {
+        bottom: calc(50% + .2rem);
+      }
+
+      &.buy {
+        top: calc(50% + .2rem);
+      }
+
+      .row {
+
+        &:hover {
+          background: $option-hover-bg;
+        }
+      }
+    }
+  }
+
+  .th:first-child, .td:first-child {
+    padding-left: .15rem;
+  }
+
+  .th:nth-child(3), .td:nth-child(3) {
+    padding-right: .15rem;
+  }
+}

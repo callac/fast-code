@@ -1,0 +1,218 @@
+.security {
+  @import '../../common/special/user-center';
+  .level {
+    //@include flex();
+    padding: .2rem 0.3rem;
+
+    .level-title {
+      padding-bottom: 0.15rem;
+      border-bottom: 1px solid $color-gray-8;
+      font-weight: bold;
+    }
+
+    .user-info {
+      margin-top: 0.5rem;
+      line-height: 0.64rem;
+      img {
+        vertical-align: middle;
+      }
+      span {
+        margin-left: 0.16rem;
+      }
+      .is-verify {
+        padding: 0.06rem 0.12rem;
+        background: rgba($color-colours-5, 0.3);
+        color: $color-colours-4;
+        border-radius: 0.15rem;
+      }
+      .not-verify {
+        padding: 0.06rem 0.12rem;
+        background: rgba($color-colours-1, 0.1);
+        color: $color-colours-1;
+        border-radius: 0.15rem;
+      }
+    }
+    .userinfo-data {
+      margin-top: 0.43rem;
+      .data-item {
+        height: 0.59rem;
+        line-height: 0.59rem;
+        box-sizing: border-box;
+        border-top: 1px solid $color-gray-8;
+        &:first-child {
+          border: none;
+        }
+        p {
+          float: left;
+        }
+        .data-key {
+          width: 2.23rem;
+        }
+        .data-value {
+          color: $font-black-c5;
+          span {
+            margin-right: 0.04rem;
+            padding: 0.02rem 0.34rem;
+            background: $color-gray-6;
+          }
+          .low-red {
+            background: $color-colours-1;
+            color: $color-colours-1;
+          }
+          .middle-yellow {
+            background: $color-colours-3;
+            color: $color-colours-3;
+          }
+          .height-green {
+            background: $color-colours-2;
+            color: $color-colours-2;
+          }
+          .grade-text {
+            background: transparent;
+            padding: 0.2rem;
+          }
+        }
+      }
+    }
+
+    .u-content {
+      margin: 0 0 0 .2rem;
+
+      .h3 {
+        margin: 0 0 .25rem;
+
+        .username {
+          color: $font-darker;
+        }
+      }
+
+      .p {
+        color: $font-light;
+        @extend .content-2;
+      }
+    }
+  }
+  .level-wrap {
+    background: $background-c1;
+    border-radius: 4px;
+  }
+  .manage-item {
+    margin-top: 0.21rem;
+    background: $background-c1;
+    padding: 0.3rem 0;
+    border-radius: 4px;
+    .level-title {
+      padding: 0 0 0 0.3rem;
+      font-weight: bold;
+    }
+    .table-base-wrap {
+      .table-base {
+        color: $font-black-c1;
+        .thead {
+          color: $font-black-c5;
+          .tr {
+            .th {
+              text-align: center;
+            }
+          }
+        }
+        .td {
+          text-align: center;
+        }
+      }
+    }
+  }
+  .item {
+    @include flex(space-between);
+    padding-left: 0.1rem;
+    width: 100%;
+    height: .5rem;
+    border-top: 1px solid $color-gray-8;
+
+    &:first-of-type {
+      border-top: none;
+    }
+
+    .iconfont {
+      margin: 0 .2rem;
+      font-size: 0.2rem;
+    }
+    .right {
+      color: $color-colours-2;
+    }
+    .error {
+      color: $color-colours-1;
+    }
+
+    .name {
+      flex: .21
+    }
+
+    .status {
+      flex: .15;
+    }
+
+    .value {
+      flex: .75;
+      color: $font-black-c5;
+    }
+
+    .operate {
+      flex: .2;
+      padding: 0 .1rem 0 0;
+      text-align: right;
+
+      .op {
+        display: inline-block;
+        position: relative;
+        //height: .2rem;
+        padding: .02rem .15rem;
+        margin-right: 0.1rem;
+        border: none;
+        background: $color-colours-4;
+        color: $font-white-c1;
+
+        &:before {
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 50%;
+          width: 1px;
+          height: .14rem;
+          margin: -.07rem 0 0;
+          background: $font-light;
+        }
+
+        &:last-child {
+
+          &:before {
+            content: none;
+          }
+        }
+      }
+      .tipT {
+        position: absolute;
+        bottom: 0.1rem;
+        right: 0.2rem;
+      }
+    }
+  }
+
+  .h2 {
+    margin: .4rem 0 .14rem;
+    @extend .content-4;
+  }
+
+  .submit {
+    margin-left: 1rem;
+    width: 3.2rem;
+    height: .4rem;
+    background: $color-colours-4;
+    color: $font-white-c1;
+  }
+
+  .overlayTip {
+    margin: 0 0 0.1rem 1rem;
+    color: $color-colours-1;
+  }
+}

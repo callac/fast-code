@@ -1,0 +1,252 @@
+.white-container-inner {
+  .exchange{
+    background: #DDE5EB;
+    //头部
+    .exchange-header{
+      background: #F2F9FC;
+      border-bottom: 1px solid #DDE5EB;
+      .header-coins .item{
+        .name{
+          color: #A1ACB3;
+        }
+        .value-wrap .value{
+          color:#454A4D;
+        }
+      }
+    }
+    //左侧
+    .exchange-aside{
+      .coins{
+        color: #454A4D;
+      }
+      .search-container{
+        border: 1px solid rgba(221,229,235,1);
+        input{
+          color:#1A2A33;
+        }
+      }
+      .overlayBox{
+        background: #FFFFFF;
+        .head{
+          color: #1A2A33;
+        }
+        .context{
+          color: #1E1E1E;
+        }
+      }
+    }
+    .left{
+      .left-container .left-aside {
+        background: #FFFFFF !important;
+        .table-base-wrap .table-extend .tbody .tr {
+          color: #1A2A33 !important;
+          &:hover {
+            background: #F0F6FA;
+          }
+          .selected:after {
+            background: #F0F6FA;
+          }
+        }
+      }
+      //k线部分
+      .tradingView-box{
+        background: #FFFFFF;
+        .tradingView-header{
+          background: #FFFFFF;
+          border-bottom: 0.01rem solid #E9EFF2;
+          .tradingView-nav{
+            &:hover{
+              background:#F2F7FA;
+            }
+          }
+          .tradingView-border-nav{
+            border-right: 1px solid #E9EFF2;
+          }
+          .tradingView-border-left{
+            border-left: 1px solid #E9EFF2;
+          }
+          .active{
+            background:#F2F7FA;
+            border-left:1px solid #E9EFF2;
+            border-right:1px solid #E9EFF2;
+          }
+        }
+      }
+    }
+
+    //tab切换栏目
+    .tab-wrap{
+      background: #F2F9FC;
+      border-bottom: 1px solid #E9EFF2;
+      .tab{
+        color: #A1ACB3;
+        &.selected{
+          color: #1A2A33;
+        }
+      }
+    }
+
+    //盘口
+    .aside{
+      .min-aside-tab{
+        background: #F2F9FC;
+        border-bottom: 1px solid #E9EFF2;
+        .aside-tab{
+          color: #A1ACB3;
+        }
+        .selected{
+          color: #1A2A33;
+        }
+      }
+    }
+    .tables{
+      .depth-map{
+        background: #FFFFFF !important;
+        .depth-tab-wrap{
+          background: #F2F9FC;
+          border-top: 1px solid #E9EFF2;
+          border-bottom: 1px solid #E9EFF2;
+        }
+        .tbody .current-price{
+          background: #F2F9FC;
+          color: #1A2A33;
+          border-top: 1px solid #E9EFF2;
+          border-bottom: 1px solid #E9EFF2;
+          .price{
+            color: #1A2A33;
+          }
+        }
+      }
+      .history-order{
+        background: #FFFFFF !important;
+      }
+      .thead .tr{
+        background: #FFFFFF !important;
+        color: #A1ACB3;
+      }
+      .tbody .tr .td{
+        color: #1A2A33;
+      }
+      .rows-depth .row{
+        .td{
+          color: #1A2A33;
+        }
+        &:hover{
+          background: #EBF7F6;
+        }
+      }
+      .exchange-side-header{
+        background: #F2F9FC;
+        color: #1A2A33;
+        border-bottom: 1px solid #E9EFF2;
+      }
+    }
+
+    //交易部分
+    .exchange-forms{
+      background: #FFFFFF;
+      .exchange-form:first-child{
+        border-right: 1px solid #E9EFF2;
+      }
+      .type-0{
+        .input-base{
+          border: 1px solid #CFDDE6;
+          color: #1A2A33;
+        }
+        .label{
+          color: #A1ACB3;
+        }
+      }
+      .exchange-form{
+        .balance{
+          color: #737B80;
+        }
+        .total{
+          color: #A1ACB3;
+          span{
+            color: #737B80;
+          }
+        }
+        .range{
+          border: 1px solid #A1ACB2;
+          color: #A1ACB3;
+        }
+        .range-green:hover{
+          border: 1px solid #50A39A;
+          color: #FFFFFF;
+        }
+        .range-red:hover{
+          border:1px solid #DE5E56;
+          color: #FFFFFF;
+        }
+      }
+      //币种介绍弹窗
+      .intro-layer-container .intro-layer{
+        background: #FFFFFF;
+        .intro-header-content{
+          color: #1A2A33;
+          .full-name{
+            color: #A1ACB3;
+          }
+          .intro-header-info{
+            color: #1A2A33;
+          }
+        }
+        .intro-layer-body{
+          color: #333333;
+          .intro-sub-title{
+            color: #1A2A33;
+            border-bottom: 1px solid #EBF1F5;
+          }
+          .info{
+            .name{
+              color: #A1ACB3;
+            }
+            .value{
+              color: #1A2A33;
+            }
+          }
+        }
+      }
+    }
+    //缺省页
+    .no-result-icon{
+      background: url('../assets/tradingview/empty-white.png') no-repeat center 0.6rem;
+      background-size: 0.39rem auto;
+      img{
+        opacity: 0;
+      }
+    }
+    .no-result{
+      color: #CFDDE6;
+    }
+  }
+  //成交记录
+  .exchange-footer{
+    background: #FFFFFF;
+    border-top: 0.05rem solid #DDE5EB;
+  }
+  .my-exchange .thead .tr{
+    color: #A1ACB3 !important;
+  }
+  .my-exchange .tbody .tr{
+    color: #1A2A33 !important;
+  }
+  .tab-wrap{
+    background: #F2F9FC;
+    border-bottom: 1px solid #E9EFF2;
+  }
+
+
+  ::-webkit-scrollbar-track-piece {
+    background-color: #F0F6FA;
+  }
+
+  ::-webkit-scrollbar-thumb:vertical {
+    background-color: #CFDCE6;
+  }
+
+  ::-webkit-scrollbar-thumb:horizontal {
+    background-color: #CFDCE6;
+  }
+}

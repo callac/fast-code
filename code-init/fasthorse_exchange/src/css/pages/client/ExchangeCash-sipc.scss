@@ -1,0 +1,170 @@
+.exchange-cash {
+  background: $background;
+
+  .content {
+    position: static;
+    border: 1px solid $border;
+    border-bottom: none;
+
+    &:before {
+      content: '';
+    }
+
+    &:first-of-type {
+      border-top: none;
+    }
+  }
+
+  .content.forms {
+    @include flex(space-between, flex-start);
+
+    .exchange-cash-form {
+      position: static;
+      flex: 1;
+
+      &:last-child {
+
+        .forms {
+          position: relative;
+
+          &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: .3rem;
+            bottom: .3rem;
+            width: 1px;
+            background: $border;
+          }
+        }
+      }
+
+      .h2 {
+        width: calc(100% - .4rem * 2);
+        line-height: .8rem;
+        font-weight: bold;
+        color: $green;
+        text-align: left;
+        border: none;
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: .36rem;
+          height: .03rem;
+          background: $green;
+        }
+
+        &.sell {
+          color: $red;
+
+          &:before {
+            background: $red;
+          }
+        }
+      }
+
+      .forms {
+        border-width: .02rem;
+        margin: -.02rem 0 0;
+        padding: .3rem 0;
+
+        .my-input {
+          width: calc(100% - .4rem * 2);
+          margin: 0 0 .2rem;
+        }
+
+        .input-base {
+          height: .6rem;
+          border: 1px solid $border !important;
+          background: $background;
+
+          &.value {
+            background: $input-bg-disabled;
+          }
+        }
+
+        .unit {
+          @include lineHeight(.16rem);
+          @extend .content-3;
+          top: 50%;
+          margin: -.08rem 0 0;
+          border-left: 1px solid $border-input;
+        }
+
+        .submit {
+          width: calc(100% - .4rem * 2 - 1rem);
+          height: .5rem;
+        }
+      }
+    }
+  }
+
+  .tips {
+    padding: .4rem;
+    border-top: none;
+    border-bottom: 1px solid $border;
+
+    .h2 {
+      @extend .content-4;
+      opacity: .7;
+    }
+
+    .p {
+      padding: .03rem 0 .03rem .18rem;
+      text-indent: -.18rem;
+      color: $font-light-1;
+
+      &:first-of-type {
+        padding-top: .2rem;
+      }
+    }
+  }
+
+  .my-order {
+    margin-top: .3rem;
+    margin-bottom: .4rem;
+    border: 1px solid $border;
+
+    .query {
+      padding: 0 .4rem .4rem;
+
+      .order-pin {
+        border: 1px solid $border;
+
+        h2 {
+          line-height: .3rem;
+          color: $font-light;
+          background: $border;
+        }
+
+        .wrap {
+          @include flex(space-between, stretch);
+          padding: .2rem;
+
+          h3 {
+            font-weight: bold;
+          }
+
+          button.btn-green {
+            color: $blue;
+            border: none;
+          }
+        }
+      }
+    }
+
+    @import '../../../pages-sipc/common/Tab';
+
+    .tab-head {
+      padding: 0 .2rem;
+    }
+
+    .link {
+      @include lineHeight(.58rem);
+      right: .4rem;
+    }
+  }
+}

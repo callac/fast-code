@@ -1,0 +1,13 @@
+.about-us {
+  background: $body-white;
+
+  .content {
+    //margin: .2rem auto;
+    padding: .2rem 0;
+    .content-detail {
+      padding: 0.3rem;
+      background: $body-white-c2;
+      border-radius: 0.03rem;
+    }
+  }
+}

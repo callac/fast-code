@@ -1,0 +1,20 @@
+.withdraw-pin {
+  @import "../../../special/user-center";
+
+  .btn-cancel {
+    padding: 0;
+    border: none;
+    background: transparent;
+  }
+
+  .my-input:first-of-type {
+    margin: .2rem 0;
+  }
+
+  .table-base {
+
+    &.no-data {
+      margin: 0 0 .7rem;
+    }
+  }
+}

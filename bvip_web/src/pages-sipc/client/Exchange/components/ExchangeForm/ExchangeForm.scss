@@ -1,0 +1,171 @@
+.exchange-form {
+  border: 1px solid $border;
+  border-top: none;
+
+  .symbol-name {
+    position: relative;
+    padding: 0 .35rem;
+    line-height: .86rem;
+    font-size: .18rem;
+    font-weight: bold;
+    border-bottom: 1px solid $border;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: .35rem;
+      bottom: -1px;
+      width: .36rem;
+      height: .03rem;
+      background: $font;
+    }
+  }
+
+  .symbol-prices {
+    padding: .35rem .35rem 0;
+
+    .price {
+      display: inline-block;
+      width: calc(100% / 3);
+
+      &:first-child {
+        @include flex();
+        width: 100%;
+        margin: 0 0 .15rem;
+      }
+
+      &:nth-child(3) {
+        text-align: center;
+      }
+
+      &:nth-child(4) {
+        text-align: right;
+      }
+    }
+
+    .name {
+      font-size: .12rem;
+      color: $font-light;
+    }
+
+    .value {
+      flex: 1;
+      @include lineHeight(.22rem);
+      display: inline-block;
+      padding: 0 0 0 .05rem;
+    }
+
+    .last {
+      font-size: .2rem;
+    }
+
+    .icon {
+      width: .07rem;
+      vertical-align: baseline;
+    }
+
+    .rate {
+      display: inline-block;
+      padding: 0 .08rem;
+      font-size: .12rem;
+      border-radius: .03rem;
+      vertical-align: top;
+      background: rgba($font, .2);
+    }
+
+    .font-green.rate {
+      background: rgba($green, .2);
+    }
+
+    .font-red.rate {
+      background: rgba($red, .3);
+    }
+
+    .ex {
+      float: right;
+      padding: 0 0 0 .4rem;
+      font-size: .16rem;
+      color: $font;
+    }
+  }
+
+  .form {
+    padding: .2rem .35rem .35rem;
+
+    .tab-wrap {
+      margin: .1rem 0 .5rem;
+      border-bottom: .02rem solid $border;
+      text-align: center;
+
+      .tab {
+        position: relative;
+        display: inline-block;
+        padding: 0 .2rem;
+        line-height: .7rem;
+        font-size: .16rem;
+        font-weight: bold;
+        color: $font-light;
+        cursor: pointer;
+
+        &.selected {
+          color: $font;
+
+          &:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -.02rem;
+            width: .36rem;
+            height: 3px;
+            margin: 0 0 0 -.18rem;
+            background: $font;
+          }
+        }
+      }
+    }
+
+    .my-input {
+      width: 100%;
+
+      .label {
+        padding: .2rem 0;
+        color: $font-light;
+      }
+
+      .input-base {
+        @extend .content-4;
+        height: .6rem;
+      }
+
+      .unit {
+        @include lineHeight(.16rem);
+        @extend .content-3;
+        top: .42rem;
+        color: $font-light;
+        border-left: 1px solid $border-input;
+      }
+    }
+
+    .btn-switch-form-type {
+      display: block;
+      margin: -.15rem 0 .2rem .6rem;
+      color: $blue;
+      border: none;
+    }
+
+    .total {
+      margin: -.15rem 0 0 .6rem;
+      line-height: .3rem;
+    }
+
+    .btn-submit {
+      @extend .content-4;
+      font-weight: bold;
+      display: block;
+      width: calc(100% - .6rem);
+      height: .5rem;
+      margin: .4rem 0 0 .6rem;
+      opacity: 1;
+    }
+  }
+}

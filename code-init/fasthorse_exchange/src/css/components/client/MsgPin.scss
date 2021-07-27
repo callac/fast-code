@@ -1,0 +1,29 @@
+.msg-pin {
+  display: block;
+  padding: .2rem 0;
+  border-bottom: 1px solid $border;
+  opacity: 1;
+
+  &:hover {
+
+    .title {
+      color: $font-dark;
+    }
+  }
+
+  .title {
+    @include flex(space-between);
+    margin: 0 0 .1rem;
+    @extend .content-4;
+
+    .time {
+      @extend .content-2;
+      color: $font-light;
+    }
+  }
+
+  .brief {
+    color: $font-light;
+    width: 70%;
+  }
+}

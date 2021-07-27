@@ -1,0 +1,189 @@
+.home {
+
+  @import 'components/client/Banner-jp';
+  @import 'components/client/Tab';
+
+  background: $background-2;
+
+  .content {
+    padding: 1rem 0;
+
+    h2 {
+      margin-bottom: .3rem;
+      font-size: .3rem;
+      color: $font-darker;
+      text-align: center;
+    }
+
+    .desc {
+      margin: 0 0 1rem;
+      font-size: .16rem;
+      text-align: center;
+      line-height: .24rem;
+    }
+  }
+
+  .banner-wrap {
+    margin: $header-height 0 0;
+    height: 5.6rem !important;
+  }
+
+  .description {
+
+    &:before {
+      background: $background-1;
+    }
+
+    .links {
+      @include flex(space-between);
+
+      .link {
+        width: calc((100% - .3rem * 2) / 3);
+        margin-right: .3rem;
+        padding: .4rem;
+        border-radius: .02rem;
+        box-shadow: 0 0 .1rem $border;
+        overflow: hidden;
+
+        &:last-child {
+          margin: 0;
+        }
+
+        .link-img-wrap {
+          width: .7rem;
+          height: .7rem;
+          margin: 0 0 .4rem;
+          line-height: .7rem;
+          text-align: center;
+        }
+
+        .link-btn {
+          display: inline-block;
+          height: .48rem;
+          padding: 0 .2rem;
+          line-height: .46rem;
+          font-size: .18rem;
+        }
+      }
+    }
+  }
+
+  .features {
+
+    &:before {
+      background: $background-2;
+    }
+
+    .desc {
+      margin-bottom: 1.2rem;
+    }
+
+    .items {
+      @include flex(center, stretch);
+      flex-wrap: wrap;
+      width: 100%;
+      margin: -1rem 0 0;
+
+      .item {
+        @include flex(center, center);
+        width: 50%;
+        border-radius: .05rem;
+        cursor: pointer;
+        //overflow: hidden;
+
+        &:nth-child(2n) {
+          padding: 1rem .3rem 0 .8rem;
+        }
+
+        &:nth-child(2n+1) {
+          padding: 1rem .8rem 0 .3rem;
+        }
+
+        img {
+          width: 1.28rem;
+          margin: 0 .2rem 0 0;
+        }
+
+        .text {
+          width: calc(100% - 1.28rem);
+        }
+
+        h3 {
+          width: 100%;
+          font-size: .20rem;
+          font-weight: 600;
+          color: $font-dark;
+          white-space: nowrap;
+        }
+
+        p {
+          width: 100%;
+          //min-height: calc(.28rem * 3);
+          max-width: 100%;
+          margin: .1rem 0 0;
+          line-height: .28rem;
+          font-size: .14rem;
+          color: $font;
+          //text-align: justify;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .apps {
+    @include flex-column(center, flex-start);
+    position: relative;
+    height: 6rem;
+    padding: 0 calc(#{$content-width} / 10) 0 calc(#{$content-width} * 5 / 10);
+
+    &:before {
+      background: $background-1;
+    }
+
+    .app-img {
+      position: absolute;
+      right: 60%;
+      top: 50%;
+      z-index: -1;
+      width: 2.36rem;
+      margin-top: -2.2rem;
+    }
+
+    h2 {
+      color: $font-darker;
+      text-align: left;
+    }
+
+    .desc {
+      margin-bottom: .4rem;
+      line-height: .4rem;
+      @extend .content-5;
+      color: $font-dark;
+      text-align: left !important;
+    }
+
+    .btns {
+      @include flex(flex-start, center, wrap);
+      margin: 0 0 .2rem;
+
+      .btn {
+        @include flex(center);
+        position: relative;
+        width: 2rem;
+        height: .5rem;
+        margin-right: .2rem;
+        background: $font;
+        vertical-align: text-top;
+        overflow: hidden;
+        color: $white;
+
+        .iconfont {
+          padding: 0 .1rem 0 0;
+          font-size: .3rem;
+          color: inherit;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ZT.COM</title>
+  <script type="text/javascript" src="index.js"></script>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="top">
+  <img src="icon-failed.png" alt="">
+  <span class="result">抱歉未完成身份验证</span>
+  <span class="reason">验证流程出现异常</span>
+</div>
+<div class="bottom">
+  <span class="tip" id="tip"></span>
+  <button class="btn" onclick="to">重新认证</button>
+</div>
+<script>
+window.addEventListener('DOMContentLoaded', function () {
+  time('tip', to);
+});
+
+function to() {
+  goTo('https://zt.com');
+}
+</script>
+</body>
+</html>

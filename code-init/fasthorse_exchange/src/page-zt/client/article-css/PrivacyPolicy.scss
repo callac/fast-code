@@ -1,0 +1,9 @@
+.privacy-policy {
+  .content {
+    padding: .2rem 0;
+
+    &:before {
+      background: $body-white;
+    }
+  }
+}

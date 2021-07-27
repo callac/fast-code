@@ -1,0 +1,40 @@
+.my-overlay {
+  .window {
+    width: 7rem;
+    height: auto;
+    background: $background-c1;
+    box-shadow: 0 .04rem .2rem rgba(#000, .5);
+    color: $font-gray-c3;
+
+    .header {
+      position: relative;
+      //@include flex(space-between);
+      padding: 0 .2rem;
+      height: .68rem;
+      line-height: .68rem;
+      font-size: 0.18rem;
+      color: $font-white-c1;
+      background: $background-c2;
+      text-align: center;
+
+      .iconfont {
+        position: absolute;
+        right: 0.2rem;
+        width: .4rem;
+        height: .4rem;
+        font-size: .2rem;
+        color: $font-gray-c2;
+        cursor: pointer;
+
+        &:hover {
+          color: $font-darker;
+        }
+      }
+    }
+
+    .content-wrap {
+      padding: .3rem 0.8rem;
+      min-height: 40vh;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.client-header {
+  @import 'components/client/UserPin-zg';
+  @import 'components/client/LangPin-zg';
+  @import 'components/client/HeaderCoins';
+
+  position: relative;
+  z-index: 1001;
+  @include flex(space-between);
+  min-width: $body-min-width;
+  height: $header-height;
+  background: $background-1;
+  padding: 0 .3rem;
+
+  &.home {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    background: transparent;
+  }
+
+  &.bg {
+    background: $background-1;
+  }
+
+  .logo {
+    display: block;
+    width: auto;
+    height: .26rem;
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .nav {
+    @include flex(flex-start);
+    flex: 1;
+    margin: 0 0 0 .4rem;
+
+    .a {
+      padding: .2rem;
+      color: $font-darker;
+      opacity: 1;
+
+      &:hover {
+        color: $main-color;
+      }
+    }
+  }
+
+  .lang-pin {
+    background: $background-1;
+  }
+}

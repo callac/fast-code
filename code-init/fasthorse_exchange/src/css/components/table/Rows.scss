@@ -1,0 +1,27 @@
+.rows {
+  width: 100%;
+
+  .row {
+    @include flex(space-between);
+    position: relative;
+    width: 100%;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(#000, .3);
+    }
+
+    .td {
+      position: relative;
+      z-index: 1;
+      padding: 0 .1rem;
+      color: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      overflow: hidden;
+    }
+  }
+}

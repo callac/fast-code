@@ -1,0 +1,81 @@
+.user-pin {
+  &.login {
+    @include flex(flex-end);
+    flex: 1;
+    margin: 0 .2rem 0 0;
+
+    .btn {
+      display: inline-block;
+      min-width: .86rem;
+      height: .34rem;
+      padding: 0 .1rem;
+      line-height: .34rem;
+      border-radius: 0.18rem;
+      border: none;
+      background: transparent;
+      // color: $font-darker;
+      color: #fff;
+      /*opacity: 1;*/
+
+      &:hover {
+        color: $white;
+        background: #636667;
+      }
+    }
+  }
+
+  &.user {
+    @include flex(flex-end);
+    margin: 0 .2rem 0;
+
+    $item-height: .4rem;
+
+    .item {
+      position: relative;
+      cursor: pointer;
+
+      &:hover {
+        .sub-items {
+          @include flex-column();
+        }
+      }
+
+      .name {
+        @include flex(flex-start);
+        height: $item-height;
+        padding: 0 0 0 .4rem;
+        // color: $font-darker;
+        color: #fff;
+
+        .icon-arrowdropdown {
+          @extend .content-2;
+          margin: 0 0 0 .08rem;
+          color: #fff;
+        }
+      }
+
+      .sub-items {
+
+        .sub-item {
+          @extend .content-2;
+          @include ellipsis(100%);
+          display: block;
+          width: 100%;
+          height: .32rem;
+          padding: 0 .2rem;
+          line-height: .32rem;
+          color: $font-darker;
+          text-align: right;
+
+          &:last-child {
+            border: none;
+          }
+
+          &:hover {
+            background: $option-hover-bg;
+          }
+        }
+      }
+    }
+  }
+}

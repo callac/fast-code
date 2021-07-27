@@ -1,0 +1,46 @@
+.deposit {
+
+  .address {
+    position: relative;
+    margin: .2rem 0;
+    padding: 0 .25rem;
+
+    .img-wrap {
+      position: absolute;
+      right: .25rem;
+      top: 0;
+    }
+
+    .img {
+      width: 1.32rem;
+    }
+
+    .tip {
+      display: block;
+      color: $font-light;
+      text-align: center;
+    }
+  }
+
+  .my-input {
+    margin: .3rem 0 !important;
+
+    .btn {
+      right: auto;
+      left: calc(100% + .1rem);
+      padding: 0 .2rem;
+      color: #fff !important;
+      white-space: nowrap;
+      background: $main-color !important;
+    }
+  }
+
+  .tips {
+    margin: 0 0 .8rem 1.4rem;
+
+    .li {
+      @extend .content-2;
+      color: $font-light;
+    }
+  }
+}

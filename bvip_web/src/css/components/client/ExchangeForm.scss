@@ -1,0 +1,45 @@
+.exchange-form {
+  .balance {
+    width: 100%;
+    height: .2rem;
+    margin: 0 0 .1rem;
+    line-height: .2rem;
+    text-align: left;
+
+    .value {
+      font-weight: 600;
+      color: $font-darker;
+    }
+  }
+
+  .ranges {
+    @include flex(space-between);
+    padding: 0 0 .1rem 0;
+  }
+
+  .range {
+    width: .64rem;
+    height: .26rem;
+    border: none;
+    @extend .content-2;
+    background: $background-1;
+  }
+
+  .submit {
+    width: 100%;
+    height: .38rem;
+    margin: .1rem 0 0;
+  }
+
+  .total {
+    @include flex(space-between);
+    height: .2rem;
+    line-height: .2rem;
+    @extend .content-2;
+
+    span {
+      font-size: inherit;
+    }
+  }
+
+}

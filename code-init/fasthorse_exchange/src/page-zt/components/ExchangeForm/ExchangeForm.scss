@@ -1,0 +1,76 @@
+.exchange-form {
+  @import "../../../css/components/client/MyInput";
+
+  .input-base.default {
+    font-size: 0.14rem;
+  }
+
+  .balance {
+    width: 100%;
+    height: .2rem;
+    margin: 0 0 .1rem;
+    line-height: .2rem;
+    text-align: left;
+    color: #8fa5b3;
+
+    .value {
+      float: right;
+      font-size: .14rem;
+      //font-weight: 600;
+      //color: $font-darker;
+    }
+  }
+
+  .ranges {
+    @include flex(space-between);
+    padding: 0 0 .1rem 0.5rem;
+  }
+
+  //.range {
+  //  width: .64rem;
+  //  height: .26rem;
+  //  border: none;
+  //  @extend .content-2;
+  //  background: $background-1;
+  //}
+  .range {
+    width: .64rem;
+    height: .26rem;
+    line-height: 0.26rem;
+    color: #525F66;
+    @extend .content-2;
+    background: none;
+    //background: $background-1;
+    border:1px solid rgba(61,71,77,1);
+    border-radius:0.02rem;
+  }
+  .range-red:hover{
+    border:1px solid #DE5E56;
+    background: #DE5E56;
+    color: #FFFFFF;
+  }
+  .range-green:hover{
+    border:1px solid #50A39A;
+    background: #50A39A;
+    color: #FFFFFF;
+  }
+
+  .submit {
+    width: 100%;
+    height: .38rem;
+    margin: .1rem 0 0;
+  }
+
+  .total {
+    @include flex(space-between);
+    height: .2rem;
+    line-height: .2rem;
+    @extend .content-2;
+    color: #737b80;
+    span {
+      font-size: inherit;
+      color: #a1acb3;
+    }
+  }
+
+}

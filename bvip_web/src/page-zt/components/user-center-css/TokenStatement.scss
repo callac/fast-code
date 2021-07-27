@@ -1,0 +1,54 @@
+.token-statement {
+  padding: 0.28rem 0.34rem;
+  background: $background-c1;
+  color: $font-black-c1;
+  .inputs-wrap {
+    @include flex();
+    padding: .2rem 0 0;
+    //border-bottom: 2px solid $border;
+
+    .my-input {
+      width: auto !important;
+    }
+  }
+  .table-base-wrap {
+    .table-base {
+      color: $font-black-c1;
+      .thead {
+        color: $font-black-c5;
+        .tr {
+          .th {
+            text-align: center;
+          }
+        }
+      }
+      .td {
+        text-align: center;
+      }
+    }
+  }
+
+  .pagination {
+    margin: .2rem 0;
+  }
+
+  .time {
+    @include flex();
+    margin: 0 0 .2rem;
+
+    label {
+      padding: 0 .1rem 0 0;
+      color: $font-black-c5;
+
+      &.x {
+        padding: 0 .1rem;
+      }
+    }
+
+    .datepicker {
+      width: 1.5rem;
+      height: .3rem;
+    }
+  }
+
+}

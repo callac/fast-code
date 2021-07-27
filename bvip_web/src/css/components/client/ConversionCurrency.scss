@@ -1,0 +1,16 @@
+.conversion-currency {
+  margin-left: 0 !important;
+
+  .currency {
+    padding: 0 !important;
+  }
+
+  .currency-item {
+    padding: 0 .2rem !important;
+
+    &.selected {
+      color: $option-selected-font !important;
+      background: $option-selected-bg !important;
+    }
+  }
+}

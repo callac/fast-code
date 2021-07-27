@@ -1,0 +1,70 @@
+.address-manage {
+  @import '../../common/special/user-center';
+  background: $background-c1;
+  color: $font-black-c1;
+
+  .add-address {
+    @include flex(space-between, stretch);
+    padding: 0.23rem 0.29rem;
+    .add {
+      width: 1.8rem;
+      height: .4rem;
+      //margin: .2rem 0;
+      background: $color-colours-4;
+    }
+
+    .btn {
+      padding: 0;
+      border: none;
+      background: transparent;
+    }
+  }
+  .submit {
+    margin-bottom: .2rem;
+  }
+
+  .select-base {
+    //position: absolute !important;
+    //right: .4rem;
+    //top: .9rem;
+    width: 1rem;
+    height: 0.3rem;
+    //border: none !important;
+    //color: $font-dark !important;
+    background: $background-c1 !important;
+    border: 1px solid $color-gray-7;
+    border-radius: 4px;
+  }
+
+  .table-base-wrap {
+    margin: 0;
+    padding: 0;
+    .table-base {
+      color: $font-black-c1;
+      .thead {
+        color: $font-black-c5;
+        .tr {
+          .th {
+            text-align: center;
+          }
+        }
+      }
+      .td {
+        text-align: center;
+        .btn-red {
+          border-color: transparent;
+        }
+      }
+    }
+  }
+
+  .my-overlay {
+
+    .select-base {
+      position: relative !important;
+      right: 0;
+      top: 0;
+      min-width: 1rem;
+    }
+  }
+}

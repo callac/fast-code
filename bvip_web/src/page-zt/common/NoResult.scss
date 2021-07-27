@@ -1,0 +1,8 @@
+.no-result {
+  @include flex(center, center);
+  width: 100%;
+  height: .5rem;
+  color: $font-gray-c3;
+  text-align: center;
+  background: transparent;
+}

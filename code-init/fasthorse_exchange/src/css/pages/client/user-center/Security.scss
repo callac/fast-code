@@ -1,0 +1,108 @@
+.security {
+  .level {
+    @include flex();
+    padding: .3rem 0;
+
+    .u-content {
+      margin: 0 0 0 .2rem;
+
+      .h3 {
+        margin: 0 0 .25rem;
+
+        .username {
+          color: $font-darker;
+        }
+      }
+
+      .p {
+        color: $font-light;
+        @extend .content-2;
+      }
+    }
+  }
+
+  .item {
+    @include flex(space-between);
+    width: 100%;
+    height: .5rem;
+    //padding: .15rem;
+    //line-height: .2rem;
+    border-top: 1px solid $border;
+
+    &:last-of-type {
+      border-bottom: 1px solid $border;
+      margin: 0 0 .3rem;
+    }
+
+    .iconfont {
+      margin: 0 .2rem;
+      @extend .title;
+    }
+
+    .name {
+      flex: .15
+    }
+
+    .status {
+      flex: .15;
+    }
+
+    .value {
+      flex: .5;
+      color: $font-light;
+    }
+
+    .operate {
+      flex: .2;
+      padding: 0 .1rem 0 0;
+      text-align: right;
+
+      .op {
+        display: inline-block;
+        position: relative;
+        height: .2rem;
+        padding: 0 .1rem;
+        border: none;
+        background: transparent;
+
+        &:before {
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 50%;
+          width: 1px;
+          height: .14rem;
+          margin: -.07rem 0 0;
+          background: $font-light;
+        }
+
+        &:last-child {
+
+          &:before {
+            content: none;
+          }
+        }
+      }
+    }
+  }
+
+  .h2 {
+    margin: .4rem 0 .14rem;
+    @extend .content-4;
+  }
+
+  .submit {
+    width: 2rem;
+    height: .4rem;
+    margin-left: 1rem;
+  }
+
+  .tip {
+    display: block;
+    margin-bottom: .2rem;
+  }
+
+  .table-base {
+    margin: 0 0 .6rem;
+  }
+}

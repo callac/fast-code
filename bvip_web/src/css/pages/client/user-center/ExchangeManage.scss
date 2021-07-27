@@ -1,0 +1,48 @@
+.exchange-manage {
+
+  .pagination {
+    margin: .2rem 0 .6rem;
+  }
+
+  .symbol {
+    position: absolute !important;
+    right: .4rem;
+    top: .2rem;
+    min-width: 1rem;
+    height: .3rem !important;
+    border: none;
+    @extend .content-2;
+    color: $font-darker;
+    background: $input-bg !important;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0;
+    border: none;
+    line-height: .3rem;
+    background: transparent;
+    font-size: inherit;
+    white-space: nowrap;
+
+    &.cancel {
+      cursor: default;
+    }
+  }
+
+  .table-base-wrap {
+
+    .thead .tr {
+      color: $font;
+    }
+
+    .tbody .tr {
+      color: $font;
+      border-bottom: 1px solid $border;
+    }
+  }
+
+  .table {
+    margin: -.2rem;
+  }
+}

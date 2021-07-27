@@ -1,0 +1,163 @@
+/*
+ * common css，确保在文件最开始位置
+ */
+@import 'themes/<<theme>>/common-variable';
+@import 'common';
+/*
+ * components css
+ */
+@import 'components/client/ClientHeader-<<template>>';
+@import 'components/client/Agreement';
+@import 'components/client/ClientFooter';
+@import 'components/client/user-center/CertificationFast';
+@import 'components/client/user-center/CertificationManual';
+@import 'components/client/DepthMap';
+@import 'components/client/ExchangeCashForm';
+@import 'components/client/ExchangeForm';
+@import 'components/client/ExchangeForms';
+@import 'components/client/GlobalPopup';
+@import 'components/client/HelpAside';
+@import 'components/client/HistoryOrder';
+@import 'components/client/KLine';
+@import 'components/client/MsgPin';
+@import 'components/client/MyExchange';
+@import 'components/client/MyInput';
+@import 'components/client/MyOrder';
+@import 'components/client/MyOverlay';
+@import 'components/client/OrderPin';
+@import 'components/client/ConversionCurrency';
+@import 'components/client/Privacy';
+@import 'components/client/RowsDepth';
+@import 'components/client/user-center/AddressManage';
+@import 'components/client/user-center/CurrencyAccount';
+@import 'components/client/user-center/DoughnutChart';
+@import 'components/client/user-center/DepositPin';
+@import 'components/client/user-center/TabHead';
+@import 'components/client/user-center/TokenStatement';
+@import 'components/client/user-center/WithdrawPin';
+@import 'components/common/Back';
+@import 'components/common/BtnCode';
+@import 'components/common/ButtonOnce';
+@import 'components/common/Download';
+@import 'components/common/DropDown';
+@import 'components/common/IconUpDown';
+@import 'components/common/NoResult';
+@import 'components/common/Overlay';
+@import 'components/common/OverlayConfirm';
+@import 'components/common/PageContainer';
+@import 'components/common/Query';
+@import 'components/common/TreeMenu';
+@import 'components/common/Warning';
+@import 'components/form/CheckBox';
+@import 'components/form/FileInput';
+@import 'components/form/ImgUpload';
+@import 'components/form/Linkage';
+@import 'components/form/MyFileInput';
+@import 'components/form/SelectBase';
+@import 'components/image/ImageFullScreen';
+@import 'components/mobile/MobileInput';
+@import 'components/pdf/PDFPage';
+@import 'components/pdf/PDFSign';
+@import 'components/pdf/PDFViewer';
+@import 'components/table/Rows';
+@import 'components/table/MyTable';
+@import 'components/kline/index';
+
+
+@import 'article';
+@import 'animation';
+@import 'datepicker';
+@import 'popper';
+@import 'pagination';
+// iconfont
+@import 'iconfont/iconfont';
+/*
+ * pages css
+ */
+@import 'pages/client/BaseRoot';
+@import 'pages/client/Exchange';
+@import 'pages/client/ExchangeCash';
+@import 'pages/client/Frame';
+@import 'pages/client/PasswordReset';
+@import 'pages/client/PasswordResetCopy';
+@import 'pages/client/RepairOrder';
+@import 'pages/client/SignIn';
+@import 'pages/client/SignUp';
+// article
+@import 'pages/client/article/AboutUs';
+@import 'pages/client/article/Article';
+@import 'pages/client/article/ArticleList';
+@import 'pages/client/article/Help';
+@import 'pages/client/article/HelpList';
+@import 'pages/client/article/PrivacyPolicy';
+@import 'pages/client/article/UserAgreement';
+// user-center
+@import 'pages/client/user-center/AssetsManage';
+@import 'pages/client/user-center/BindEmail';
+@import 'pages/client/user-center/BindGoogleVerify';
+@import 'pages/client/user-center/BindPhone';
+@import 'pages/client/user-center/CashPaySet';
+@import 'pages/client/user-center/Certification';
+@import 'pages/client/user-center/Deposit';
+@import 'pages/client/user-center/ExchangeCashManage';
+@import 'pages/client/user-center/ExchangeManage';
+@import 'pages/client/user-center/Message';
+@import 'pages/client/user-center/MessageCenter';
+@import 'pages/client/user-center/ResetPassword';
+@import 'pages/client/user-center/Security';
+@import 'pages/client/user-center/SetFundPassword';
+@import 'pages/client/user-center/UserCenter';
+@import 'pages/client/user-center/UserInvite';
+@import 'pages/client/user-center/Withdraw';
+// asset
+@import 'pages/client/asset/AssetsList';
+@import 'pages/client/asset/AssetInfo';
+// feedback
+@import 'pages/client/feedback/Feedback';
+@import 'pages/client/feedback/FeedbackList';
+// otc
+@import 'pages/client/otc/Otc';
+@import 'pages/client/otc/OtcOrderDetail';
+// home
+@import 'themes/<<theme>>/home-color-variable';
+@import 'pages/client/Home-<<template>>';
+@import '../../node_modules/vue-scrollbar-live/lib/css/index.css';
+// mobile
+@import 'pages/mobile/MobileActivity';
+@import 'pages/mobile/MobileFrame';
+@import 'pages/mobile/MobileSignUp';
+@import 'pages/mobile/MobileSignIn';
+@import 'pages/NotFound';
+
+.scrollbar {
+  background: rgba($main-color, .4) !important;
+  box-shadow: none !important;
+  text-transform: none;
+}
+
+.snack-bar-wrap {
+  z-index: 10001 !important;
+}
+
+//新增滚动条样式
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 5px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  width: 5px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 6px;
+}
